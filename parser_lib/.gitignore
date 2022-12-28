@@ -1,0 +1,7 @@
+.idea
+gremlin_syntax.md
+parser.tab.h
+parser.tab.c
+parser.output
+parser
+lex.yy.c

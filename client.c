@@ -1,3 +1,8 @@
+#include "parser_lib/query.h"
+#include "parser_lib/printer.h"
+#include "parser_lib/main.h"
+#include "client_convert.h"
+
 #include "gen-c_glib/query_svc.h"
 
 #include <thrift/c_glib/transport/thrift_transport.h>
@@ -10,6 +15,8 @@
 
 #include <stdio.h>
 
+#define BUF_SIZE 1024
+
 int
 main(void) {
     ThriftSocket *socket;
@@ -20,7 +27,7 @@ main(void) {
 
     gboolean success;
     gchar *message = NULL;
-    QueryResult *result = NULL;
+    I_QueryResult *result = NULL;
     GError *error = NULL;
 
 #if (!GLIB_CHECK_VERSION(2, 36, 0))
@@ -45,39 +52,38 @@ main(void) {
                           "output_protocol", protocol,
                           NULL);
 
-    Query *query = g_object_new(TYPE_QUERY, NULL);
-    uQuery *u_query = g_object_new(TYPE_U_QUERY, NULL);
-    SchemaGetQuery *schema_get_query = g_object_new(TYPE_SCHEMA_GET_QUERY, NULL);
-    g_object_set(
-            schema_get_query,
-            "schema_name", "schema",
-            NULL
-    );
-    g_object_set(
-            u_query,
-            "schema_get_query", schema_get_query,
-            NULL
-    );
-    g_object_set(
-            query,
-            "type", QUERY_TYPE_SCHEMA_GET,
-            "query", u_query,
-            NULL
-    );
+    char *buffer = malloc(BUF_SIZE * sizeof(char));
+    buffer[0] = '\0';
 
-    result = g_object_new(TYPE_QUERY_RESULT, NULL);
-    success = query_svc_if_execute(client, &result, query, &error);
-    if (success) {
-        g_object_get(result, "message", &message, NULL);
-        puts(message);
-    } else {
-        fprintf(stderr, "Client caught an exception: %s\n", error->message);
-        g_clear_error(&error);
+    while (1) {
+        printf("> ");
+        size_t i = 0;
+        char c;
+        while ((c = getchar()) != EOF) {
+            buffer[i++] = c;
+            if (c == ';')
+                break;
+        }
+        buffer[i] = '\0';
+        if (strcmp(buffer, "exit;") == 0)
+            break;
+
+        Query q = get_query(buffer);
+        print_query(q);
+        I_Query *i_query = convert_query(&q);
+
+        result = g_object_new(TYPE_I__QUERY_RESULT, NULL);
+        success = query_svc_if_execute(client, &result, i_query, &error);
+        if (success) {
+            g_object_get(result, "message", &message, NULL);
+            puts(message);
+        } else {
+            fprintf(stderr, "Client caught an exception: %s\n", error->message);
+            g_clear_error(&error);
+        }
     }
+    free(buffer);
 
-    g_object_unref(schema_get_query);
-    g_object_unref(u_query);
-    g_object_unref(query);
     g_object_unref(result);
 
     thrift_transport_close(transport, &error);

@@ -10,7 +10,7 @@
 #include "query_svc.h"
 
 gboolean
-query_svc_if_execute (querySvcIf *iface, QueryResult ** _return, const Query * query, GError **error)
+query_svc_if_execute (querySvcIf *iface, I_QueryResult ** _return, const I_Query * query, GError **error)
 {
   return QUERY_SVC_IF_GET_INTERFACE (iface)->execute (iface, _return, query, error);
 }
@@ -92,7 +92,7 @@ query_svc_client_get_property (GObject *object, guint property_id, GValue *value
   }
 }
 
-gboolean query_svc_client_send_execute (querySvcIf * iface, const Query * query, GError ** error)
+gboolean query_svc_client_send_execute (querySvcIf * iface, const I_Query * query, GError ** error)
 {
   gint32 cseqid = 0;
   ThriftProtocol * protocol = QUERY_SVC_CLIENT (iface)->output_protocol;
@@ -137,7 +137,7 @@ gboolean query_svc_client_send_execute (querySvcIf * iface, const Query * query,
   return TRUE;
 }
 
-gboolean query_svc_client_recv_execute (querySvcIf * iface, QueryResult ** _return, GError ** error)
+gboolean query_svc_client_recv_execute (querySvcIf * iface, I_QueryResult ** _return, GError ** error)
 {
   gint32 rseqid;
   gchar * fname = NULL;
@@ -261,7 +261,7 @@ gboolean query_svc_client_recv_execute (querySvcIf * iface, QueryResult ** _retu
   return TRUE;
 }
 
-gboolean query_svc_client_execute (querySvcIf * iface, QueryResult ** _return, const Query * query, GError ** error)
+gboolean query_svc_client_execute (querySvcIf * iface, I_QueryResult ** _return, const I_Query * query, GError ** error)
 {
   if (!query_svc_client_send_execute (iface, query, error))
     return FALSE;
@@ -318,7 +318,7 @@ G_DEFINE_TYPE_WITH_CODE (querySvcHandler,
                          G_IMPLEMENT_INTERFACE (TYPE_QUERY_SVC_IF,
                                                 query_svc_handler_query_svc_if_interface_init))
 
-gboolean query_svc_handler_execute (querySvcIf * iface, QueryResult ** _return, const Query * query, GError ** error)
+gboolean query_svc_handler_execute (querySvcIf * iface, I_QueryResult ** _return, const I_Query * query, GError ** error)
 {
   g_return_val_if_fail (IS_QUERY_SVC_HANDLER (iface), FALSE);
 
@@ -399,8 +399,8 @@ query_svc_processor_process_execute (querySvcProcessor *self,
       (thrift_protocol_read_message_end (input_protocol, error) != -1) &&
       (thrift_transport_read_end (transport, error) != FALSE))
   {
-    Query * query;
-    QueryResult * return_value;
+    I_Query * query;
+    I_QueryResult * return_value;
     querySvcExecuteResult * result_struct;
 
     g_object_get (args,

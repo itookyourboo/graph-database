@@ -1,43 +1,43 @@
-enum ValueType {
+enum I_ValueType {
     VT_INTEGER
     VT_STRING
     VT_FLOATING
     VT_BOOLEAN
 }
 
-union uValue {
+union I_uValue {
     1: i32 integer
     2: string string_
     3: double floating
     4: bool boolean
 }
 
-struct Value {
-    1: ValueType type
-    2: uValue value
+struct I_Value {
+    1: I_ValueType type
+    2: I_uValue value
 }
 
-struct Property {
+struct I_Property {
     1: string field
-    2: Value value
+    2: I_Value value
 }
 
-struct Attribute {
+struct I_Attribute {
     1: string name
-    2: ValueType vt
+    2: I_ValueType vt
 }
 
-struct Schema {
+struct I_Schema {
     1: string name
-    2: list<Attribute> attributes
+    2: list<I_Attribute> attributes
 }
 
-struct Node {
+struct I_Node {
     1: string name
-    2: list<Property> properties
+    2: list<I_Property> properties
 }
 
-enum LinkType {
+enum I_LinkType {
     LT_TO
     LT_FROM
     LT_BOTH
@@ -45,14 +45,14 @@ enum LinkType {
     LT_ANY
 }
 
-struct Link {
+struct I_Link {
     1: string name
-    2: LinkType type
+    2: I_LinkType type
     3: string first
     4: string second
 }
 
-enum Comparation {
+enum I_Comparation {
     CMP_GT
     CMP_LT
     CMP_GE
@@ -62,71 +62,71 @@ enum Comparation {
     CMP_CONTAINS
 }
 
-enum ComparableType {
+enum I_ComparableType {
     CMPT_FIELD
     CMPT_VALUE
 }
 
-union uComparable {
+union I_uComparable {
     1: string field_name
-    2: Value value
+    2: I_Value value
 }
 
-struct Comparable {
-    1: ComparableType type
-    2: uComparable comparable
+struct I_Comparable {
+    1: I_ComparableType type
+    2: I_uComparable comparable
 }
 
-struct Compare {
-    1: Comparation cmp
-    2: Comparable with_
+struct I_Compare {
+    1: I_Comparation cmp
+    2: I_Comparable with_
 }
 
-struct ConditionCompare {
-    1: Comparable left
-    2: Compare compare
+struct I_ConditionCompare {
+    1: I_Comparable left
+    2: I_Compare compare
 }
 
-enum PredicateType {
+enum I_PredicateType {
     PT_TERM
     PT_OR
     PT_AND
 }
 
-union uPredicate {
-    1: ConditionCompare term
-    2: list<Predicate> and_
-    3: list<Predicate> or_
+union I_uPredicate {
+    1: I_ConditionCompare term
+    2: list<I_Predicate> and_
+    3: list<I_Predicate> or_
 }
 
-struct Predicate {
-    1: PredicateType type
-    2: uPredicate predicate
+struct I_Predicate {
+    1: I_PredicateType type
+    2: I_uPredicate predicate
 }
 
-struct NodeCondition {
+struct I_NodeCondition {
     1: bool is_null
     2: string schema
-    3: list<Predicate> predicates
+    3: list<I_Predicate> predicates
 }
 
-struct LinkCondition {
+struct I_LinkCondition {
     1: bool is_null
 
-    2: LinkType link_type
+    2: I_LinkType link_type
     3: string link_name
 }
 
-struct MatchCondition {
+struct I_MatchCondition {
     1: bool is_null
 
-    2: NodeCondition node_first_condition
-    3: NodeCondition node_second_condition
-    4: NodeCondition node_cross_condition
-    5: LinkCondition link_condition
+    2: I_NodeCondition node_first_condition
+    3: I_NodeCondition node_second_condition
+    4: I_NodeCondition node_cross_condition
+    5: I_LinkCondition link_condition
 }
 
-enum QueryType {
+enum I_QueryType {
     SCHEMA_CREATE
     SCHEMA_GET
     SCHEMA_GET_ALL
@@ -143,70 +143,70 @@ enum QueryType {
     MATCH
 }
 
-struct SchemaCreateQuery {
-    1: Schema schema
-} 
+struct I_SchemaCreateQuery {
+    1: I_Schema schema
+}
 
-struct SchemaGetQuery {
+struct I_SchemaGetQuery {
     1: string schema_name
 }
 
-struct SchemaDeleteQuery {
+struct I_SchemaDeleteQuery {
     1: string schema_name
 }
 
-struct NodeCreateQuery {
+struct I_NodeCreateQuery {
     1: string schema_name
-    2: Node node
+    2: I_Node node
 }
 
-struct NodeUpdateQuery {
-    1: NodeCondition condition
-    2: list<Property> properties
+struct I_NodeUpdateQuery {
+    1: I_NodeCondition condition
+    2: list<I_Property> properties
 }
 
-struct NodeDeleteQuery {
-    1: NodeCondition condition
+struct I_NodeDeleteQuery {
+    1: I_NodeCondition condition
 }
 
-struct NodeMatchQuery {
-    1: NodeCondition condition
+struct I_NodeMatchQuery {
+    1: I_NodeCondition condition
 }
 
-struct LinkCreateQuery {
-    1: Link link
+struct I_LinkCreateQuery {
+    1: I_Link link
 }
 
-struct LinkDeleteQuery {
-    1: MatchCondition condition
+struct I_LinkDeleteQuery {
+    1: I_MatchCondition condition
 }
 
-struct MatchQuery {
-    1: MatchCondition condition
+struct I_MatchQuery {
+    1: I_MatchCondition condition
 }
 
-union uQuery {
-    1: SchemaCreateQuery schema_create_query
-    2: SchemaGetQuery schema_get_query
-    3: SchemaDeleteQuery schema_delete_query
+union I_uQuery {
+    1: I_SchemaCreateQuery schema_create_query
+    2: I_SchemaGetQuery schema_get_query
+    3: I_SchemaDeleteQuery schema_delete_query
 
-    4: NodeCreateQuery node_create_query
-    5: NodeUpdateQuery node_update_query
-    6: NodeDeleteQuery node_delete_query
-    7: NodeMatchQuery node_match_query
+    4: I_NodeCreateQuery node_create_query
+    5: I_NodeUpdateQuery node_update_query
+    6: I_NodeDeleteQuery node_delete_query
+    7: I_NodeMatchQuery node_match_query
 
-    8: LinkCreateQuery link_create_query
-    9: LinkDeleteQuery link_delete_query
+    8: I_LinkCreateQuery link_create_query
+    9: I_LinkDeleteQuery link_delete_query
 
-    10: MatchQuery match_query
+    10: I_MatchQuery match_query
 }
 
-struct Query {
-    1: QueryType type
-    2: uQuery query
+struct I_Query {
+    1: I_QueryType type
+    2: I_uQuery query
 }
 
-enum Return {
+enum I_Return {
     RETURN_NOTHING      = 0,
     RETURN_NODE_FIRST   = 1,
     RETURN_NODE_SECOND  = 2,
@@ -216,31 +216,31 @@ enum Return {
     RETURN_UNDEF        = 8,
 }
 
-struct Result {
-    1: Return return_items
-    2: optional Node first
-    3: optional Link link
-    4: optional Node second
+struct I_Result {
+    1: I_Return return_items
+    2: optional I_Node first
+    3: optional I_Link link
+    4: optional I_Node second
 }
 
-enum QueryResultType {
+enum I_QueryResultType {
     RESULT_SCHEMA
     RESULT_GENERATOR
     RESULT_NONE
 }
 
-union uQueryResult {
-    1: list<Schema> schema
-    2: list<Result> items
+union I_uQueryResult {
+    1: list<I_Schema> schema
+    2: list<I_Result> items
 }
 
-struct QueryResult {
-    1: QueryResultType type;
+struct I_QueryResult {
+    1: I_QueryResultType type;
     2: string message;
-    3: optional uQueryResult result;
+    3: optional I_uQueryResult result;
 }
 
 
 service querySvc {
-   QueryResult execute(1: Query query)
+   I_QueryResult execute(1: I_Query query)
 }

@@ -1,3 +1,6 @@
+#include "db_lib/main.h"
+#include "server_convert.h"
+
 #include "gen-c_glib/query_svc.h"
 
 #include <thrift/c_glib/server/thrift_simple_server.h>
@@ -59,19 +62,19 @@ G_DEFINE_TYPE(ExampleQuerySvcHandler,
 
 static gboolean
 example_query_svc_handler_execute(querySvcIf *iface,
-                                  QueryResult **_return,
-                                  const Query *query,
+                                  I_QueryResult **_return,
+                                  const I_Query *query,
                                   GError **error) {
     THRIFT_UNUSED_VAR(iface);
     THRIFT_UNUSED_VAR(error);
 
-    g_assert(*_return != NULL);
-
-    printf("Server received query type: %d, from client\n", query->type);
+    printf("Got query: %s\n", toString_I_QueryType(query->type));
+    Query to_execute = convert_query(query);
+    QueryResult qr = execute_db_query(to_execute);
 
     g_object_set(
             *_return,
-            "type", QUERY_RESULT_TYPE_RESULT_NONE,
+            "type", qr.type,
             "message", "200, Query executed",
             NULL
     );
@@ -130,6 +133,7 @@ main(void) {
                           "output_protocol_factory", protocol_factory,
                           NULL);
 
+    printf("SERVER IS RUNNING\n");
     thrift_server_serve(server, &error);
 
     g_object_unref(server);

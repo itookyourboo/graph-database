@@ -15,112 +15,112 @@
 
 /* begin types */
 
-enum _ValueType {
-  VALUE_TYPE_VT_INTEGER = 0,
-  VALUE_TYPE_VT_STRING = 1,
-  VALUE_TYPE_VT_FLOATING = 2,
-  VALUE_TYPE_VT_BOOLEAN = 3
+enum _I_ValueType {
+  I__VALUE_TYPE_VT_INTEGER = 0,
+  I__VALUE_TYPE_VT_STRING = 1,
+  I__VALUE_TYPE_VT_FLOATING = 2,
+  I__VALUE_TYPE_VT_BOOLEAN = 3
 };
-typedef enum _ValueType ValueType;
+typedef enum _I_ValueType I_ValueType;
 
 /* return the name of the constant */
 const char *
-toString_ValueType(int value); 
+toString_I_ValueType(int value); 
 
-enum _LinkType {
-  LINK_TYPE_LT_TO = 0,
-  LINK_TYPE_LT_FROM = 1,
-  LINK_TYPE_LT_BOTH = 2,
-  LINK_TYPE_LT_ANY = 3
+enum _I_LinkType {
+  I__LINK_TYPE_LT_TO = 0,
+  I__LINK_TYPE_LT_FROM = 1,
+  I__LINK_TYPE_LT_BOTH = 2,
+  I__LINK_TYPE_LT_ANY = 3
 };
-typedef enum _LinkType LinkType;
+typedef enum _I_LinkType I_LinkType;
 
 /* return the name of the constant */
 const char *
-toString_LinkType(int value); 
+toString_I_LinkType(int value); 
 
-enum _Comparation {
-  COMPARATION_CMP_GT = 0,
-  COMPARATION_CMP_LT = 1,
-  COMPARATION_CMP_GE = 2,
-  COMPARATION_CMP_LE = 3,
-  COMPARATION_CMP_EQ = 4,
-  COMPARATION_CMP_NEQ = 5,
-  COMPARATION_CMP_CONTAINS = 6
+enum _I_Comparation {
+  I__COMPARATION_CMP_GT = 0,
+  I__COMPARATION_CMP_LT = 1,
+  I__COMPARATION_CMP_GE = 2,
+  I__COMPARATION_CMP_LE = 3,
+  I__COMPARATION_CMP_EQ = 4,
+  I__COMPARATION_CMP_NEQ = 5,
+  I__COMPARATION_CMP_CONTAINS = 6
 };
-typedef enum _Comparation Comparation;
+typedef enum _I_Comparation I_Comparation;
 
 /* return the name of the constant */
 const char *
-toString_Comparation(int value); 
+toString_I_Comparation(int value); 
 
-enum _ComparableType {
-  COMPARABLE_TYPE_CMPT_FIELD = 0,
-  COMPARABLE_TYPE_CMPT_VALUE = 1
+enum _I_ComparableType {
+  I__COMPARABLE_TYPE_CMPT_FIELD = 0,
+  I__COMPARABLE_TYPE_CMPT_VALUE = 1
 };
-typedef enum _ComparableType ComparableType;
+typedef enum _I_ComparableType I_ComparableType;
 
 /* return the name of the constant */
 const char *
-toString_ComparableType(int value); 
+toString_I_ComparableType(int value); 
 
-enum _PredicateType {
-  PREDICATE_TYPE_PT_TERM = 0,
-  PREDICATE_TYPE_PT_OR = 1,
-  PREDICATE_TYPE_PT_AND = 2
+enum _I_PredicateType {
+  I__PREDICATE_TYPE_PT_TERM = 0,
+  I__PREDICATE_TYPE_PT_OR = 1,
+  I__PREDICATE_TYPE_PT_AND = 2
 };
-typedef enum _PredicateType PredicateType;
+typedef enum _I_PredicateType I_PredicateType;
 
 /* return the name of the constant */
 const char *
-toString_PredicateType(int value); 
+toString_I_PredicateType(int value); 
 
-enum _QueryType {
-  QUERY_TYPE_SCHEMA_CREATE = 0,
-  QUERY_TYPE_SCHEMA_GET = 1,
-  QUERY_TYPE_SCHEMA_GET_ALL = 2,
-  QUERY_TYPE_SCHEMA_DELETE = 3,
-  QUERY_TYPE_NODE_CREATE = 4,
-  QUERY_TYPE_NODE_UPDATE = 5,
-  QUERY_TYPE_NODE_DELETE = 6,
-  QUERY_TYPE_NODE_MATCH = 7,
-  QUERY_TYPE_LINK_CREATE = 8,
-  QUERY_TYPE_LINK_DELETE = 9,
-  QUERY_TYPE_MATCH = 10
+enum _I_QueryType {
+  I__QUERY_TYPE_SCHEMA_CREATE = 0,
+  I__QUERY_TYPE_SCHEMA_GET = 1,
+  I__QUERY_TYPE_SCHEMA_GET_ALL = 2,
+  I__QUERY_TYPE_SCHEMA_DELETE = 3,
+  I__QUERY_TYPE_NODE_CREATE = 4,
+  I__QUERY_TYPE_NODE_UPDATE = 5,
+  I__QUERY_TYPE_NODE_DELETE = 6,
+  I__QUERY_TYPE_NODE_MATCH = 7,
+  I__QUERY_TYPE_LINK_CREATE = 8,
+  I__QUERY_TYPE_LINK_DELETE = 9,
+  I__QUERY_TYPE_MATCH = 10
 };
-typedef enum _QueryType QueryType;
+typedef enum _I_QueryType I_QueryType;
 
 /* return the name of the constant */
 const char *
-toString_QueryType(int value); 
+toString_I_QueryType(int value); 
 
-enum _Return {
-  RETURN_RETURN_NOTHING = 0,
-  RETURN_RETURN_NODE_FIRST = 1,
-  RETURN_RETURN_NODE_SECOND = 2,
-  RETURN_RETURN_LINK = 4,
-  RETURN_RETURN_ALL = 7,
-  RETURN_RETURN_UNDEF = 8
+enum _I_Return {
+  I__RETURN_RETURN_NOTHING = 0,
+  I__RETURN_RETURN_NODE_FIRST = 1,
+  I__RETURN_RETURN_NODE_SECOND = 2,
+  I__RETURN_RETURN_LINK = 4,
+  I__RETURN_RETURN_ALL = 7,
+  I__RETURN_RETURN_UNDEF = 8
 };
-typedef enum _Return Return;
+typedef enum _I_Return I_Return;
 
 /* return the name of the constant */
 const char *
-toString_Return(int value); 
+toString_I_Return(int value); 
 
-enum _QueryResultType {
-  QUERY_RESULT_TYPE_RESULT_SCHEMA = 0,
-  QUERY_RESULT_TYPE_RESULT_GENERATOR = 1,
-  QUERY_RESULT_TYPE_RESULT_NONE = 2
+enum _I_QueryResultType {
+  I__QUERY_RESULT_TYPE_RESULT_SCHEMA = 0,
+  I__QUERY_RESULT_TYPE_RESULT_GENERATOR = 1,
+  I__QUERY_RESULT_TYPE_RESULT_NONE = 2
 };
-typedef enum _QueryResultType QueryResultType;
+typedef enum _I_QueryResultType I_QueryResultType;
 
 /* return the name of the constant */
 const char *
-toString_QueryResultType(int value); 
+toString_I_QueryResultType(int value); 
 
-/* struct uValue */
-struct _uValue
+/* struct I_uValue */
+struct _I_uValue
 { 
   ThriftStruct parent; 
 
@@ -134,105 +134,105 @@ struct _uValue
   gboolean boolean;
   gboolean __isset_boolean;
 };
-typedef struct _uValue uValue;
+typedef struct _I_uValue I_uValue;
 
-struct _uValueClass
+struct _I_uValueClass
 {
   ThriftStructClass parent;
 };
-typedef struct _uValueClass uValueClass;
+typedef struct _I_uValueClass I_uValueClass;
 
-GType u_value_get_type (void);
-#define TYPE_U_VALUE (u_value_get_type())
-#define U_VALUE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_U_VALUE, uValue))
-#define U_VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_U_VALUE, uValueClass))
-#define IS_U_VALUE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_U_VALUE))
-#define IS_U_VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_U_VALUE))
-#define U_VALUE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_U_VALUE, uValueClass))
+GType i_u_value_get_type (void);
+#define TYPE_I_U_VALUE (i_u_value_get_type())
+#define I_U_VALUE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I_U_VALUE, I_uValue))
+#define I_U_VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I_U_VALUE, I_uValueClass))
+#define IS_I_U_VALUE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I_U_VALUE))
+#define IS_I_U_VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I_U_VALUE))
+#define I_U_VALUE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I_U_VALUE, I_uValueClass))
 
-/* struct Value */
-struct _Value
+/* struct I_Value */
+struct _I_Value
 { 
   ThriftStruct parent; 
 
   /* public */
-  ValueType type;
+  I_ValueType type;
   gboolean __isset_type;
-  uValue * value;
+  I_uValue * value;
   gboolean __isset_value;
 };
-typedef struct _Value Value;
+typedef struct _I_Value I_Value;
 
-struct _ValueClass
+struct _I_ValueClass
 {
   ThriftStructClass parent;
 };
-typedef struct _ValueClass ValueClass;
+typedef struct _I_ValueClass I_ValueClass;
 
-GType value_get_type (void);
-#define TYPE_VALUE (value_get_type())
-#define VALUE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_VALUE, Value))
-#define VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_VALUE, ValueClass))
-#define IS_VALUE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_VALUE))
-#define IS_VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_VALUE))
-#define VALUE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_VALUE, ValueClass))
+GType i__value_get_type (void);
+#define TYPE_I__VALUE (i__value_get_type())
+#define I__VALUE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__VALUE, I_Value))
+#define I__VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__VALUE, I_ValueClass))
+#define IS_I__VALUE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__VALUE))
+#define IS_I__VALUE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__VALUE))
+#define I__VALUE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__VALUE, I_ValueClass))
 
-/* struct Property */
-struct _Property
+/* struct I_Property */
+struct _I_Property
 { 
   ThriftStruct parent; 
 
   /* public */
   gchar * field;
   gboolean __isset_field;
-  Value * value;
+  I_Value * value;
   gboolean __isset_value;
 };
-typedef struct _Property Property;
+typedef struct _I_Property I_Property;
 
-struct _PropertyClass
+struct _I_PropertyClass
 {
   ThriftStructClass parent;
 };
-typedef struct _PropertyClass PropertyClass;
+typedef struct _I_PropertyClass I_PropertyClass;
 
-GType property_get_type (void);
-#define TYPE_PROPERTY (property_get_type())
-#define PROPERTY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_PROPERTY, Property))
-#define PROPERTY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_PROPERTY, PropertyClass))
-#define IS_PROPERTY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_PROPERTY))
-#define IS_PROPERTY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_PROPERTY))
-#define PROPERTY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_PROPERTY, PropertyClass))
+GType i__property_get_type (void);
+#define TYPE_I__PROPERTY (i__property_get_type())
+#define I__PROPERTY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__PROPERTY, I_Property))
+#define I__PROPERTY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__PROPERTY, I_PropertyClass))
+#define IS_I__PROPERTY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__PROPERTY))
+#define IS_I__PROPERTY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__PROPERTY))
+#define I__PROPERTY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__PROPERTY, I_PropertyClass))
 
-/* struct Attribute */
-struct _Attribute
+/* struct I_Attribute */
+struct _I_Attribute
 { 
   ThriftStruct parent; 
 
   /* public */
   gchar * name;
   gboolean __isset_name;
-  ValueType vt;
+  I_ValueType vt;
   gboolean __isset_vt;
 };
-typedef struct _Attribute Attribute;
+typedef struct _I_Attribute I_Attribute;
 
-struct _AttributeClass
+struct _I_AttributeClass
 {
   ThriftStructClass parent;
 };
-typedef struct _AttributeClass AttributeClass;
+typedef struct _I_AttributeClass I_AttributeClass;
 
-GType attribute_get_type (void);
-#define TYPE_ATTRIBUTE (attribute_get_type())
-#define ATTRIBUTE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_ATTRIBUTE, Attribute))
-#define ATTRIBUTE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_ATTRIBUTE, AttributeClass))
-#define IS_ATTRIBUTE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_ATTRIBUTE))
-#define IS_ATTRIBUTE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_ATTRIBUTE))
-#define ATTRIBUTE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_ATTRIBUTE, AttributeClass))
+GType i__attribute_get_type (void);
+#define TYPE_I__ATTRIBUTE (i__attribute_get_type())
+#define I__ATTRIBUTE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__ATTRIBUTE, I_Attribute))
+#define I__ATTRIBUTE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__ATTRIBUTE, I_AttributeClass))
+#define IS_I__ATTRIBUTE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__ATTRIBUTE))
+#define IS_I__ATTRIBUTE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__ATTRIBUTE))
+#define I__ATTRIBUTE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__ATTRIBUTE, I_AttributeClass))
 
-/* struct Schema */
-struct _Schema
+/* struct I_Schema */
+struct _I_Schema
 { 
   ThriftStruct parent; 
 
@@ -242,24 +242,24 @@ struct _Schema
   GPtrArray * attributes;
   gboolean __isset_attributes;
 };
-typedef struct _Schema Schema;
+typedef struct _I_Schema I_Schema;
 
-struct _SchemaClass
+struct _I_SchemaClass
 {
   ThriftStructClass parent;
 };
-typedef struct _SchemaClass SchemaClass;
+typedef struct _I_SchemaClass I_SchemaClass;
 
-GType schema_get_type (void);
-#define TYPE_SCHEMA (schema_get_type())
-#define SCHEMA(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_SCHEMA, Schema))
-#define SCHEMA_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_SCHEMA, SchemaClass))
-#define IS_SCHEMA(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_SCHEMA))
-#define IS_SCHEMA_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_SCHEMA))
-#define SCHEMA_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_SCHEMA, SchemaClass))
+GType i__schema_get_type (void);
+#define TYPE_I__SCHEMA (i__schema_get_type())
+#define I__SCHEMA(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__SCHEMA, I_Schema))
+#define I__SCHEMA_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__SCHEMA, I_SchemaClass))
+#define IS_I__SCHEMA(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__SCHEMA))
+#define IS_I__SCHEMA_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA))
+#define I__SCHEMA_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA, I_SchemaClass))
 
-/* struct Node */
-struct _Node
+/* struct I_Node */
+struct _I_Node
 { 
   ThriftStruct parent; 
 
@@ -269,219 +269,219 @@ struct _Node
   GPtrArray * properties;
   gboolean __isset_properties;
 };
-typedef struct _Node Node;
+typedef struct _I_Node I_Node;
 
-struct _NodeClass
+struct _I_NodeClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeClass NodeClass;
+typedef struct _I_NodeClass I_NodeClass;
 
-GType node_get_type (void);
-#define TYPE_NODE (node_get_type())
-#define NODE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE, Node))
-#define NODE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE, NodeClass))
-#define IS_NODE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE))
-#define IS_NODE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE))
-#define NODE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE, NodeClass))
+GType i__node_get_type (void);
+#define TYPE_I__NODE (i__node_get_type())
+#define I__NODE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE, I_Node))
+#define I__NODE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE, I_NodeClass))
+#define IS_I__NODE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE))
+#define IS_I__NODE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE))
+#define I__NODE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE, I_NodeClass))
 
-/* struct Link */
-struct _Link
+/* struct I_Link */
+struct _I_Link
 { 
   ThriftStruct parent; 
 
   /* public */
   gchar * name;
   gboolean __isset_name;
-  LinkType type;
+  I_LinkType type;
   gboolean __isset_type;
   gchar * first;
   gboolean __isset_first;
   gchar * second;
   gboolean __isset_second;
 };
-typedef struct _Link Link;
+typedef struct _I_Link I_Link;
 
-struct _LinkClass
+struct _I_LinkClass
 {
   ThriftStructClass parent;
 };
-typedef struct _LinkClass LinkClass;
+typedef struct _I_LinkClass I_LinkClass;
 
-GType link_get_type (void);
-#define TYPE_LINK (link_get_type())
-#define LINK(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_LINK, Link))
-#define LINK_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_LINK, LinkClass))
-#define IS_LINK(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_LINK))
-#define IS_LINK_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_LINK))
-#define LINK_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_LINK, LinkClass))
+GType i__link_get_type (void);
+#define TYPE_I__LINK (i__link_get_type())
+#define I__LINK(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__LINK, I_Link))
+#define I__LINK_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__LINK, I_LinkClass))
+#define IS_I__LINK(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__LINK))
+#define IS_I__LINK_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__LINK))
+#define I__LINK_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__LINK, I_LinkClass))
 
-/* struct uComparable */
-struct _uComparable
+/* struct I_uComparable */
+struct _I_uComparable
 { 
   ThriftStruct parent; 
 
   /* public */
   gchar * field_name;
   gboolean __isset_field_name;
-  Value * value;
+  I_Value * value;
   gboolean __isset_value;
 };
-typedef struct _uComparable uComparable;
+typedef struct _I_uComparable I_uComparable;
 
-struct _uComparableClass
+struct _I_uComparableClass
 {
   ThriftStructClass parent;
 };
-typedef struct _uComparableClass uComparableClass;
+typedef struct _I_uComparableClass I_uComparableClass;
 
-GType u_comparable_get_type (void);
-#define TYPE_U_COMPARABLE (u_comparable_get_type())
-#define U_COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_U_COMPARABLE, uComparable))
-#define U_COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_U_COMPARABLE, uComparableClass))
-#define IS_U_COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_U_COMPARABLE))
-#define IS_U_COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_U_COMPARABLE))
-#define U_COMPARABLE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_U_COMPARABLE, uComparableClass))
+GType i_u_comparable_get_type (void);
+#define TYPE_I_U_COMPARABLE (i_u_comparable_get_type())
+#define I_U_COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I_U_COMPARABLE, I_uComparable))
+#define I_U_COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I_U_COMPARABLE, I_uComparableClass))
+#define IS_I_U_COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I_U_COMPARABLE))
+#define IS_I_U_COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I_U_COMPARABLE))
+#define I_U_COMPARABLE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I_U_COMPARABLE, I_uComparableClass))
 
-/* struct Comparable */
-struct _Comparable
+/* struct I_Comparable */
+struct _I_Comparable
 { 
   ThriftStruct parent; 
 
   /* public */
-  ComparableType type;
+  I_ComparableType type;
   gboolean __isset_type;
-  uComparable * comparable;
+  I_uComparable * comparable;
   gboolean __isset_comparable;
 };
-typedef struct _Comparable Comparable;
+typedef struct _I_Comparable I_Comparable;
 
-struct _ComparableClass
+struct _I_ComparableClass
 {
   ThriftStructClass parent;
 };
-typedef struct _ComparableClass ComparableClass;
+typedef struct _I_ComparableClass I_ComparableClass;
 
-GType comparable_get_type (void);
-#define TYPE_COMPARABLE (comparable_get_type())
-#define COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_COMPARABLE, Comparable))
-#define COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_COMPARABLE, ComparableClass))
-#define IS_COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_COMPARABLE))
-#define IS_COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_COMPARABLE))
-#define COMPARABLE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_COMPARABLE, ComparableClass))
+GType i__comparable_get_type (void);
+#define TYPE_I__COMPARABLE (i__comparable_get_type())
+#define I__COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__COMPARABLE, I_Comparable))
+#define I__COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__COMPARABLE, I_ComparableClass))
+#define IS_I__COMPARABLE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__COMPARABLE))
+#define IS_I__COMPARABLE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__COMPARABLE))
+#define I__COMPARABLE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__COMPARABLE, I_ComparableClass))
 
-/* struct Compare */
-struct _Compare
+/* struct I_Compare */
+struct _I_Compare
 { 
   ThriftStruct parent; 
 
   /* public */
-  Comparation cmp;
+  I_Comparation cmp;
   gboolean __isset_cmp;
-  Comparable * with_;
+  I_Comparable * with_;
   gboolean __isset_with_;
 };
-typedef struct _Compare Compare;
+typedef struct _I_Compare I_Compare;
 
-struct _CompareClass
+struct _I_CompareClass
 {
   ThriftStructClass parent;
 };
-typedef struct _CompareClass CompareClass;
+typedef struct _I_CompareClass I_CompareClass;
 
-GType compare_get_type (void);
-#define TYPE_COMPARE (compare_get_type())
-#define COMPARE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_COMPARE, Compare))
-#define COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_COMPARE, CompareClass))
-#define IS_COMPARE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_COMPARE))
-#define IS_COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_COMPARE))
-#define COMPARE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_COMPARE, CompareClass))
+GType i__compare_get_type (void);
+#define TYPE_I__COMPARE (i__compare_get_type())
+#define I__COMPARE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__COMPARE, I_Compare))
+#define I__COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__COMPARE, I_CompareClass))
+#define IS_I__COMPARE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__COMPARE))
+#define IS_I__COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__COMPARE))
+#define I__COMPARE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__COMPARE, I_CompareClass))
 
-/* struct ConditionCompare */
-struct _ConditionCompare
+/* struct I_ConditionCompare */
+struct _I_ConditionCompare
 { 
   ThriftStruct parent; 
 
   /* public */
-  Comparable * left;
+  I_Comparable * left;
   gboolean __isset_left;
-  Compare * compare;
+  I_Compare * compare;
   gboolean __isset_compare;
 };
-typedef struct _ConditionCompare ConditionCompare;
+typedef struct _I_ConditionCompare I_ConditionCompare;
 
-struct _ConditionCompareClass
+struct _I_ConditionCompareClass
 {
   ThriftStructClass parent;
 };
-typedef struct _ConditionCompareClass ConditionCompareClass;
+typedef struct _I_ConditionCompareClass I_ConditionCompareClass;
 
-GType condition_compare_get_type (void);
-#define TYPE_CONDITION_COMPARE (condition_compare_get_type())
-#define CONDITION_COMPARE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_CONDITION_COMPARE, ConditionCompare))
-#define CONDITION_COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_CONDITION_COMPARE, ConditionCompareClass))
-#define IS_CONDITION_COMPARE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_CONDITION_COMPARE))
-#define IS_CONDITION_COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_CONDITION_COMPARE))
-#define CONDITION_COMPARE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_CONDITION_COMPARE, ConditionCompareClass))
+GType i__condition_compare_get_type (void);
+#define TYPE_I__CONDITION_COMPARE (i__condition_compare_get_type())
+#define I__CONDITION_COMPARE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__CONDITION_COMPARE, I_ConditionCompare))
+#define I__CONDITION_COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__CONDITION_COMPARE, I_ConditionCompareClass))
+#define IS_I__CONDITION_COMPARE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__CONDITION_COMPARE))
+#define IS_I__CONDITION_COMPARE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__CONDITION_COMPARE))
+#define I__CONDITION_COMPARE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__CONDITION_COMPARE, I_ConditionCompareClass))
 
-/* struct uPredicate */
-struct _uPredicate
+/* struct I_uPredicate */
+struct _I_uPredicate
 { 
   ThriftStruct parent; 
 
   /* public */
-  ConditionCompare * term;
+  I_ConditionCompare * term;
   gboolean __isset_term;
   GPtrArray * and_;
   gboolean __isset_and_;
   GPtrArray * or_;
   gboolean __isset_or_;
 };
-typedef struct _uPredicate uPredicate;
+typedef struct _I_uPredicate I_uPredicate;
 
-struct _uPredicateClass
+struct _I_uPredicateClass
 {
   ThriftStructClass parent;
 };
-typedef struct _uPredicateClass uPredicateClass;
+typedef struct _I_uPredicateClass I_uPredicateClass;
 
-GType u_predicate_get_type (void);
-#define TYPE_U_PREDICATE (u_predicate_get_type())
-#define U_PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_U_PREDICATE, uPredicate))
-#define U_PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_U_PREDICATE, uPredicateClass))
-#define IS_U_PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_U_PREDICATE))
-#define IS_U_PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_U_PREDICATE))
-#define U_PREDICATE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_U_PREDICATE, uPredicateClass))
+GType i_u_predicate_get_type (void);
+#define TYPE_I_U_PREDICATE (i_u_predicate_get_type())
+#define I_U_PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I_U_PREDICATE, I_uPredicate))
+#define I_U_PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I_U_PREDICATE, I_uPredicateClass))
+#define IS_I_U_PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I_U_PREDICATE))
+#define IS_I_U_PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I_U_PREDICATE))
+#define I_U_PREDICATE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I_U_PREDICATE, I_uPredicateClass))
 
-/* struct Predicate */
-struct _Predicate
+/* struct I_Predicate */
+struct _I_Predicate
 { 
   ThriftStruct parent; 
 
   /* public */
-  PredicateType type;
+  I_PredicateType type;
   gboolean __isset_type;
-  uPredicate * predicate;
+  I_uPredicate * predicate;
   gboolean __isset_predicate;
 };
-typedef struct _Predicate Predicate;
+typedef struct _I_Predicate I_Predicate;
 
-struct _PredicateClass
+struct _I_PredicateClass
 {
   ThriftStructClass parent;
 };
-typedef struct _PredicateClass PredicateClass;
+typedef struct _I_PredicateClass I_PredicateClass;
 
-GType predicate_get_type (void);
-#define TYPE_PREDICATE (predicate_get_type())
-#define PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_PREDICATE, Predicate))
-#define PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_PREDICATE, PredicateClass))
-#define IS_PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_PREDICATE))
-#define IS_PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_PREDICATE))
-#define PREDICATE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_PREDICATE, PredicateClass))
+GType i__predicate_get_type (void);
+#define TYPE_I__PREDICATE (i__predicate_get_type())
+#define I__PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__PREDICATE, I_Predicate))
+#define I__PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__PREDICATE, I_PredicateClass))
+#define IS_I__PREDICATE(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__PREDICATE))
+#define IS_I__PREDICATE_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__PREDICATE))
+#define I__PREDICATE_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__PREDICATE, I_PredicateClass))
 
-/* struct NodeCondition */
-struct _NodeCondition
+/* struct I_NodeCondition */
+struct _I_NodeCondition
 { 
   ThriftStruct parent; 
 
@@ -493,111 +493,111 @@ struct _NodeCondition
   GPtrArray * predicates;
   gboolean __isset_predicates;
 };
-typedef struct _NodeCondition NodeCondition;
+typedef struct _I_NodeCondition I_NodeCondition;
 
-struct _NodeConditionClass
+struct _I_NodeConditionClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeConditionClass NodeConditionClass;
+typedef struct _I_NodeConditionClass I_NodeConditionClass;
 
-GType node_condition_get_type (void);
-#define TYPE_NODE_CONDITION (node_condition_get_type())
-#define NODE_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE_CONDITION, NodeCondition))
-#define NODE_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE_CONDITION, NodeConditionClass))
-#define IS_NODE_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE_CONDITION))
-#define IS_NODE_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE_CONDITION))
-#define NODE_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE_CONDITION, NodeConditionClass))
+GType i__node_condition_get_type (void);
+#define TYPE_I__NODE_CONDITION (i__node_condition_get_type())
+#define I__NODE_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE_CONDITION, I_NodeCondition))
+#define I__NODE_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE_CONDITION, I_NodeConditionClass))
+#define IS_I__NODE_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE_CONDITION))
+#define IS_I__NODE_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE_CONDITION))
+#define I__NODE_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE_CONDITION, I_NodeConditionClass))
 
-/* struct LinkCondition */
-struct _LinkCondition
+/* struct I_LinkCondition */
+struct _I_LinkCondition
 { 
   ThriftStruct parent; 
 
   /* public */
   gboolean is_null;
   gboolean __isset_is_null;
-  LinkType link_type;
+  I_LinkType link_type;
   gboolean __isset_link_type;
   gchar * link_name;
   gboolean __isset_link_name;
 };
-typedef struct _LinkCondition LinkCondition;
+typedef struct _I_LinkCondition I_LinkCondition;
 
-struct _LinkConditionClass
+struct _I_LinkConditionClass
 {
   ThriftStructClass parent;
 };
-typedef struct _LinkConditionClass LinkConditionClass;
+typedef struct _I_LinkConditionClass I_LinkConditionClass;
 
-GType link_condition_get_type (void);
-#define TYPE_LINK_CONDITION (link_condition_get_type())
-#define LINK_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_LINK_CONDITION, LinkCondition))
-#define LINK_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_LINK_CONDITION, LinkConditionClass))
-#define IS_LINK_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_LINK_CONDITION))
-#define IS_LINK_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_LINK_CONDITION))
-#define LINK_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_LINK_CONDITION, LinkConditionClass))
+GType i__link_condition_get_type (void);
+#define TYPE_I__LINK_CONDITION (i__link_condition_get_type())
+#define I__LINK_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__LINK_CONDITION, I_LinkCondition))
+#define I__LINK_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__LINK_CONDITION, I_LinkConditionClass))
+#define IS_I__LINK_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__LINK_CONDITION))
+#define IS_I__LINK_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__LINK_CONDITION))
+#define I__LINK_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__LINK_CONDITION, I_LinkConditionClass))
 
-/* struct MatchCondition */
-struct _MatchCondition
+/* struct I_MatchCondition */
+struct _I_MatchCondition
 { 
   ThriftStruct parent; 
 
   /* public */
   gboolean is_null;
   gboolean __isset_is_null;
-  NodeCondition * node_first_condition;
+  I_NodeCondition * node_first_condition;
   gboolean __isset_node_first_condition;
-  NodeCondition * node_second_condition;
+  I_NodeCondition * node_second_condition;
   gboolean __isset_node_second_condition;
-  NodeCondition * node_cross_condition;
+  I_NodeCondition * node_cross_condition;
   gboolean __isset_node_cross_condition;
-  LinkCondition * link_condition;
+  I_LinkCondition * link_condition;
   gboolean __isset_link_condition;
 };
-typedef struct _MatchCondition MatchCondition;
+typedef struct _I_MatchCondition I_MatchCondition;
 
-struct _MatchConditionClass
+struct _I_MatchConditionClass
 {
   ThriftStructClass parent;
 };
-typedef struct _MatchConditionClass MatchConditionClass;
+typedef struct _I_MatchConditionClass I_MatchConditionClass;
 
-GType match_condition_get_type (void);
-#define TYPE_MATCH_CONDITION (match_condition_get_type())
-#define MATCH_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_MATCH_CONDITION, MatchCondition))
-#define MATCH_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_MATCH_CONDITION, MatchConditionClass))
-#define IS_MATCH_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_MATCH_CONDITION))
-#define IS_MATCH_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_MATCH_CONDITION))
-#define MATCH_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_MATCH_CONDITION, MatchConditionClass))
+GType i__match_condition_get_type (void);
+#define TYPE_I__MATCH_CONDITION (i__match_condition_get_type())
+#define I__MATCH_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__MATCH_CONDITION, I_MatchCondition))
+#define I__MATCH_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__MATCH_CONDITION, I_MatchConditionClass))
+#define IS_I__MATCH_CONDITION(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__MATCH_CONDITION))
+#define IS_I__MATCH_CONDITION_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__MATCH_CONDITION))
+#define I__MATCH_CONDITION_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__MATCH_CONDITION, I_MatchConditionClass))
 
-/* struct SchemaCreateQuery */
-struct _SchemaCreateQuery
+/* struct I_SchemaCreateQuery */
+struct _I_SchemaCreateQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  Schema * schema;
+  I_Schema * schema;
   gboolean __isset_schema;
 };
-typedef struct _SchemaCreateQuery SchemaCreateQuery;
+typedef struct _I_SchemaCreateQuery I_SchemaCreateQuery;
 
-struct _SchemaCreateQueryClass
+struct _I_SchemaCreateQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _SchemaCreateQueryClass SchemaCreateQueryClass;
+typedef struct _I_SchemaCreateQueryClass I_SchemaCreateQueryClass;
 
-GType schema_create_query_get_type (void);
-#define TYPE_SCHEMA_CREATE_QUERY (schema_create_query_get_type())
-#define SCHEMA_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_SCHEMA_CREATE_QUERY, SchemaCreateQuery))
-#define SCHEMA_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_SCHEMA_CREATE_QUERY, SchemaCreateQueryClass))
-#define IS_SCHEMA_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_SCHEMA_CREATE_QUERY))
-#define IS_SCHEMA_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_SCHEMA_CREATE_QUERY))
-#define SCHEMA_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_SCHEMA_CREATE_QUERY, SchemaCreateQueryClass))
+GType i__schema_create_query_get_type (void);
+#define TYPE_I__SCHEMA_CREATE_QUERY (i__schema_create_query_get_type())
+#define I__SCHEMA_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__SCHEMA_CREATE_QUERY, I_SchemaCreateQuery))
+#define I__SCHEMA_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__SCHEMA_CREATE_QUERY, I_SchemaCreateQueryClass))
+#define IS_I__SCHEMA_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__SCHEMA_CREATE_QUERY))
+#define IS_I__SCHEMA_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA_CREATE_QUERY))
+#define I__SCHEMA_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA_CREATE_QUERY, I_SchemaCreateQueryClass))
 
-/* struct SchemaGetQuery */
-struct _SchemaGetQuery
+/* struct I_SchemaGetQuery */
+struct _I_SchemaGetQuery
 { 
   ThriftStruct parent; 
 
@@ -605,24 +605,24 @@ struct _SchemaGetQuery
   gchar * schema_name;
   gboolean __isset_schema_name;
 };
-typedef struct _SchemaGetQuery SchemaGetQuery;
+typedef struct _I_SchemaGetQuery I_SchemaGetQuery;
 
-struct _SchemaGetQueryClass
+struct _I_SchemaGetQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _SchemaGetQueryClass SchemaGetQueryClass;
+typedef struct _I_SchemaGetQueryClass I_SchemaGetQueryClass;
 
-GType schema_get_query_get_type (void);
-#define TYPE_SCHEMA_GET_QUERY (schema_get_query_get_type())
-#define SCHEMA_GET_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_SCHEMA_GET_QUERY, SchemaGetQuery))
-#define SCHEMA_GET_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_SCHEMA_GET_QUERY, SchemaGetQueryClass))
-#define IS_SCHEMA_GET_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_SCHEMA_GET_QUERY))
-#define IS_SCHEMA_GET_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_SCHEMA_GET_QUERY))
-#define SCHEMA_GET_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_SCHEMA_GET_QUERY, SchemaGetQueryClass))
+GType i__schema_get_query_get_type (void);
+#define TYPE_I__SCHEMA_GET_QUERY (i__schema_get_query_get_type())
+#define I__SCHEMA_GET_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__SCHEMA_GET_QUERY, I_SchemaGetQuery))
+#define I__SCHEMA_GET_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__SCHEMA_GET_QUERY, I_SchemaGetQueryClass))
+#define IS_I__SCHEMA_GET_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__SCHEMA_GET_QUERY))
+#define IS_I__SCHEMA_GET_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA_GET_QUERY))
+#define I__SCHEMA_GET_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA_GET_QUERY, I_SchemaGetQueryClass))
 
-/* struct SchemaDeleteQuery */
-struct _SchemaDeleteQuery
+/* struct I_SchemaDeleteQuery */
+struct _I_SchemaDeleteQuery
 { 
   ThriftStruct parent; 
 
@@ -630,304 +630,304 @@ struct _SchemaDeleteQuery
   gchar * schema_name;
   gboolean __isset_schema_name;
 };
-typedef struct _SchemaDeleteQuery SchemaDeleteQuery;
+typedef struct _I_SchemaDeleteQuery I_SchemaDeleteQuery;
 
-struct _SchemaDeleteQueryClass
+struct _I_SchemaDeleteQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _SchemaDeleteQueryClass SchemaDeleteQueryClass;
+typedef struct _I_SchemaDeleteQueryClass I_SchemaDeleteQueryClass;
 
-GType schema_delete_query_get_type (void);
-#define TYPE_SCHEMA_DELETE_QUERY (schema_delete_query_get_type())
-#define SCHEMA_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_SCHEMA_DELETE_QUERY, SchemaDeleteQuery))
-#define SCHEMA_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_SCHEMA_DELETE_QUERY, SchemaDeleteQueryClass))
-#define IS_SCHEMA_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_SCHEMA_DELETE_QUERY))
-#define IS_SCHEMA_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_SCHEMA_DELETE_QUERY))
-#define SCHEMA_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_SCHEMA_DELETE_QUERY, SchemaDeleteQueryClass))
+GType i__schema_delete_query_get_type (void);
+#define TYPE_I__SCHEMA_DELETE_QUERY (i__schema_delete_query_get_type())
+#define I__SCHEMA_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__SCHEMA_DELETE_QUERY, I_SchemaDeleteQuery))
+#define I__SCHEMA_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__SCHEMA_DELETE_QUERY, I_SchemaDeleteQueryClass))
+#define IS_I__SCHEMA_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__SCHEMA_DELETE_QUERY))
+#define IS_I__SCHEMA_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA_DELETE_QUERY))
+#define I__SCHEMA_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA_DELETE_QUERY, I_SchemaDeleteQueryClass))
 
-/* struct NodeCreateQuery */
-struct _NodeCreateQuery
+/* struct I_NodeCreateQuery */
+struct _I_NodeCreateQuery
 { 
   ThriftStruct parent; 
 
   /* public */
   gchar * schema_name;
   gboolean __isset_schema_name;
-  Node * node;
+  I_Node * node;
   gboolean __isset_node;
 };
-typedef struct _NodeCreateQuery NodeCreateQuery;
+typedef struct _I_NodeCreateQuery I_NodeCreateQuery;
 
-struct _NodeCreateQueryClass
+struct _I_NodeCreateQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeCreateQueryClass NodeCreateQueryClass;
+typedef struct _I_NodeCreateQueryClass I_NodeCreateQueryClass;
 
-GType node_create_query_get_type (void);
-#define TYPE_NODE_CREATE_QUERY (node_create_query_get_type())
-#define NODE_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE_CREATE_QUERY, NodeCreateQuery))
-#define NODE_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE_CREATE_QUERY, NodeCreateQueryClass))
-#define IS_NODE_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE_CREATE_QUERY))
-#define IS_NODE_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE_CREATE_QUERY))
-#define NODE_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE_CREATE_QUERY, NodeCreateQueryClass))
+GType i__node_create_query_get_type (void);
+#define TYPE_I__NODE_CREATE_QUERY (i__node_create_query_get_type())
+#define I__NODE_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE_CREATE_QUERY, I_NodeCreateQuery))
+#define I__NODE_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE_CREATE_QUERY, I_NodeCreateQueryClass))
+#define IS_I__NODE_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE_CREATE_QUERY))
+#define IS_I__NODE_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE_CREATE_QUERY))
+#define I__NODE_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE_CREATE_QUERY, I_NodeCreateQueryClass))
 
-/* struct NodeUpdateQuery */
-struct _NodeUpdateQuery
+/* struct I_NodeUpdateQuery */
+struct _I_NodeUpdateQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  NodeCondition * condition;
+  I_NodeCondition * condition;
   gboolean __isset_condition;
   GPtrArray * properties;
   gboolean __isset_properties;
 };
-typedef struct _NodeUpdateQuery NodeUpdateQuery;
+typedef struct _I_NodeUpdateQuery I_NodeUpdateQuery;
 
-struct _NodeUpdateQueryClass
+struct _I_NodeUpdateQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeUpdateQueryClass NodeUpdateQueryClass;
+typedef struct _I_NodeUpdateQueryClass I_NodeUpdateQueryClass;
 
-GType node_update_query_get_type (void);
-#define TYPE_NODE_UPDATE_QUERY (node_update_query_get_type())
-#define NODE_UPDATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE_UPDATE_QUERY, NodeUpdateQuery))
-#define NODE_UPDATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE_UPDATE_QUERY, NodeUpdateQueryClass))
-#define IS_NODE_UPDATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE_UPDATE_QUERY))
-#define IS_NODE_UPDATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE_UPDATE_QUERY))
-#define NODE_UPDATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE_UPDATE_QUERY, NodeUpdateQueryClass))
+GType i__node_update_query_get_type (void);
+#define TYPE_I__NODE_UPDATE_QUERY (i__node_update_query_get_type())
+#define I__NODE_UPDATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE_UPDATE_QUERY, I_NodeUpdateQuery))
+#define I__NODE_UPDATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE_UPDATE_QUERY, I_NodeUpdateQueryClass))
+#define IS_I__NODE_UPDATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE_UPDATE_QUERY))
+#define IS_I__NODE_UPDATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE_UPDATE_QUERY))
+#define I__NODE_UPDATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE_UPDATE_QUERY, I_NodeUpdateQueryClass))
 
-/* struct NodeDeleteQuery */
-struct _NodeDeleteQuery
+/* struct I_NodeDeleteQuery */
+struct _I_NodeDeleteQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  NodeCondition * condition;
+  I_NodeCondition * condition;
   gboolean __isset_condition;
 };
-typedef struct _NodeDeleteQuery NodeDeleteQuery;
+typedef struct _I_NodeDeleteQuery I_NodeDeleteQuery;
 
-struct _NodeDeleteQueryClass
+struct _I_NodeDeleteQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeDeleteQueryClass NodeDeleteQueryClass;
+typedef struct _I_NodeDeleteQueryClass I_NodeDeleteQueryClass;
 
-GType node_delete_query_get_type (void);
-#define TYPE_NODE_DELETE_QUERY (node_delete_query_get_type())
-#define NODE_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE_DELETE_QUERY, NodeDeleteQuery))
-#define NODE_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE_DELETE_QUERY, NodeDeleteQueryClass))
-#define IS_NODE_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE_DELETE_QUERY))
-#define IS_NODE_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE_DELETE_QUERY))
-#define NODE_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE_DELETE_QUERY, NodeDeleteQueryClass))
+GType i__node_delete_query_get_type (void);
+#define TYPE_I__NODE_DELETE_QUERY (i__node_delete_query_get_type())
+#define I__NODE_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE_DELETE_QUERY, I_NodeDeleteQuery))
+#define I__NODE_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE_DELETE_QUERY, I_NodeDeleteQueryClass))
+#define IS_I__NODE_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE_DELETE_QUERY))
+#define IS_I__NODE_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE_DELETE_QUERY))
+#define I__NODE_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE_DELETE_QUERY, I_NodeDeleteQueryClass))
 
-/* struct NodeMatchQuery */
-struct _NodeMatchQuery
+/* struct I_NodeMatchQuery */
+struct _I_NodeMatchQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  NodeCondition * condition;
+  I_NodeCondition * condition;
   gboolean __isset_condition;
 };
-typedef struct _NodeMatchQuery NodeMatchQuery;
+typedef struct _I_NodeMatchQuery I_NodeMatchQuery;
 
-struct _NodeMatchQueryClass
+struct _I_NodeMatchQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _NodeMatchQueryClass NodeMatchQueryClass;
+typedef struct _I_NodeMatchQueryClass I_NodeMatchQueryClass;
 
-GType node_match_query_get_type (void);
-#define TYPE_NODE_MATCH_QUERY (node_match_query_get_type())
-#define NODE_MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_NODE_MATCH_QUERY, NodeMatchQuery))
-#define NODE_MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_NODE_MATCH_QUERY, NodeMatchQueryClass))
-#define IS_NODE_MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_NODE_MATCH_QUERY))
-#define IS_NODE_MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_NODE_MATCH_QUERY))
-#define NODE_MATCH_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_NODE_MATCH_QUERY, NodeMatchQueryClass))
+GType i__node_match_query_get_type (void);
+#define TYPE_I__NODE_MATCH_QUERY (i__node_match_query_get_type())
+#define I__NODE_MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__NODE_MATCH_QUERY, I_NodeMatchQuery))
+#define I__NODE_MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__NODE_MATCH_QUERY, I_NodeMatchQueryClass))
+#define IS_I__NODE_MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__NODE_MATCH_QUERY))
+#define IS_I__NODE_MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__NODE_MATCH_QUERY))
+#define I__NODE_MATCH_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__NODE_MATCH_QUERY, I_NodeMatchQueryClass))
 
-/* struct LinkCreateQuery */
-struct _LinkCreateQuery
+/* struct I_LinkCreateQuery */
+struct _I_LinkCreateQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  Link * link;
+  I_Link * link;
   gboolean __isset_link;
 };
-typedef struct _LinkCreateQuery LinkCreateQuery;
+typedef struct _I_LinkCreateQuery I_LinkCreateQuery;
 
-struct _LinkCreateQueryClass
+struct _I_LinkCreateQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _LinkCreateQueryClass LinkCreateQueryClass;
+typedef struct _I_LinkCreateQueryClass I_LinkCreateQueryClass;
 
-GType link_create_query_get_type (void);
-#define TYPE_LINK_CREATE_QUERY (link_create_query_get_type())
-#define LINK_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_LINK_CREATE_QUERY, LinkCreateQuery))
-#define LINK_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_LINK_CREATE_QUERY, LinkCreateQueryClass))
-#define IS_LINK_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_LINK_CREATE_QUERY))
-#define IS_LINK_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_LINK_CREATE_QUERY))
-#define LINK_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_LINK_CREATE_QUERY, LinkCreateQueryClass))
+GType i__link_create_query_get_type (void);
+#define TYPE_I__LINK_CREATE_QUERY (i__link_create_query_get_type())
+#define I__LINK_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__LINK_CREATE_QUERY, I_LinkCreateQuery))
+#define I__LINK_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__LINK_CREATE_QUERY, I_LinkCreateQueryClass))
+#define IS_I__LINK_CREATE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__LINK_CREATE_QUERY))
+#define IS_I__LINK_CREATE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__LINK_CREATE_QUERY))
+#define I__LINK_CREATE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__LINK_CREATE_QUERY, I_LinkCreateQueryClass))
 
-/* struct LinkDeleteQuery */
-struct _LinkDeleteQuery
+/* struct I_LinkDeleteQuery */
+struct _I_LinkDeleteQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  MatchCondition * condition;
+  I_MatchCondition * condition;
   gboolean __isset_condition;
 };
-typedef struct _LinkDeleteQuery LinkDeleteQuery;
+typedef struct _I_LinkDeleteQuery I_LinkDeleteQuery;
 
-struct _LinkDeleteQueryClass
+struct _I_LinkDeleteQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _LinkDeleteQueryClass LinkDeleteQueryClass;
+typedef struct _I_LinkDeleteQueryClass I_LinkDeleteQueryClass;
 
-GType link_delete_query_get_type (void);
-#define TYPE_LINK_DELETE_QUERY (link_delete_query_get_type())
-#define LINK_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_LINK_DELETE_QUERY, LinkDeleteQuery))
-#define LINK_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_LINK_DELETE_QUERY, LinkDeleteQueryClass))
-#define IS_LINK_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_LINK_DELETE_QUERY))
-#define IS_LINK_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_LINK_DELETE_QUERY))
-#define LINK_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_LINK_DELETE_QUERY, LinkDeleteQueryClass))
+GType i__link_delete_query_get_type (void);
+#define TYPE_I__LINK_DELETE_QUERY (i__link_delete_query_get_type())
+#define I__LINK_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__LINK_DELETE_QUERY, I_LinkDeleteQuery))
+#define I__LINK_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__LINK_DELETE_QUERY, I_LinkDeleteQueryClass))
+#define IS_I__LINK_DELETE_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__LINK_DELETE_QUERY))
+#define IS_I__LINK_DELETE_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__LINK_DELETE_QUERY))
+#define I__LINK_DELETE_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__LINK_DELETE_QUERY, I_LinkDeleteQueryClass))
 
-/* struct MatchQuery */
-struct _MatchQuery
+/* struct I_MatchQuery */
+struct _I_MatchQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  MatchCondition * condition;
+  I_MatchCondition * condition;
   gboolean __isset_condition;
 };
-typedef struct _MatchQuery MatchQuery;
+typedef struct _I_MatchQuery I_MatchQuery;
 
-struct _MatchQueryClass
+struct _I_MatchQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _MatchQueryClass MatchQueryClass;
+typedef struct _I_MatchQueryClass I_MatchQueryClass;
 
-GType match_query_get_type (void);
-#define TYPE_MATCH_QUERY (match_query_get_type())
-#define MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_MATCH_QUERY, MatchQuery))
-#define MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_MATCH_QUERY, MatchQueryClass))
-#define IS_MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_MATCH_QUERY))
-#define IS_MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_MATCH_QUERY))
-#define MATCH_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_MATCH_QUERY, MatchQueryClass))
+GType i__match_query_get_type (void);
+#define TYPE_I__MATCH_QUERY (i__match_query_get_type())
+#define I__MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__MATCH_QUERY, I_MatchQuery))
+#define I__MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__MATCH_QUERY, I_MatchQueryClass))
+#define IS_I__MATCH_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__MATCH_QUERY))
+#define IS_I__MATCH_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__MATCH_QUERY))
+#define I__MATCH_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__MATCH_QUERY, I_MatchQueryClass))
 
-/* struct uQuery */
-struct _uQuery
+/* struct I_uQuery */
+struct _I_uQuery
 { 
   ThriftStruct parent; 
 
   /* public */
-  SchemaCreateQuery * schema_create_query;
+  I_SchemaCreateQuery * schema_create_query;
   gboolean __isset_schema_create_query;
-  SchemaGetQuery * schema_get_query;
+  I_SchemaGetQuery * schema_get_query;
   gboolean __isset_schema_get_query;
-  SchemaDeleteQuery * schema_delete_query;
+  I_SchemaDeleteQuery * schema_delete_query;
   gboolean __isset_schema_delete_query;
-  NodeCreateQuery * node_create_query;
+  I_NodeCreateQuery * node_create_query;
   gboolean __isset_node_create_query;
-  NodeUpdateQuery * node_update_query;
+  I_NodeUpdateQuery * node_update_query;
   gboolean __isset_node_update_query;
-  NodeDeleteQuery * node_delete_query;
+  I_NodeDeleteQuery * node_delete_query;
   gboolean __isset_node_delete_query;
-  NodeMatchQuery * node_match_query;
+  I_NodeMatchQuery * node_match_query;
   gboolean __isset_node_match_query;
-  LinkCreateQuery * link_create_query;
+  I_LinkCreateQuery * link_create_query;
   gboolean __isset_link_create_query;
-  LinkDeleteQuery * link_delete_query;
+  I_LinkDeleteQuery * link_delete_query;
   gboolean __isset_link_delete_query;
-  MatchQuery * match_query;
+  I_MatchQuery * match_query;
   gboolean __isset_match_query;
 };
-typedef struct _uQuery uQuery;
+typedef struct _I_uQuery I_uQuery;
 
-struct _uQueryClass
+struct _I_uQueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _uQueryClass uQueryClass;
+typedef struct _I_uQueryClass I_uQueryClass;
 
-GType u_query_get_type (void);
-#define TYPE_U_QUERY (u_query_get_type())
-#define U_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_U_QUERY, uQuery))
-#define U_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_U_QUERY, uQueryClass))
-#define IS_U_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_U_QUERY))
-#define IS_U_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_U_QUERY))
-#define U_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_U_QUERY, uQueryClass))
+GType i_u_query_get_type (void);
+#define TYPE_I_U_QUERY (i_u_query_get_type())
+#define I_U_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I_U_QUERY, I_uQuery))
+#define I_U_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I_U_QUERY, I_uQueryClass))
+#define IS_I_U_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I_U_QUERY))
+#define IS_I_U_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I_U_QUERY))
+#define I_U_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I_U_QUERY, I_uQueryClass))
 
-/* struct Query */
-struct _Query
+/* struct I_Query */
+struct _I_Query
 { 
   ThriftStruct parent; 
 
   /* public */
-  QueryType type;
+  I_QueryType type;
   gboolean __isset_type;
-  uQuery * query;
+  I_uQuery * query;
   gboolean __isset_query;
 };
-typedef struct _Query Query;
+typedef struct _I_Query I_Query;
 
-struct _QueryClass
+struct _I_QueryClass
 {
   ThriftStructClass parent;
 };
-typedef struct _QueryClass QueryClass;
+typedef struct _I_QueryClass I_QueryClass;
 
-GType query_get_type (void);
-#define TYPE_QUERY (query_get_type())
-#define QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_QUERY, Query))
-#define QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_QUERY, QueryClass))
-#define IS_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_QUERY))
-#define IS_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_QUERY))
-#define QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_QUERY, QueryClass))
+GType i__query_get_type (void);
+#define TYPE_I__QUERY (i__query_get_type())
+#define I__QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__QUERY, I_Query))
+#define I__QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__QUERY, I_QueryClass))
+#define IS_I__QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__QUERY))
+#define IS_I__QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__QUERY))
+#define I__QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__QUERY, I_QueryClass))
 
-/* struct Result */
-struct _Result
+/* struct I_Result */
+struct _I_Result
 { 
   ThriftStruct parent; 
 
   /* public */
-  Return return_items;
+  I_Return return_items;
   gboolean __isset_return_items;
-  Node * first;
+  I_Node * first;
   gboolean __isset_first;
-  Link * link;
+  I_Link * link;
   gboolean __isset_link;
-  Node * second;
+  I_Node * second;
   gboolean __isset_second;
 };
-typedef struct _Result Result;
+typedef struct _I_Result I_Result;
 
-struct _ResultClass
+struct _I_ResultClass
 {
   ThriftStructClass parent;
 };
-typedef struct _ResultClass ResultClass;
+typedef struct _I_ResultClass I_ResultClass;
 
-GType result_get_type (void);
-#define TYPE_RESULT (result_get_type())
-#define RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_RESULT, Result))
-#define RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_RESULT, ResultClass))
-#define IS_RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_RESULT))
-#define IS_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_RESULT))
-#define RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_RESULT, ResultClass))
+GType i__result_get_type (void);
+#define TYPE_I__RESULT (i__result_get_type())
+#define I__RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__RESULT, I_Result))
+#define I__RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__RESULT, I_ResultClass))
+#define IS_I__RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__RESULT))
+#define IS_I__RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__RESULT))
+#define I__RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__RESULT, I_ResultClass))
 
-/* struct uQueryResult */
-struct _uQueryResult
+/* struct I_uQueryResult */
+struct _I_uQueryResult
 { 
   ThriftStruct parent; 
 
@@ -937,50 +937,50 @@ struct _uQueryResult
   GPtrArray * items;
   gboolean __isset_items;
 };
-typedef struct _uQueryResult uQueryResult;
+typedef struct _I_uQueryResult I_uQueryResult;
 
-struct _uQueryResultClass
+struct _I_uQueryResultClass
 {
   ThriftStructClass parent;
 };
-typedef struct _uQueryResultClass uQueryResultClass;
+typedef struct _I_uQueryResultClass I_uQueryResultClass;
 
-GType u_query_result_get_type (void);
-#define TYPE_U_QUERY_RESULT (u_query_result_get_type())
-#define U_QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_U_QUERY_RESULT, uQueryResult))
-#define U_QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_U_QUERY_RESULT, uQueryResultClass))
-#define IS_U_QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_U_QUERY_RESULT))
-#define IS_U_QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_U_QUERY_RESULT))
-#define U_QUERY_RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_U_QUERY_RESULT, uQueryResultClass))
+GType i_u_query_result_get_type (void);
+#define TYPE_I_U_QUERY_RESULT (i_u_query_result_get_type())
+#define I_U_QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I_U_QUERY_RESULT, I_uQueryResult))
+#define I_U_QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I_U_QUERY_RESULT, I_uQueryResultClass))
+#define IS_I_U_QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I_U_QUERY_RESULT))
+#define IS_I_U_QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I_U_QUERY_RESULT))
+#define I_U_QUERY_RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I_U_QUERY_RESULT, I_uQueryResultClass))
 
-/* struct QueryResult */
-struct _QueryResult
+/* struct I_QueryResult */
+struct _I_QueryResult
 { 
   ThriftStruct parent; 
 
   /* public */
-  QueryResultType type;
+  I_QueryResultType type;
   gboolean __isset_type;
   gchar * message;
   gboolean __isset_message;
-  uQueryResult * result;
+  I_uQueryResult * result;
   gboolean __isset_result;
 };
-typedef struct _QueryResult QueryResult;
+typedef struct _I_QueryResult I_QueryResult;
 
-struct _QueryResultClass
+struct _I_QueryResultClass
 {
   ThriftStructClass parent;
 };
-typedef struct _QueryResultClass QueryResultClass;
+typedef struct _I_QueryResultClass I_QueryResultClass;
 
-GType query_result_get_type (void);
-#define TYPE_QUERY_RESULT (query_result_get_type())
-#define QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_QUERY_RESULT, QueryResult))
-#define QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_QUERY_RESULT, QueryResultClass))
-#define IS_QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_QUERY_RESULT))
-#define IS_QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_QUERY_RESULT))
-#define QUERY_RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_QUERY_RESULT, QueryResultClass))
+GType i__query_result_get_type (void);
+#define TYPE_I__QUERY_RESULT (i__query_result_get_type())
+#define I__QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__QUERY_RESULT, I_QueryResult))
+#define I__QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__QUERY_RESULT, I_QueryResultClass))
+#define IS_I__QUERY_RESULT(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__QUERY_RESULT))
+#define IS_I__QUERY_RESULT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__QUERY_RESULT))
+#define I__QUERY_RESULT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__QUERY_RESULT, I_QueryResultClass))
 
 /* constants */
 
@@ -990,7 +990,7 @@ struct _querySvcExecuteArgs
   ThriftStruct parent; 
 
   /* public */
-  Query * query;
+  I_Query * query;
   gboolean __isset_query;
 };
 typedef struct _querySvcExecuteArgs querySvcExecuteArgs;
@@ -1015,7 +1015,7 @@ struct _querySvcExecuteResult
   ThriftStruct parent; 
 
   /* public */
-  QueryResult * success;
+  I_QueryResult * success;
   gboolean __isset_success;
 };
 typedef struct _querySvcExecuteResult querySvcExecuteResult;

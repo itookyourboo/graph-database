@@ -18,7 +18,7 @@ struct _querySvcIfInterface
 {
   GTypeInterface parent;
 
-  gboolean (*execute) (querySvcIf *iface, QueryResult ** _return, const Query * query, GError **error);
+  gboolean (*execute) (querySvcIf *iface, I_QueryResult ** _return, const I_Query * query, GError **error);
 };
 typedef struct _querySvcIfInterface querySvcIfInterface;
 
@@ -28,7 +28,7 @@ GType query_svc_if_get_type (void);
 #define IS_QUERY_SVC_IF(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_QUERY_SVC_IF))
 #define QUERY_SVC_IF_GET_INTERFACE(inst) (G_TYPE_INSTANCE_GET_INTERFACE ((inst), TYPE_QUERY_SVC_IF, querySvcIfInterface))
 
-gboolean query_svc_if_execute (querySvcIf *iface, QueryResult ** _return, const Query * query, GError **error);
+gboolean query_svc_if_execute (querySvcIf *iface, I_QueryResult ** _return, const I_Query * query, GError **error);
 
 /* querySvc service client */
 struct _querySvcClient
@@ -54,9 +54,9 @@ GType query_svc_client_get_type (void);
 #define QUERY_SVC_IS_CLIENT_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_QUERY_SVC_CLIENT))
 #define QUERY_SVC_CLIENT_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_QUERY_SVC_CLIENT, querySvcClientClass))
 
-gboolean query_svc_client_execute (querySvcIf * iface, QueryResult ** _return, const Query * query, GError ** error);
-gboolean query_svc_client_send_execute (querySvcIf * iface, const Query * query, GError ** error);
-gboolean query_svc_client_recv_execute (querySvcIf * iface, QueryResult ** _return, GError ** error);
+gboolean query_svc_client_execute (querySvcIf * iface, I_QueryResult ** _return, const I_Query * query, GError ** error);
+gboolean query_svc_client_send_execute (querySvcIf * iface, const I_Query * query, GError ** error);
+gboolean query_svc_client_recv_execute (querySvcIf * iface, I_QueryResult ** _return, GError ** error);
 void query_svc_client_set_property (GObject *object, guint property_id, const GValue *value, GParamSpec *pspec);
 void query_svc_client_get_property (GObject *object, guint property_id, GValue *value, GParamSpec *pspec);
 
@@ -71,7 +71,7 @@ struct _querySvcHandlerClass
 {
   GObjectClass parent;
 
-  gboolean (*execute) (querySvcIf *iface, QueryResult ** _return, const Query * query, GError **error);
+  gboolean (*execute) (querySvcIf *iface, I_QueryResult ** _return, const I_Query * query, GError **error);
 };
 typedef struct _querySvcHandlerClass querySvcHandlerClass;
 
@@ -83,7 +83,7 @@ GType query_svc_handler_get_type (void);
 #define IS_QUERY_SVC_HANDLER_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_QUERY_SVC_HANDLER))
 #define QUERY_SVC_HANDLER_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_QUERY_SVC_HANDLER, querySvcHandlerClass))
 
-gboolean query_svc_handler_execute (querySvcIf *iface, QueryResult ** _return, const Query * query, GError **error);
+gboolean query_svc_handler_execute (querySvcIf *iface, I_QueryResult ** _return, const I_Query * query, GError **error);
 
 /* querySvc processor */
 struct _querySvcProcessor

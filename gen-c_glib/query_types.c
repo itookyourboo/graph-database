@@ -12,136 +12,136 @@
 
 /* return the name of the constant */
 const char *
-toString_ValueType(int value) 
+toString_I_ValueType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case VALUE_TYPE_VT_INTEGER:return "VALUE_TYPE_VT_INTEGER";
-  case VALUE_TYPE_VT_STRING:return "VALUE_TYPE_VT_STRING";
-  case VALUE_TYPE_VT_FLOATING:return "VALUE_TYPE_VT_FLOATING";
-  case VALUE_TYPE_VT_BOOLEAN:return "VALUE_TYPE_VT_BOOLEAN";
+  case I__VALUE_TYPE_VT_INTEGER:return "I__VALUE_TYPE_VT_INTEGER";
+  case I__VALUE_TYPE_VT_STRING:return "I__VALUE_TYPE_VT_STRING";
+  case I__VALUE_TYPE_VT_FLOATING:return "I__VALUE_TYPE_VT_FLOATING";
+  case I__VALUE_TYPE_VT_BOOLEAN:return "I__VALUE_TYPE_VT_BOOLEAN";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_LinkType(int value) 
+toString_I_LinkType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case LINK_TYPE_LT_TO:return "LINK_TYPE_LT_TO";
-  case LINK_TYPE_LT_FROM:return "LINK_TYPE_LT_FROM";
-  case LINK_TYPE_LT_BOTH:return "LINK_TYPE_LT_BOTH";
-  case LINK_TYPE_LT_ANY:return "LINK_TYPE_LT_ANY";
+  case I__LINK_TYPE_LT_TO:return "I__LINK_TYPE_LT_TO";
+  case I__LINK_TYPE_LT_FROM:return "I__LINK_TYPE_LT_FROM";
+  case I__LINK_TYPE_LT_BOTH:return "I__LINK_TYPE_LT_BOTH";
+  case I__LINK_TYPE_LT_ANY:return "I__LINK_TYPE_LT_ANY";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_Comparation(int value) 
+toString_I_Comparation(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case COMPARATION_CMP_GT:return "COMPARATION_CMP_GT";
-  case COMPARATION_CMP_LT:return "COMPARATION_CMP_LT";
-  case COMPARATION_CMP_GE:return "COMPARATION_CMP_GE";
-  case COMPARATION_CMP_LE:return "COMPARATION_CMP_LE";
-  case COMPARATION_CMP_EQ:return "COMPARATION_CMP_EQ";
-  case COMPARATION_CMP_NEQ:return "COMPARATION_CMP_NEQ";
-  case COMPARATION_CMP_CONTAINS:return "COMPARATION_CMP_CONTAINS";
+  case I__COMPARATION_CMP_GT:return "I__COMPARATION_CMP_GT";
+  case I__COMPARATION_CMP_LT:return "I__COMPARATION_CMP_LT";
+  case I__COMPARATION_CMP_GE:return "I__COMPARATION_CMP_GE";
+  case I__COMPARATION_CMP_LE:return "I__COMPARATION_CMP_LE";
+  case I__COMPARATION_CMP_EQ:return "I__COMPARATION_CMP_EQ";
+  case I__COMPARATION_CMP_NEQ:return "I__COMPARATION_CMP_NEQ";
+  case I__COMPARATION_CMP_CONTAINS:return "I__COMPARATION_CMP_CONTAINS";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_ComparableType(int value) 
+toString_I_ComparableType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case COMPARABLE_TYPE_CMPT_FIELD:return "COMPARABLE_TYPE_CMPT_FIELD";
-  case COMPARABLE_TYPE_CMPT_VALUE:return "COMPARABLE_TYPE_CMPT_VALUE";
+  case I__COMPARABLE_TYPE_CMPT_FIELD:return "I__COMPARABLE_TYPE_CMPT_FIELD";
+  case I__COMPARABLE_TYPE_CMPT_VALUE:return "I__COMPARABLE_TYPE_CMPT_VALUE";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_PredicateType(int value) 
+toString_I_PredicateType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case PREDICATE_TYPE_PT_TERM:return "PREDICATE_TYPE_PT_TERM";
-  case PREDICATE_TYPE_PT_OR:return "PREDICATE_TYPE_PT_OR";
-  case PREDICATE_TYPE_PT_AND:return "PREDICATE_TYPE_PT_AND";
+  case I__PREDICATE_TYPE_PT_TERM:return "I__PREDICATE_TYPE_PT_TERM";
+  case I__PREDICATE_TYPE_PT_OR:return "I__PREDICATE_TYPE_PT_OR";
+  case I__PREDICATE_TYPE_PT_AND:return "I__PREDICATE_TYPE_PT_AND";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_QueryType(int value) 
+toString_I_QueryType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case QUERY_TYPE_SCHEMA_CREATE:return "QUERY_TYPE_SCHEMA_CREATE";
-  case QUERY_TYPE_SCHEMA_GET:return "QUERY_TYPE_SCHEMA_GET";
-  case QUERY_TYPE_SCHEMA_GET_ALL:return "QUERY_TYPE_SCHEMA_GET_ALL";
-  case QUERY_TYPE_SCHEMA_DELETE:return "QUERY_TYPE_SCHEMA_DELETE";
-  case QUERY_TYPE_NODE_CREATE:return "QUERY_TYPE_NODE_CREATE";
-  case QUERY_TYPE_NODE_UPDATE:return "QUERY_TYPE_NODE_UPDATE";
-  case QUERY_TYPE_NODE_DELETE:return "QUERY_TYPE_NODE_DELETE";
-  case QUERY_TYPE_NODE_MATCH:return "QUERY_TYPE_NODE_MATCH";
-  case QUERY_TYPE_LINK_CREATE:return "QUERY_TYPE_LINK_CREATE";
-  case QUERY_TYPE_LINK_DELETE:return "QUERY_TYPE_LINK_DELETE";
-  case QUERY_TYPE_MATCH:return "QUERY_TYPE_MATCH";
+  case I__QUERY_TYPE_SCHEMA_CREATE:return "I__QUERY_TYPE_SCHEMA_CREATE";
+  case I__QUERY_TYPE_SCHEMA_GET:return "I__QUERY_TYPE_SCHEMA_GET";
+  case I__QUERY_TYPE_SCHEMA_GET_ALL:return "I__QUERY_TYPE_SCHEMA_GET_ALL";
+  case I__QUERY_TYPE_SCHEMA_DELETE:return "I__QUERY_TYPE_SCHEMA_DELETE";
+  case I__QUERY_TYPE_NODE_CREATE:return "I__QUERY_TYPE_NODE_CREATE";
+  case I__QUERY_TYPE_NODE_UPDATE:return "I__QUERY_TYPE_NODE_UPDATE";
+  case I__QUERY_TYPE_NODE_DELETE:return "I__QUERY_TYPE_NODE_DELETE";
+  case I__QUERY_TYPE_NODE_MATCH:return "I__QUERY_TYPE_NODE_MATCH";
+  case I__QUERY_TYPE_LINK_CREATE:return "I__QUERY_TYPE_LINK_CREATE";
+  case I__QUERY_TYPE_LINK_DELETE:return "I__QUERY_TYPE_LINK_DELETE";
+  case I__QUERY_TYPE_MATCH:return "I__QUERY_TYPE_MATCH";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_Return(int value) 
+toString_I_Return(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case RETURN_RETURN_NOTHING:return "RETURN_RETURN_NOTHING";
-  case RETURN_RETURN_NODE_FIRST:return "RETURN_RETURN_NODE_FIRST";
-  case RETURN_RETURN_NODE_SECOND:return "RETURN_RETURN_NODE_SECOND";
-  case RETURN_RETURN_LINK:return "RETURN_RETURN_LINK";
-  case RETURN_RETURN_ALL:return "RETURN_RETURN_ALL";
-  case RETURN_RETURN_UNDEF:return "RETURN_RETURN_UNDEF";
+  case I__RETURN_RETURN_NOTHING:return "I__RETURN_RETURN_NOTHING";
+  case I__RETURN_RETURN_NODE_FIRST:return "I__RETURN_RETURN_NODE_FIRST";
+  case I__RETURN_RETURN_NODE_SECOND:return "I__RETURN_RETURN_NODE_SECOND";
+  case I__RETURN_RETURN_LINK:return "I__RETURN_RETURN_LINK";
+  case I__RETURN_RETURN_ALL:return "I__RETURN_RETURN_ALL";
+  case I__RETURN_RETURN_UNDEF:return "I__RETURN_RETURN_UNDEF";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
 /* return the name of the constant */
 const char *
-toString_QueryResultType(int value) 
+toString_I_QueryResultType(int value) 
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case QUERY_RESULT_TYPE_RESULT_SCHEMA:return "QUERY_RESULT_TYPE_RESULT_SCHEMA";
-  case QUERY_RESULT_TYPE_RESULT_GENERATOR:return "QUERY_RESULT_TYPE_RESULT_GENERATOR";
-  case QUERY_RESULT_TYPE_RESULT_NONE:return "QUERY_RESULT_TYPE_RESULT_NONE";
+  case I__QUERY_RESULT_TYPE_RESULT_SCHEMA:return "I__QUERY_RESULT_TYPE_RESULT_SCHEMA";
+  case I__QUERY_RESULT_TYPE_RESULT_GENERATOR:return "I__QUERY_RESULT_TYPE_RESULT_GENERATOR";
+  case I__QUERY_RESULT_TYPE_RESULT_NONE:return "I__QUERY_RESULT_TYPE_RESULT_NONE";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
 
-enum _uValueProperties
+enum _I_uValueProperties
 {
-  PROP_U_VALUE_0,
-  PROP_U_VALUE_INTEGER,
-  PROP_U_VALUE_STRING_,
-  PROP_U_VALUE_FLOATING,
-  PROP_U_VALUE_BOOLEAN
+  PROP_I_U_VALUE_0,
+  PROP_I_U_VALUE_INTEGER,
+  PROP_I_U_VALUE_STRING_,
+  PROP_I_U_VALUE_FLOATING,
+  PROP_I_U_VALUE_BOOLEAN
 };
 
-/* reads a u_value object */
+/* reads a i_u_value object */
 static gint32
-u_value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -150,7 +150,7 @@ u_value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  uValue * this_object = U_VALUE(object);
+  I_uValue * this_object = I_U_VALUE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -265,14 +265,14 @@ u_value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-u_value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  uValue * this_object = U_VALUE(object);
+  I_uValue * this_object = I_U_VALUE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "uValue", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_uValue", error)) < 0)
     return -1;
   xfer += ret;
   if (this_object->__isset_integer == TRUE) {
@@ -334,33 +334,33 @@ u_value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-u_value_set_property (GObject *object,
-                      guint property_id,
-                      const GValue *value,
-                      GParamSpec *pspec)
+i_u_value_set_property (GObject *object,
+                        guint property_id,
+                        const GValue *value,
+                        GParamSpec *pspec)
 {
-  uValue *self = U_VALUE (object);
+  I_uValue *self = I_U_VALUE (object);
 
   switch (property_id)
   {
-    case PROP_U_VALUE_INTEGER:
+    case PROP_I_U_VALUE_INTEGER:
       self->integer = g_value_get_int (value);
       self->__isset_integer = TRUE;
       break;
 
-    case PROP_U_VALUE_STRING_:
+    case PROP_I_U_VALUE_STRING_:
       if (self->string_ != NULL)
         g_free (self->string_);
       self->string_ = g_value_dup_string (value);
       self->__isset_string_ = TRUE;
       break;
 
-    case PROP_U_VALUE_FLOATING:
+    case PROP_I_U_VALUE_FLOATING:
       self->floating = g_value_get_double (value);
       self->__isset_floating = TRUE;
       break;
 
-    case PROP_U_VALUE_BOOLEAN:
+    case PROP_I_U_VALUE_BOOLEAN:
       self->boolean = g_value_get_boolean (value);
       self->__isset_boolean = TRUE;
       break;
@@ -372,28 +372,28 @@ u_value_set_property (GObject *object,
 }
 
 static void
-u_value_get_property (GObject *object,
-                      guint property_id,
-                      GValue *value,
-                      GParamSpec *pspec)
+i_u_value_get_property (GObject *object,
+                        guint property_id,
+                        GValue *value,
+                        GParamSpec *pspec)
 {
-  uValue *self = U_VALUE (object);
+  I_uValue *self = I_U_VALUE (object);
 
   switch (property_id)
   {
-    case PROP_U_VALUE_INTEGER:
+    case PROP_I_U_VALUE_INTEGER:
       g_value_set_int (value, self->integer);
       break;
 
-    case PROP_U_VALUE_STRING_:
+    case PROP_I_U_VALUE_STRING_:
       g_value_set_string (value, self->string_);
       break;
 
-    case PROP_U_VALUE_FLOATING:
+    case PROP_I_U_VALUE_FLOATING:
       g_value_set_double (value, self->floating);
       break;
 
-    case PROP_U_VALUE_BOOLEAN:
+    case PROP_I_U_VALUE_BOOLEAN:
       g_value_set_boolean (value, self->boolean);
       break;
 
@@ -404,7 +404,7 @@ u_value_get_property (GObject *object,
 }
 
 static void 
-u_value_instance_init (uValue * object)
+i_u_value_instance_init (I_uValue * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -419,9 +419,9 @@ u_value_instance_init (uValue * object)
 }
 
 static void 
-u_value_finalize (GObject *object)
+i_u_value_finalize (GObject *object)
 {
-  uValue *tobject = U_VALUE (object);
+  I_uValue *tobject = I_U_VALUE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -433,21 +433,21 @@ u_value_finalize (GObject *object)
 }
 
 static void
-u_value_class_init (uValueClass * cls)
+i_u_value_class_init (I_uValueClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = u_value_read;
-  struct_class->write = u_value_write;
+  struct_class->read = i_u_value_read;
+  struct_class->write = i_u_value_write;
 
-  gobject_class->finalize = u_value_finalize;
-  gobject_class->get_property = u_value_get_property;
-  gobject_class->set_property = u_value_set_property;
+  gobject_class->finalize = i_u_value_finalize;
+  gobject_class->get_property = i_u_value_get_property;
+  gobject_class->set_property = i_u_value_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_VALUE_INTEGER,
+     PROP_I_U_VALUE_INTEGER,
      g_param_spec_int ("integer",
                        NULL,
                        NULL,
@@ -458,7 +458,7 @@ u_value_class_init (uValueClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_VALUE_STRING_,
+     PROP_I_U_VALUE_STRING_,
      g_param_spec_string ("string_",
                           NULL,
                           NULL,
@@ -467,7 +467,7 @@ u_value_class_init (uValueClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_VALUE_FLOATING,
+     PROP_I_U_VALUE_FLOATING,
      g_param_spec_double ("floating",
                           NULL,
                           NULL,
@@ -478,7 +478,7 @@ u_value_class_init (uValueClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_VALUE_BOOLEAN,
+     PROP_I_U_VALUE_BOOLEAN,
      g_param_spec_boolean ("boolean",
                            NULL,
                            NULL,
@@ -487,7 +487,7 @@ u_value_class_init (uValueClass * cls)
 }
 
 GType
-u_value_get_type (void)
+i_u_value_get_type (void)
 {
   static GType type = 0;
 
@@ -495,36 +495,36 @@ u_value_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (uValueClass),
+      sizeof (I_uValueClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) u_value_class_init,
+      (GClassInitFunc) i_u_value_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (uValue),
+      sizeof (I_uValue),
       0, /* n_preallocs */
-      (GInstanceInitFunc) u_value_instance_init,
+      (GInstanceInitFunc) i_u_value_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "uValueType",
+                                   "I_uValueType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _ValueProperties
+enum _I_ValueProperties
 {
-  PROP_VALUE_0,
-  PROP_VALUE_TYPE,
-  PROP_VALUE_VALUE
+  PROP_I__VALUE_0,
+  PROP_I__VALUE_TYPE,
+  PROP_I__VALUE_VALUE
 };
 
-/* reads a value object */
+/* reads a i__value object */
 static gint32
-value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -533,7 +533,7 @@ value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Value * this_object = VALUE(object);
+  I_Value * this_object = I__VALUE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -578,7 +578,7 @@ value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast0, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (ValueType)ecast0;
+          this_object->type = (I_ValueType)ecast0;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -620,14 +620,14 @@ value_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Value * this_object = VALUE(object);
+  I_Value * this_object = I__VALUE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Value", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Value", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "type", T_I32, 1, error)) < 0)
@@ -661,21 +661,21 @@ value_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-value_set_property (GObject *object,
-                    guint property_id,
-                    const GValue *value,
-                    GParamSpec *pspec)
+i__value_set_property (GObject *object,
+                       guint property_id,
+                       const GValue *value,
+                       GParamSpec *pspec)
 {
-  Value *self = VALUE (object);
+  I_Value *self = I__VALUE (object);
 
   switch (property_id)
   {
-    case PROP_VALUE_TYPE:
+    case PROP_I__VALUE_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_VALUE_VALUE:
+    case PROP_I__VALUE_VALUE:
       if (self->value != NULL)
         g_object_unref (self->value);
       self->value = g_value_dup_object (value);
@@ -689,20 +689,20 @@ value_set_property (GObject *object,
 }
 
 static void
-value_get_property (GObject *object,
-                    guint property_id,
-                    GValue *value,
-                    GParamSpec *pspec)
+i__value_get_property (GObject *object,
+                       guint property_id,
+                       GValue *value,
+                       GParamSpec *pspec)
 {
-  Value *self = VALUE (object);
+  I_Value *self = I__VALUE (object);
 
   switch (property_id)
   {
-    case PROP_VALUE_TYPE:
+    case PROP_I__VALUE_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_VALUE_VALUE:
+    case PROP_I__VALUE_VALUE:
       g_value_set_object (value, self->value);
       break;
 
@@ -713,19 +713,19 @@ value_get_property (GObject *object,
 }
 
 static void 
-value_instance_init (Value * object)
+i__value_instance_init (I_Value * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_type = FALSE;
-  object->value = g_object_new (TYPE_U_VALUE, NULL);
+  object->value = g_object_new (TYPE_I_U_VALUE, NULL);
   object->__isset_value = FALSE;
 }
 
 static void 
-value_finalize (GObject *object)
+i__value_finalize (GObject *object)
 {
-  Value *tobject = VALUE (object);
+  I_Value *tobject = I__VALUE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -737,21 +737,21 @@ value_finalize (GObject *object)
 }
 
 static void
-value_class_init (ValueClass * cls)
+i__value_class_init (I_ValueClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = value_read;
-  struct_class->write = value_write;
+  struct_class->read = i__value_read;
+  struct_class->write = i__value_write;
 
-  gobject_class->finalize = value_finalize;
-  gobject_class->get_property = value_get_property;
-  gobject_class->set_property = value_set_property;
+  gobject_class->finalize = i__value_finalize;
+  gobject_class->get_property = i__value_get_property;
+  gobject_class->set_property = i__value_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_VALUE_TYPE,
+     PROP_I__VALUE_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -762,16 +762,16 @@ value_class_init (ValueClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_VALUE_VALUE,
+     PROP_I__VALUE_VALUE,
      g_param_spec_object ("value",
                          NULL,
                          NULL,
-                         TYPE_U_VALUE,
+                         TYPE_I_U_VALUE,
                          G_PARAM_READWRITE));
 }
 
 GType
-value_get_type (void)
+i__value_get_type (void)
 {
   static GType type = 0;
 
@@ -779,36 +779,36 @@ value_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (ValueClass),
+      sizeof (I_ValueClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) value_class_init,
+      (GClassInitFunc) i__value_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Value),
+      sizeof (I_Value),
       0, /* n_preallocs */
-      (GInstanceInitFunc) value_instance_init,
+      (GInstanceInitFunc) i__value_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "ValueType",
+                                   "I_ValueType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _PropertyProperties
+enum _I_PropertyProperties
 {
-  PROP_PROPERTY_0,
-  PROP_PROPERTY_FIELD,
-  PROP_PROPERTY_VALUE
+  PROP_I__PROPERTY_0,
+  PROP_I__PROPERTY_FIELD,
+  PROP_I__PROPERTY_VALUE
 };
 
-/* reads a property object */
+/* reads a i__property object */
 static gint32
-property_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__property_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -817,7 +817,7 @@ property_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Property * this_object = PROPERTY(object);
+  I_Property * this_object = I__PROPERTY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -908,14 +908,14 @@ property_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-property_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__property_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Property * this_object = PROPERTY(object);
+  I_Property * this_object = I__PROPERTY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Property", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Property", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "field", T_STRING, 1, error)) < 0)
@@ -949,23 +949,23 @@ property_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-property_set_property (GObject *object,
-                       guint property_id,
-                       const GValue *value,
-                       GParamSpec *pspec)
+i__property_set_property (GObject *object,
+                          guint property_id,
+                          const GValue *value,
+                          GParamSpec *pspec)
 {
-  Property *self = PROPERTY (object);
+  I_Property *self = I__PROPERTY (object);
 
   switch (property_id)
   {
-    case PROP_PROPERTY_FIELD:
+    case PROP_I__PROPERTY_FIELD:
       if (self->field != NULL)
         g_free (self->field);
       self->field = g_value_dup_string (value);
       self->__isset_field = TRUE;
       break;
 
-    case PROP_PROPERTY_VALUE:
+    case PROP_I__PROPERTY_VALUE:
       if (self->value != NULL)
         g_object_unref (self->value);
       self->value = g_value_dup_object (value);
@@ -979,20 +979,20 @@ property_set_property (GObject *object,
 }
 
 static void
-property_get_property (GObject *object,
-                       guint property_id,
-                       GValue *value,
-                       GParamSpec *pspec)
+i__property_get_property (GObject *object,
+                          guint property_id,
+                          GValue *value,
+                          GParamSpec *pspec)
 {
-  Property *self = PROPERTY (object);
+  I_Property *self = I__PROPERTY (object);
 
   switch (property_id)
   {
-    case PROP_PROPERTY_FIELD:
+    case PROP_I__PROPERTY_FIELD:
       g_value_set_string (value, self->field);
       break;
 
-    case PROP_PROPERTY_VALUE:
+    case PROP_I__PROPERTY_VALUE:
       g_value_set_object (value, self->value);
       break;
 
@@ -1003,20 +1003,20 @@ property_get_property (GObject *object,
 }
 
 static void 
-property_instance_init (Property * object)
+i__property_instance_init (I_Property * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->field = NULL;
   object->__isset_field = FALSE;
-  object->value = g_object_new (TYPE_VALUE, NULL);
+  object->value = g_object_new (TYPE_I__VALUE, NULL);
   object->__isset_value = FALSE;
 }
 
 static void 
-property_finalize (GObject *object)
+i__property_finalize (GObject *object)
 {
-  Property *tobject = PROPERTY (object);
+  I_Property *tobject = I__PROPERTY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -1033,21 +1033,21 @@ property_finalize (GObject *object)
 }
 
 static void
-property_class_init (PropertyClass * cls)
+i__property_class_init (I_PropertyClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = property_read;
-  struct_class->write = property_write;
+  struct_class->read = i__property_read;
+  struct_class->write = i__property_write;
 
-  gobject_class->finalize = property_finalize;
-  gobject_class->get_property = property_get_property;
-  gobject_class->set_property = property_set_property;
+  gobject_class->finalize = i__property_finalize;
+  gobject_class->get_property = i__property_get_property;
+  gobject_class->set_property = i__property_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_PROPERTY_FIELD,
+     PROP_I__PROPERTY_FIELD,
      g_param_spec_string ("field",
                           NULL,
                           NULL,
@@ -1056,16 +1056,16 @@ property_class_init (PropertyClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_PROPERTY_VALUE,
+     PROP_I__PROPERTY_VALUE,
      g_param_spec_object ("value",
                          NULL,
                          NULL,
-                         TYPE_VALUE,
+                         TYPE_I__VALUE,
                          G_PARAM_READWRITE));
 }
 
 GType
-property_get_type (void)
+i__property_get_type (void)
 {
   static GType type = 0;
 
@@ -1073,36 +1073,36 @@ property_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (PropertyClass),
+      sizeof (I_PropertyClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) property_class_init,
+      (GClassInitFunc) i__property_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Property),
+      sizeof (I_Property),
       0, /* n_preallocs */
-      (GInstanceInitFunc) property_instance_init,
+      (GInstanceInitFunc) i__property_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "PropertyType",
+                                   "I_PropertyType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _AttributeProperties
+enum _I_AttributeProperties
 {
-  PROP_ATTRIBUTE_0,
-  PROP_ATTRIBUTE_NAME,
-  PROP_ATTRIBUTE_VT
+  PROP_I__ATTRIBUTE_0,
+  PROP_I__ATTRIBUTE_NAME,
+  PROP_I__ATTRIBUTE_VT
 };
 
-/* reads a attribute object */
+/* reads a i__attribute object */
 static gint32
-attribute_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__attribute_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -1111,7 +1111,7 @@ attribute_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Attribute * this_object = ATTRIBUTE(object);
+  I_Attribute * this_object = I__ATTRIBUTE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -1175,7 +1175,7 @@ attribute_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast1, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->vt = (ValueType)ecast1;
+          this_object->vt = (I_ValueType)ecast1;
           this_object->__isset_vt = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -1202,14 +1202,14 @@ attribute_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-attribute_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__attribute_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Attribute * this_object = ATTRIBUTE(object);
+  I_Attribute * this_object = I__ATTRIBUTE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Attribute", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Attribute", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
@@ -1243,23 +1243,23 @@ attribute_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-attribute_set_property (GObject *object,
-                        guint property_id,
-                        const GValue *value,
-                        GParamSpec *pspec)
+i__attribute_set_property (GObject *object,
+                           guint property_id,
+                           const GValue *value,
+                           GParamSpec *pspec)
 {
-  Attribute *self = ATTRIBUTE (object);
+  I_Attribute *self = I__ATTRIBUTE (object);
 
   switch (property_id)
   {
-    case PROP_ATTRIBUTE_NAME:
+    case PROP_I__ATTRIBUTE_NAME:
       if (self->name != NULL)
         g_free (self->name);
       self->name = g_value_dup_string (value);
       self->__isset_name = TRUE;
       break;
 
-    case PROP_ATTRIBUTE_VT:
+    case PROP_I__ATTRIBUTE_VT:
       self->vt = g_value_get_int (value);
       self->__isset_vt = TRUE;
       break;
@@ -1271,20 +1271,20 @@ attribute_set_property (GObject *object,
 }
 
 static void
-attribute_get_property (GObject *object,
-                        guint property_id,
-                        GValue *value,
-                        GParamSpec *pspec)
+i__attribute_get_property (GObject *object,
+                           guint property_id,
+                           GValue *value,
+                           GParamSpec *pspec)
 {
-  Attribute *self = ATTRIBUTE (object);
+  I_Attribute *self = I__ATTRIBUTE (object);
 
   switch (property_id)
   {
-    case PROP_ATTRIBUTE_NAME:
+    case PROP_I__ATTRIBUTE_NAME:
       g_value_set_string (value, self->name);
       break;
 
-    case PROP_ATTRIBUTE_VT:
+    case PROP_I__ATTRIBUTE_VT:
       g_value_set_int (value, self->vt);
       break;
 
@@ -1295,7 +1295,7 @@ attribute_get_property (GObject *object,
 }
 
 static void 
-attribute_instance_init (Attribute * object)
+i__attribute_instance_init (I_Attribute * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -1305,9 +1305,9 @@ attribute_instance_init (Attribute * object)
 }
 
 static void 
-attribute_finalize (GObject *object)
+i__attribute_finalize (GObject *object)
 {
-  Attribute *tobject = ATTRIBUTE (object);
+  I_Attribute *tobject = I__ATTRIBUTE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -1319,21 +1319,21 @@ attribute_finalize (GObject *object)
 }
 
 static void
-attribute_class_init (AttributeClass * cls)
+i__attribute_class_init (I_AttributeClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = attribute_read;
-  struct_class->write = attribute_write;
+  struct_class->read = i__attribute_read;
+  struct_class->write = i__attribute_write;
 
-  gobject_class->finalize = attribute_finalize;
-  gobject_class->get_property = attribute_get_property;
-  gobject_class->set_property = attribute_set_property;
+  gobject_class->finalize = i__attribute_finalize;
+  gobject_class->get_property = i__attribute_get_property;
+  gobject_class->set_property = i__attribute_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_ATTRIBUTE_NAME,
+     PROP_I__ATTRIBUTE_NAME,
      g_param_spec_string ("name",
                           NULL,
                           NULL,
@@ -1342,7 +1342,7 @@ attribute_class_init (AttributeClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_ATTRIBUTE_VT,
+     PROP_I__ATTRIBUTE_VT,
      g_param_spec_int ("vt",
                        NULL,
                        NULL,
@@ -1353,7 +1353,7 @@ attribute_class_init (AttributeClass * cls)
 }
 
 GType
-attribute_get_type (void)
+i__attribute_get_type (void)
 {
   static GType type = 0;
 
@@ -1361,36 +1361,36 @@ attribute_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (AttributeClass),
+      sizeof (I_AttributeClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) attribute_class_init,
+      (GClassInitFunc) i__attribute_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Attribute),
+      sizeof (I_Attribute),
       0, /* n_preallocs */
-      (GInstanceInitFunc) attribute_instance_init,
+      (GInstanceInitFunc) i__attribute_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "AttributeType",
+                                   "I_AttributeType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _SchemaProperties
+enum _I_SchemaProperties
 {
-  PROP_SCHEMA_0,
-  PROP_SCHEMA_NAME,
-  PROP_SCHEMA_ATTRIBUTES
+  PROP_I__SCHEMA_0,
+  PROP_I__SCHEMA_NAME,
+  PROP_I__SCHEMA_ATTRIBUTES
 };
 
-/* reads a schema object */
+/* reads a i__schema object */
 static gint32
-schema_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -1399,7 +1399,7 @@ schema_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Schema * this_object = SCHEMA(object);
+  I_Schema * this_object = I__SCHEMA(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -1471,12 +1471,12 @@ schema_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Attribute * _elem2 = NULL;
+              I_Attribute * _elem2 = NULL;
               if ( _elem2 != NULL)
               {
                 g_object_unref (_elem2);
               }
-              _elem2 = g_object_new (TYPE_ATTRIBUTE, NULL);
+              _elem2 = g_object_new (TYPE_I__ATTRIBUTE, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem2), protocol, error)) < 0)
               {
                 g_object_unref (_elem2);
@@ -1515,14 +1515,14 @@ schema_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-schema_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Schema * this_object = SCHEMA(object);
+  I_Schema * this_object = I__SCHEMA(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Schema", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Schema", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
@@ -1569,23 +1569,23 @@ schema_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-schema_set_property (GObject *object,
-                     guint property_id,
-                     const GValue *value,
-                     GParamSpec *pspec)
+i__schema_set_property (GObject *object,
+                        guint property_id,
+                        const GValue *value,
+                        GParamSpec *pspec)
 {
-  Schema *self = SCHEMA (object);
+  I_Schema *self = I__SCHEMA (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_NAME:
+    case PROP_I__SCHEMA_NAME:
       if (self->name != NULL)
         g_free (self->name);
       self->name = g_value_dup_string (value);
       self->__isset_name = TRUE;
       break;
 
-    case PROP_SCHEMA_ATTRIBUTES:
+    case PROP_I__SCHEMA_ATTRIBUTES:
       if (self->attributes != NULL)
         g_ptr_array_unref (self->attributes);
       self->attributes = g_value_dup_boxed (value);
@@ -1599,20 +1599,20 @@ schema_set_property (GObject *object,
 }
 
 static void
-schema_get_property (GObject *object,
-                     guint property_id,
-                     GValue *value,
-                     GParamSpec *pspec)
+i__schema_get_property (GObject *object,
+                        guint property_id,
+                        GValue *value,
+                        GParamSpec *pspec)
 {
-  Schema *self = SCHEMA (object);
+  I_Schema *self = I__SCHEMA (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_NAME:
+    case PROP_I__SCHEMA_NAME:
       g_value_set_string (value, self->name);
       break;
 
-    case PROP_SCHEMA_ATTRIBUTES:
+    case PROP_I__SCHEMA_ATTRIBUTES:
       g_value_set_boxed (value, self->attributes);
       break;
 
@@ -1623,7 +1623,7 @@ schema_get_property (GObject *object,
 }
 
 static void 
-schema_instance_init (Schema * object)
+i__schema_instance_init (I_Schema * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -1634,9 +1634,9 @@ schema_instance_init (Schema * object)
 }
 
 static void 
-schema_finalize (GObject *object)
+i__schema_finalize (GObject *object)
 {
-  Schema *tobject = SCHEMA (object);
+  I_Schema *tobject = I__SCHEMA (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -1653,21 +1653,21 @@ schema_finalize (GObject *object)
 }
 
 static void
-schema_class_init (SchemaClass * cls)
+i__schema_class_init (I_SchemaClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = schema_read;
-  struct_class->write = schema_write;
+  struct_class->read = i__schema_read;
+  struct_class->write = i__schema_write;
 
-  gobject_class->finalize = schema_finalize;
-  gobject_class->get_property = schema_get_property;
-  gobject_class->set_property = schema_set_property;
+  gobject_class->finalize = i__schema_finalize;
+  gobject_class->get_property = i__schema_get_property;
+  gobject_class->set_property = i__schema_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_SCHEMA_NAME,
+     PROP_I__SCHEMA_NAME,
      g_param_spec_string ("name",
                           NULL,
                           NULL,
@@ -1676,7 +1676,7 @@ schema_class_init (SchemaClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_SCHEMA_ATTRIBUTES,
+     PROP_I__SCHEMA_ATTRIBUTES,
      g_param_spec_boxed ("attributes",
                          NULL,
                          NULL,
@@ -1685,7 +1685,7 @@ schema_class_init (SchemaClass * cls)
 }
 
 GType
-schema_get_type (void)
+i__schema_get_type (void)
 {
   static GType type = 0;
 
@@ -1693,36 +1693,36 @@ schema_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (SchemaClass),
+      sizeof (I_SchemaClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) schema_class_init,
+      (GClassInitFunc) i__schema_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Schema),
+      sizeof (I_Schema),
       0, /* n_preallocs */
-      (GInstanceInitFunc) schema_instance_init,
+      (GInstanceInitFunc) i__schema_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "SchemaType",
+                                   "I_SchemaType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeProperties
+enum _I_NodeProperties
 {
-  PROP_NODE_0,
-  PROP_NODE_NAME,
-  PROP_NODE_PROPERTIES
+  PROP_I__NODE_0,
+  PROP_I__NODE_NAME,
+  PROP_I__NODE_PROPERTIES
 };
 
-/* reads a node object */
+/* reads a i__node object */
 static gint32
-node_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -1731,7 +1731,7 @@ node_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Node * this_object = NODE(object);
+  I_Node * this_object = I__NODE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -1803,12 +1803,12 @@ node_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Property * _elem4 = NULL;
+              I_Property * _elem4 = NULL;
               if ( _elem4 != NULL)
               {
                 g_object_unref (_elem4);
               }
-              _elem4 = g_object_new (TYPE_PROPERTY, NULL);
+              _elem4 = g_object_new (TYPE_I__PROPERTY, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem4), protocol, error)) < 0)
               {
                 g_object_unref (_elem4);
@@ -1847,14 +1847,14 @@ node_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-node_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Node * this_object = NODE(object);
+  I_Node * this_object = I__NODE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Node", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Node", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
@@ -1901,23 +1901,23 @@ node_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-node_set_property (GObject *object,
-                   guint property_id,
-                   const GValue *value,
-                   GParamSpec *pspec)
+i__node_set_property (GObject *object,
+                      guint property_id,
+                      const GValue *value,
+                      GParamSpec *pspec)
 {
-  Node *self = NODE (object);
+  I_Node *self = I__NODE (object);
 
   switch (property_id)
   {
-    case PROP_NODE_NAME:
+    case PROP_I__NODE_NAME:
       if (self->name != NULL)
         g_free (self->name);
       self->name = g_value_dup_string (value);
       self->__isset_name = TRUE;
       break;
 
-    case PROP_NODE_PROPERTIES:
+    case PROP_I__NODE_PROPERTIES:
       if (self->properties != NULL)
         g_ptr_array_unref (self->properties);
       self->properties = g_value_dup_boxed (value);
@@ -1931,20 +1931,20 @@ node_set_property (GObject *object,
 }
 
 static void
-node_get_property (GObject *object,
-                   guint property_id,
-                   GValue *value,
-                   GParamSpec *pspec)
+i__node_get_property (GObject *object,
+                      guint property_id,
+                      GValue *value,
+                      GParamSpec *pspec)
 {
-  Node *self = NODE (object);
+  I_Node *self = I__NODE (object);
 
   switch (property_id)
   {
-    case PROP_NODE_NAME:
+    case PROP_I__NODE_NAME:
       g_value_set_string (value, self->name);
       break;
 
-    case PROP_NODE_PROPERTIES:
+    case PROP_I__NODE_PROPERTIES:
       g_value_set_boxed (value, self->properties);
       break;
 
@@ -1955,7 +1955,7 @@ node_get_property (GObject *object,
 }
 
 static void 
-node_instance_init (Node * object)
+i__node_instance_init (I_Node * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -1966,9 +1966,9 @@ node_instance_init (Node * object)
 }
 
 static void 
-node_finalize (GObject *object)
+i__node_finalize (GObject *object)
 {
-  Node *tobject = NODE (object);
+  I_Node *tobject = I__NODE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -1985,21 +1985,21 @@ node_finalize (GObject *object)
 }
 
 static void
-node_class_init (NodeClass * cls)
+i__node_class_init (I_NodeClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_read;
-  struct_class->write = node_write;
+  struct_class->read = i__node_read;
+  struct_class->write = i__node_write;
 
-  gobject_class->finalize = node_finalize;
-  gobject_class->get_property = node_get_property;
-  gobject_class->set_property = node_set_property;
+  gobject_class->finalize = i__node_finalize;
+  gobject_class->get_property = i__node_get_property;
+  gobject_class->set_property = i__node_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_NAME,
+     PROP_I__NODE_NAME,
      g_param_spec_string ("name",
                           NULL,
                           NULL,
@@ -2008,7 +2008,7 @@ node_class_init (NodeClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_PROPERTIES,
+     PROP_I__NODE_PROPERTIES,
      g_param_spec_boxed ("properties",
                          NULL,
                          NULL,
@@ -2017,7 +2017,7 @@ node_class_init (NodeClass * cls)
 }
 
 GType
-node_get_type (void)
+i__node_get_type (void)
 {
   static GType type = 0;
 
@@ -2025,38 +2025,38 @@ node_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeClass),
+      sizeof (I_NodeClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_class_init,
+      (GClassInitFunc) i__node_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Node),
+      sizeof (I_Node),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_instance_init,
+      (GInstanceInitFunc) i__node_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeType",
+                                   "I_NodeType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _LinkProperties
+enum _I_LinkProperties
 {
-  PROP_LINK_0,
-  PROP_LINK_NAME,
-  PROP_LINK_TYPE,
-  PROP_LINK_FIRST,
-  PROP_LINK_SECOND
+  PROP_I__LINK_0,
+  PROP_I__LINK_NAME,
+  PROP_I__LINK_TYPE,
+  PROP_I__LINK_FIRST,
+  PROP_I__LINK_SECOND
 };
 
-/* reads a link object */
+/* reads a i__link object */
 static gint32
-link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -2065,7 +2065,7 @@ link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Link * this_object = LINK(object);
+  I_Link * this_object = I__LINK(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -2129,7 +2129,7 @@ link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast6, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (LinkType)ecast6;
+          this_object->type = (I_LinkType)ecast6;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -2194,14 +2194,14 @@ link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-link_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Link * this_object = LINK(object);
+  I_Link * this_object = I__LINK(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Link", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Link", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
@@ -2255,35 +2255,35 @@ link_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-link_set_property (GObject *object,
-                   guint property_id,
-                   const GValue *value,
-                   GParamSpec *pspec)
+i__link_set_property (GObject *object,
+                      guint property_id,
+                      const GValue *value,
+                      GParamSpec *pspec)
 {
-  Link *self = LINK (object);
+  I_Link *self = I__LINK (object);
 
   switch (property_id)
   {
-    case PROP_LINK_NAME:
+    case PROP_I__LINK_NAME:
       if (self->name != NULL)
         g_free (self->name);
       self->name = g_value_dup_string (value);
       self->__isset_name = TRUE;
       break;
 
-    case PROP_LINK_TYPE:
+    case PROP_I__LINK_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_LINK_FIRST:
+    case PROP_I__LINK_FIRST:
       if (self->first != NULL)
         g_free (self->first);
       self->first = g_value_dup_string (value);
       self->__isset_first = TRUE;
       break;
 
-    case PROP_LINK_SECOND:
+    case PROP_I__LINK_SECOND:
       if (self->second != NULL)
         g_free (self->second);
       self->second = g_value_dup_string (value);
@@ -2297,28 +2297,28 @@ link_set_property (GObject *object,
 }
 
 static void
-link_get_property (GObject *object,
-                   guint property_id,
-                   GValue *value,
-                   GParamSpec *pspec)
+i__link_get_property (GObject *object,
+                      guint property_id,
+                      GValue *value,
+                      GParamSpec *pspec)
 {
-  Link *self = LINK (object);
+  I_Link *self = I__LINK (object);
 
   switch (property_id)
   {
-    case PROP_LINK_NAME:
+    case PROP_I__LINK_NAME:
       g_value_set_string (value, self->name);
       break;
 
-    case PROP_LINK_TYPE:
+    case PROP_I__LINK_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_LINK_FIRST:
+    case PROP_I__LINK_FIRST:
       g_value_set_string (value, self->first);
       break;
 
-    case PROP_LINK_SECOND:
+    case PROP_I__LINK_SECOND:
       g_value_set_string (value, self->second);
       break;
 
@@ -2329,7 +2329,7 @@ link_get_property (GObject *object,
 }
 
 static void 
-link_instance_init (Link * object)
+i__link_instance_init (I_Link * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -2343,9 +2343,9 @@ link_instance_init (Link * object)
 }
 
 static void 
-link_finalize (GObject *object)
+i__link_finalize (GObject *object)
 {
-  Link *tobject = LINK (object);
+  I_Link *tobject = I__LINK (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -2367,21 +2367,21 @@ link_finalize (GObject *object)
 }
 
 static void
-link_class_init (LinkClass * cls)
+i__link_class_init (I_LinkClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = link_read;
-  struct_class->write = link_write;
+  struct_class->read = i__link_read;
+  struct_class->write = i__link_write;
 
-  gobject_class->finalize = link_finalize;
-  gobject_class->get_property = link_get_property;
-  gobject_class->set_property = link_set_property;
+  gobject_class->finalize = i__link_finalize;
+  gobject_class->get_property = i__link_get_property;
+  gobject_class->set_property = i__link_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_NAME,
+     PROP_I__LINK_NAME,
      g_param_spec_string ("name",
                           NULL,
                           NULL,
@@ -2390,7 +2390,7 @@ link_class_init (LinkClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_TYPE,
+     PROP_I__LINK_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -2401,7 +2401,7 @@ link_class_init (LinkClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_FIRST,
+     PROP_I__LINK_FIRST,
      g_param_spec_string ("first",
                           NULL,
                           NULL,
@@ -2410,7 +2410,7 @@ link_class_init (LinkClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_SECOND,
+     PROP_I__LINK_SECOND,
      g_param_spec_string ("second",
                           NULL,
                           NULL,
@@ -2419,7 +2419,7 @@ link_class_init (LinkClass * cls)
 }
 
 GType
-link_get_type (void)
+i__link_get_type (void)
 {
   static GType type = 0;
 
@@ -2427,36 +2427,36 @@ link_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (LinkClass),
+      sizeof (I_LinkClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) link_class_init,
+      (GClassInitFunc) i__link_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Link),
+      sizeof (I_Link),
       0, /* n_preallocs */
-      (GInstanceInitFunc) link_instance_init,
+      (GInstanceInitFunc) i__link_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "LinkType",
+                                   "I_LinkType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _uComparableProperties
+enum _I_uComparableProperties
 {
-  PROP_U_COMPARABLE_0,
-  PROP_U_COMPARABLE_FIELD_NAME,
-  PROP_U_COMPARABLE_VALUE
+  PROP_I_U_COMPARABLE_0,
+  PROP_I_U_COMPARABLE_FIELD_NAME,
+  PROP_I_U_COMPARABLE_VALUE
 };
 
-/* reads a u_comparable object */
+/* reads a i_u_comparable object */
 static gint32
-u_comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -2465,7 +2465,7 @@ u_comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  uComparable * this_object = U_COMPARABLE(object);
+  I_uComparable * this_object = I_U_COMPARABLE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -2556,14 +2556,14 @@ u_comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
 }
 
 static gint32
-u_comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  uComparable * this_object = U_COMPARABLE(object);
+  I_uComparable * this_object = I_U_COMPARABLE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "uComparable", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_uComparable", error)) < 0)
     return -1;
   xfer += ret;
   if (this_object->__isset_field_name == TRUE) {
@@ -2601,23 +2601,23 @@ u_comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **err
 }
 
 static void
-u_comparable_set_property (GObject *object,
-                           guint property_id,
-                           const GValue *value,
-                           GParamSpec *pspec)
+i_u_comparable_set_property (GObject *object,
+                             guint property_id,
+                             const GValue *value,
+                             GParamSpec *pspec)
 {
-  uComparable *self = U_COMPARABLE (object);
+  I_uComparable *self = I_U_COMPARABLE (object);
 
   switch (property_id)
   {
-    case PROP_U_COMPARABLE_FIELD_NAME:
+    case PROP_I_U_COMPARABLE_FIELD_NAME:
       if (self->field_name != NULL)
         g_free (self->field_name);
       self->field_name = g_value_dup_string (value);
       self->__isset_field_name = TRUE;
       break;
 
-    case PROP_U_COMPARABLE_VALUE:
+    case PROP_I_U_COMPARABLE_VALUE:
       if (self->value != NULL)
         g_object_unref (self->value);
       self->value = g_value_dup_object (value);
@@ -2631,20 +2631,20 @@ u_comparable_set_property (GObject *object,
 }
 
 static void
-u_comparable_get_property (GObject *object,
-                           guint property_id,
-                           GValue *value,
-                           GParamSpec *pspec)
+i_u_comparable_get_property (GObject *object,
+                             guint property_id,
+                             GValue *value,
+                             GParamSpec *pspec)
 {
-  uComparable *self = U_COMPARABLE (object);
+  I_uComparable *self = I_U_COMPARABLE (object);
 
   switch (property_id)
   {
-    case PROP_U_COMPARABLE_FIELD_NAME:
+    case PROP_I_U_COMPARABLE_FIELD_NAME:
       g_value_set_string (value, self->field_name);
       break;
 
-    case PROP_U_COMPARABLE_VALUE:
+    case PROP_I_U_COMPARABLE_VALUE:
       g_value_set_object (value, self->value);
       break;
 
@@ -2655,20 +2655,20 @@ u_comparable_get_property (GObject *object,
 }
 
 static void 
-u_comparable_instance_init (uComparable * object)
+i_u_comparable_instance_init (I_uComparable * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->field_name = NULL;
   object->__isset_field_name = FALSE;
-  object->value = g_object_new (TYPE_VALUE, NULL);
+  object->value = g_object_new (TYPE_I__VALUE, NULL);
   object->__isset_value = FALSE;
 }
 
 static void 
-u_comparable_finalize (GObject *object)
+i_u_comparable_finalize (GObject *object)
 {
-  uComparable *tobject = U_COMPARABLE (object);
+  I_uComparable *tobject = I_U_COMPARABLE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -2685,21 +2685,21 @@ u_comparable_finalize (GObject *object)
 }
 
 static void
-u_comparable_class_init (uComparableClass * cls)
+i_u_comparable_class_init (I_uComparableClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = u_comparable_read;
-  struct_class->write = u_comparable_write;
+  struct_class->read = i_u_comparable_read;
+  struct_class->write = i_u_comparable_write;
 
-  gobject_class->finalize = u_comparable_finalize;
-  gobject_class->get_property = u_comparable_get_property;
-  gobject_class->set_property = u_comparable_set_property;
+  gobject_class->finalize = i_u_comparable_finalize;
+  gobject_class->get_property = i_u_comparable_get_property;
+  gobject_class->set_property = i_u_comparable_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_COMPARABLE_FIELD_NAME,
+     PROP_I_U_COMPARABLE_FIELD_NAME,
      g_param_spec_string ("field_name",
                           NULL,
                           NULL,
@@ -2708,16 +2708,16 @@ u_comparable_class_init (uComparableClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_COMPARABLE_VALUE,
+     PROP_I_U_COMPARABLE_VALUE,
      g_param_spec_object ("value",
                          NULL,
                          NULL,
-                         TYPE_VALUE,
+                         TYPE_I__VALUE,
                          G_PARAM_READWRITE));
 }
 
 GType
-u_comparable_get_type (void)
+i_u_comparable_get_type (void)
 {
   static GType type = 0;
 
@@ -2725,36 +2725,36 @@ u_comparable_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (uComparableClass),
+      sizeof (I_uComparableClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) u_comparable_class_init,
+      (GClassInitFunc) i_u_comparable_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (uComparable),
+      sizeof (I_uComparable),
       0, /* n_preallocs */
-      (GInstanceInitFunc) u_comparable_instance_init,
+      (GInstanceInitFunc) i_u_comparable_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "uComparableType",
+                                   "I_uComparableType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _ComparableProperties
+enum _I_ComparableProperties
 {
-  PROP_COMPARABLE_0,
-  PROP_COMPARABLE_TYPE,
-  PROP_COMPARABLE_COMPARABLE
+  PROP_I__COMPARABLE_0,
+  PROP_I__COMPARABLE_TYPE,
+  PROP_I__COMPARABLE_COMPARABLE
 };
 
-/* reads a comparable object */
+/* reads a i__comparable object */
 static gint32
-comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -2763,7 +2763,7 @@ comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Comparable * this_object = COMPARABLE(object);
+  I_Comparable * this_object = I__COMPARABLE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -2808,7 +2808,7 @@ comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast7, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (ComparableType)ecast7;
+          this_object->type = (I_ComparableType)ecast7;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -2850,14 +2850,14 @@ comparable_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Comparable * this_object = COMPARABLE(object);
+  I_Comparable * this_object = I__COMPARABLE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Comparable", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Comparable", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "type", T_I32, 1, error)) < 0)
@@ -2891,21 +2891,21 @@ comparable_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error
 }
 
 static void
-comparable_set_property (GObject *object,
-                         guint property_id,
-                         const GValue *value,
-                         GParamSpec *pspec)
+i__comparable_set_property (GObject *object,
+                            guint property_id,
+                            const GValue *value,
+                            GParamSpec *pspec)
 {
-  Comparable *self = COMPARABLE (object);
+  I_Comparable *self = I__COMPARABLE (object);
 
   switch (property_id)
   {
-    case PROP_COMPARABLE_TYPE:
+    case PROP_I__COMPARABLE_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_COMPARABLE_COMPARABLE:
+    case PROP_I__COMPARABLE_COMPARABLE:
       if (self->comparable != NULL)
         g_object_unref (self->comparable);
       self->comparable = g_value_dup_object (value);
@@ -2919,20 +2919,20 @@ comparable_set_property (GObject *object,
 }
 
 static void
-comparable_get_property (GObject *object,
-                         guint property_id,
-                         GValue *value,
-                         GParamSpec *pspec)
+i__comparable_get_property (GObject *object,
+                            guint property_id,
+                            GValue *value,
+                            GParamSpec *pspec)
 {
-  Comparable *self = COMPARABLE (object);
+  I_Comparable *self = I__COMPARABLE (object);
 
   switch (property_id)
   {
-    case PROP_COMPARABLE_TYPE:
+    case PROP_I__COMPARABLE_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_COMPARABLE_COMPARABLE:
+    case PROP_I__COMPARABLE_COMPARABLE:
       g_value_set_object (value, self->comparable);
       break;
 
@@ -2943,19 +2943,19 @@ comparable_get_property (GObject *object,
 }
 
 static void 
-comparable_instance_init (Comparable * object)
+i__comparable_instance_init (I_Comparable * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_type = FALSE;
-  object->comparable = g_object_new (TYPE_U_COMPARABLE, NULL);
+  object->comparable = g_object_new (TYPE_I_U_COMPARABLE, NULL);
   object->__isset_comparable = FALSE;
 }
 
 static void 
-comparable_finalize (GObject *object)
+i__comparable_finalize (GObject *object)
 {
-  Comparable *tobject = COMPARABLE (object);
+  I_Comparable *tobject = I__COMPARABLE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -2967,21 +2967,21 @@ comparable_finalize (GObject *object)
 }
 
 static void
-comparable_class_init (ComparableClass * cls)
+i__comparable_class_init (I_ComparableClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = comparable_read;
-  struct_class->write = comparable_write;
+  struct_class->read = i__comparable_read;
+  struct_class->write = i__comparable_write;
 
-  gobject_class->finalize = comparable_finalize;
-  gobject_class->get_property = comparable_get_property;
-  gobject_class->set_property = comparable_set_property;
+  gobject_class->finalize = i__comparable_finalize;
+  gobject_class->get_property = i__comparable_get_property;
+  gobject_class->set_property = i__comparable_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_COMPARABLE_TYPE,
+     PROP_I__COMPARABLE_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -2992,16 +2992,16 @@ comparable_class_init (ComparableClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_COMPARABLE_COMPARABLE,
+     PROP_I__COMPARABLE_COMPARABLE,
      g_param_spec_object ("comparable",
                          NULL,
                          NULL,
-                         TYPE_U_COMPARABLE,
+                         TYPE_I_U_COMPARABLE,
                          G_PARAM_READWRITE));
 }
 
 GType
-comparable_get_type (void)
+i__comparable_get_type (void)
 {
   static GType type = 0;
 
@@ -3009,36 +3009,36 @@ comparable_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (ComparableClass),
+      sizeof (I_ComparableClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) comparable_class_init,
+      (GClassInitFunc) i__comparable_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Comparable),
+      sizeof (I_Comparable),
       0, /* n_preallocs */
-      (GInstanceInitFunc) comparable_instance_init,
+      (GInstanceInitFunc) i__comparable_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "ComparableType",
+                                   "I_ComparableType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _CompareProperties
+enum _I_CompareProperties
 {
-  PROP_COMPARE_0,
-  PROP_COMPARE_CMP,
-  PROP_COMPARE_WITH_
+  PROP_I__COMPARE_0,
+  PROP_I__COMPARE_CMP,
+  PROP_I__COMPARE_WITH_
 };
 
-/* reads a compare object */
+/* reads a i__compare object */
 static gint32
-compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -3047,7 +3047,7 @@ compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Compare * this_object = COMPARE(object);
+  I_Compare * this_object = I__COMPARE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -3092,7 +3092,7 @@ compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast8, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->cmp = (Comparation)ecast8;
+          this_object->cmp = (I_Comparation)ecast8;
           this_object->__isset_cmp = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -3134,14 +3134,14 @@ compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Compare * this_object = COMPARE(object);
+  I_Compare * this_object = I__COMPARE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Compare", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Compare", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "cmp", T_I32, 1, error)) < 0)
@@ -3175,21 +3175,21 @@ compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-compare_set_property (GObject *object,
-                      guint property_id,
-                      const GValue *value,
-                      GParamSpec *pspec)
+i__compare_set_property (GObject *object,
+                         guint property_id,
+                         const GValue *value,
+                         GParamSpec *pspec)
 {
-  Compare *self = COMPARE (object);
+  I_Compare *self = I__COMPARE (object);
 
   switch (property_id)
   {
-    case PROP_COMPARE_CMP:
+    case PROP_I__COMPARE_CMP:
       self->cmp = g_value_get_int (value);
       self->__isset_cmp = TRUE;
       break;
 
-    case PROP_COMPARE_WITH_:
+    case PROP_I__COMPARE_WITH_:
       if (self->with_ != NULL)
         g_object_unref (self->with_);
       self->with_ = g_value_dup_object (value);
@@ -3203,20 +3203,20 @@ compare_set_property (GObject *object,
 }
 
 static void
-compare_get_property (GObject *object,
-                      guint property_id,
-                      GValue *value,
-                      GParamSpec *pspec)
+i__compare_get_property (GObject *object,
+                         guint property_id,
+                         GValue *value,
+                         GParamSpec *pspec)
 {
-  Compare *self = COMPARE (object);
+  I_Compare *self = I__COMPARE (object);
 
   switch (property_id)
   {
-    case PROP_COMPARE_CMP:
+    case PROP_I__COMPARE_CMP:
       g_value_set_int (value, self->cmp);
       break;
 
-    case PROP_COMPARE_WITH_:
+    case PROP_I__COMPARE_WITH_:
       g_value_set_object (value, self->with_);
       break;
 
@@ -3227,19 +3227,19 @@ compare_get_property (GObject *object,
 }
 
 static void 
-compare_instance_init (Compare * object)
+i__compare_instance_init (I_Compare * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_cmp = FALSE;
-  object->with_ = g_object_new (TYPE_COMPARABLE, NULL);
+  object->with_ = g_object_new (TYPE_I__COMPARABLE, NULL);
   object->__isset_with_ = FALSE;
 }
 
 static void 
-compare_finalize (GObject *object)
+i__compare_finalize (GObject *object)
 {
-  Compare *tobject = COMPARE (object);
+  I_Compare *tobject = I__COMPARE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -3251,21 +3251,21 @@ compare_finalize (GObject *object)
 }
 
 static void
-compare_class_init (CompareClass * cls)
+i__compare_class_init (I_CompareClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = compare_read;
-  struct_class->write = compare_write;
+  struct_class->read = i__compare_read;
+  struct_class->write = i__compare_write;
 
-  gobject_class->finalize = compare_finalize;
-  gobject_class->get_property = compare_get_property;
-  gobject_class->set_property = compare_set_property;
+  gobject_class->finalize = i__compare_finalize;
+  gobject_class->get_property = i__compare_get_property;
+  gobject_class->set_property = i__compare_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_COMPARE_CMP,
+     PROP_I__COMPARE_CMP,
      g_param_spec_int ("cmp",
                        NULL,
                        NULL,
@@ -3276,16 +3276,16 @@ compare_class_init (CompareClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_COMPARE_WITH_,
+     PROP_I__COMPARE_WITH_,
      g_param_spec_object ("with_",
                          NULL,
                          NULL,
-                         TYPE_COMPARABLE,
+                         TYPE_I__COMPARABLE,
                          G_PARAM_READWRITE));
 }
 
 GType
-compare_get_type (void)
+i__compare_get_type (void)
 {
   static GType type = 0;
 
@@ -3293,36 +3293,36 @@ compare_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (CompareClass),
+      sizeof (I_CompareClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) compare_class_init,
+      (GClassInitFunc) i__compare_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Compare),
+      sizeof (I_Compare),
       0, /* n_preallocs */
-      (GInstanceInitFunc) compare_instance_init,
+      (GInstanceInitFunc) i__compare_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "CompareType",
+                                   "I_CompareType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _ConditionCompareProperties
+enum _I_ConditionCompareProperties
 {
-  PROP_CONDITION_COMPARE_0,
-  PROP_CONDITION_COMPARE_LEFT,
-  PROP_CONDITION_COMPARE_COMPARE
+  PROP_I__CONDITION_COMPARE_0,
+  PROP_I__CONDITION_COMPARE_LEFT,
+  PROP_I__CONDITION_COMPARE_COMPARE
 };
 
-/* reads a condition_compare object */
+/* reads a i__condition_compare object */
 static gint32
-condition_compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__condition_compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -3331,7 +3331,7 @@ condition_compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  ConditionCompare * this_object = CONDITION_COMPARE(object);
+  I_ConditionCompare * this_object = I__CONDITION_COMPARE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -3418,14 +3418,14 @@ condition_compare_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-condition_compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__condition_compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  ConditionCompare * this_object = CONDITION_COMPARE(object);
+  I_ConditionCompare * this_object = I__CONDITION_COMPARE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "ConditionCompare", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_ConditionCompare", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "left", T_STRUCT, 1, error)) < 0)
@@ -3459,23 +3459,23 @@ condition_compare_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-condition_compare_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__condition_compare_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  ConditionCompare *self = CONDITION_COMPARE (object);
+  I_ConditionCompare *self = I__CONDITION_COMPARE (object);
 
   switch (property_id)
   {
-    case PROP_CONDITION_COMPARE_LEFT:
+    case PROP_I__CONDITION_COMPARE_LEFT:
       if (self->left != NULL)
         g_object_unref (self->left);
       self->left = g_value_dup_object (value);
       self->__isset_left = TRUE;
       break;
 
-    case PROP_CONDITION_COMPARE_COMPARE:
+    case PROP_I__CONDITION_COMPARE_COMPARE:
       if (self->compare != NULL)
         g_object_unref (self->compare);
       self->compare = g_value_dup_object (value);
@@ -3489,20 +3489,20 @@ condition_compare_set_property (GObject *object,
 }
 
 static void
-condition_compare_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__condition_compare_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  ConditionCompare *self = CONDITION_COMPARE (object);
+  I_ConditionCompare *self = I__CONDITION_COMPARE (object);
 
   switch (property_id)
   {
-    case PROP_CONDITION_COMPARE_LEFT:
+    case PROP_I__CONDITION_COMPARE_LEFT:
       g_value_set_object (value, self->left);
       break;
 
-    case PROP_CONDITION_COMPARE_COMPARE:
+    case PROP_I__CONDITION_COMPARE_COMPARE:
       g_value_set_object (value, self->compare);
       break;
 
@@ -3513,20 +3513,20 @@ condition_compare_get_property (GObject *object,
 }
 
 static void 
-condition_compare_instance_init (ConditionCompare * object)
+i__condition_compare_instance_init (I_ConditionCompare * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->left = g_object_new (TYPE_COMPARABLE, NULL);
+  object->left = g_object_new (TYPE_I__COMPARABLE, NULL);
   object->__isset_left = FALSE;
-  object->compare = g_object_new (TYPE_COMPARE, NULL);
+  object->compare = g_object_new (TYPE_I__COMPARE, NULL);
   object->__isset_compare = FALSE;
 }
 
 static void 
-condition_compare_finalize (GObject *object)
+i__condition_compare_finalize (GObject *object)
 {
-  ConditionCompare *tobject = CONDITION_COMPARE (object);
+  I_ConditionCompare *tobject = I__CONDITION_COMPARE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -3543,39 +3543,39 @@ condition_compare_finalize (GObject *object)
 }
 
 static void
-condition_compare_class_init (ConditionCompareClass * cls)
+i__condition_compare_class_init (I_ConditionCompareClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = condition_compare_read;
-  struct_class->write = condition_compare_write;
+  struct_class->read = i__condition_compare_read;
+  struct_class->write = i__condition_compare_write;
 
-  gobject_class->finalize = condition_compare_finalize;
-  gobject_class->get_property = condition_compare_get_property;
-  gobject_class->set_property = condition_compare_set_property;
+  gobject_class->finalize = i__condition_compare_finalize;
+  gobject_class->get_property = i__condition_compare_get_property;
+  gobject_class->set_property = i__condition_compare_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_CONDITION_COMPARE_LEFT,
+     PROP_I__CONDITION_COMPARE_LEFT,
      g_param_spec_object ("left",
                          NULL,
                          NULL,
-                         TYPE_COMPARABLE,
+                         TYPE_I__COMPARABLE,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_CONDITION_COMPARE_COMPARE,
+     PROP_I__CONDITION_COMPARE_COMPARE,
      g_param_spec_object ("compare",
                          NULL,
                          NULL,
-                         TYPE_COMPARE,
+                         TYPE_I__COMPARE,
                          G_PARAM_READWRITE));
 }
 
 GType
-condition_compare_get_type (void)
+i__condition_compare_get_type (void)
 {
   static GType type = 0;
 
@@ -3583,37 +3583,37 @@ condition_compare_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (ConditionCompareClass),
+      sizeof (I_ConditionCompareClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) condition_compare_class_init,
+      (GClassInitFunc) i__condition_compare_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (ConditionCompare),
+      sizeof (I_ConditionCompare),
       0, /* n_preallocs */
-      (GInstanceInitFunc) condition_compare_instance_init,
+      (GInstanceInitFunc) i__condition_compare_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "ConditionCompareType",
+                                   "I_ConditionCompareType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _uPredicateProperties
+enum _I_uPredicateProperties
 {
-  PROP_U_PREDICATE_0,
-  PROP_U_PREDICATE_TERM,
-  PROP_U_PREDICATE_AND_,
-  PROP_U_PREDICATE_OR_
+  PROP_I_U_PREDICATE_0,
+  PROP_I_U_PREDICATE_TERM,
+  PROP_I_U_PREDICATE_AND_,
+  PROP_I_U_PREDICATE_OR_
 };
 
-/* reads a u_predicate object */
+/* reads a i_u_predicate object */
 static gint32
-u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -3622,7 +3622,7 @@ u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  uPredicate * this_object = U_PREDICATE(object);
+  I_uPredicate * this_object = I_U_PREDICATE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -3690,12 +3690,12 @@ u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Predicate * _elem9 = NULL;
+              I_Predicate * _elem9 = NULL;
               if ( _elem9 != NULL)
               {
                 g_object_unref (_elem9);
               }
-              _elem9 = g_object_new (TYPE_PREDICATE, NULL);
+              _elem9 = g_object_new (TYPE_I__PREDICATE, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem9), protocol, error)) < 0)
               {
                 g_object_unref (_elem9);
@@ -3730,12 +3730,12 @@ u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Predicate * _elem10 = NULL;
+              I_Predicate * _elem10 = NULL;
               if ( _elem10 != NULL)
               {
                 g_object_unref (_elem10);
               }
-              _elem10 = g_object_new (TYPE_PREDICATE, NULL);
+              _elem10 = g_object_new (TYPE_I__PREDICATE, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem10), protocol, error)) < 0)
               {
                 g_object_unref (_elem10);
@@ -3774,14 +3774,14 @@ u_predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
 }
 
 static gint32
-u_predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  uPredicate * this_object = U_PREDICATE(object);
+  I_uPredicate * this_object = I_U_PREDICATE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "uPredicate", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_uPredicate", error)) < 0)
     return -1;
   xfer += ret;
   if (this_object->__isset_term == TRUE) {
@@ -3857,30 +3857,30 @@ u_predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
 }
 
 static void
-u_predicate_set_property (GObject *object,
-                          guint property_id,
-                          const GValue *value,
-                          GParamSpec *pspec)
+i_u_predicate_set_property (GObject *object,
+                            guint property_id,
+                            const GValue *value,
+                            GParamSpec *pspec)
 {
-  uPredicate *self = U_PREDICATE (object);
+  I_uPredicate *self = I_U_PREDICATE (object);
 
   switch (property_id)
   {
-    case PROP_U_PREDICATE_TERM:
+    case PROP_I_U_PREDICATE_TERM:
       if (self->term != NULL)
         g_object_unref (self->term);
       self->term = g_value_dup_object (value);
       self->__isset_term = TRUE;
       break;
 
-    case PROP_U_PREDICATE_AND_:
+    case PROP_I_U_PREDICATE_AND_:
       if (self->and_ != NULL)
         g_ptr_array_unref (self->and_);
       self->and_ = g_value_dup_boxed (value);
       self->__isset_and_ = TRUE;
       break;
 
-    case PROP_U_PREDICATE_OR_:
+    case PROP_I_U_PREDICATE_OR_:
       if (self->or_ != NULL)
         g_ptr_array_unref (self->or_);
       self->or_ = g_value_dup_boxed (value);
@@ -3894,24 +3894,24 @@ u_predicate_set_property (GObject *object,
 }
 
 static void
-u_predicate_get_property (GObject *object,
-                          guint property_id,
-                          GValue *value,
-                          GParamSpec *pspec)
+i_u_predicate_get_property (GObject *object,
+                            guint property_id,
+                            GValue *value,
+                            GParamSpec *pspec)
 {
-  uPredicate *self = U_PREDICATE (object);
+  I_uPredicate *self = I_U_PREDICATE (object);
 
   switch (property_id)
   {
-    case PROP_U_PREDICATE_TERM:
+    case PROP_I_U_PREDICATE_TERM:
       g_value_set_object (value, self->term);
       break;
 
-    case PROP_U_PREDICATE_AND_:
+    case PROP_I_U_PREDICATE_AND_:
       g_value_set_boxed (value, self->and_);
       break;
 
-    case PROP_U_PREDICATE_OR_:
+    case PROP_I_U_PREDICATE_OR_:
       g_value_set_boxed (value, self->or_);
       break;
 
@@ -3922,11 +3922,11 @@ u_predicate_get_property (GObject *object,
 }
 
 static void 
-u_predicate_instance_init (uPredicate * object)
+i_u_predicate_instance_init (I_uPredicate * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->term = g_object_new (TYPE_CONDITION_COMPARE, NULL);
+  object->term = g_object_new (TYPE_I__CONDITION_COMPARE, NULL);
   object->__isset_term = FALSE;
   object->and_ = g_ptr_array_new_with_free_func (g_object_unref);
   object->__isset_and_ = FALSE;
@@ -3935,9 +3935,9 @@ u_predicate_instance_init (uPredicate * object)
 }
 
 static void 
-u_predicate_finalize (GObject *object)
+i_u_predicate_finalize (GObject *object)
 {
-  uPredicate *tobject = U_PREDICATE (object);
+  I_uPredicate *tobject = I_U_PREDICATE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -3959,30 +3959,30 @@ u_predicate_finalize (GObject *object)
 }
 
 static void
-u_predicate_class_init (uPredicateClass * cls)
+i_u_predicate_class_init (I_uPredicateClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = u_predicate_read;
-  struct_class->write = u_predicate_write;
+  struct_class->read = i_u_predicate_read;
+  struct_class->write = i_u_predicate_write;
 
-  gobject_class->finalize = u_predicate_finalize;
-  gobject_class->get_property = u_predicate_get_property;
-  gobject_class->set_property = u_predicate_set_property;
+  gobject_class->finalize = i_u_predicate_finalize;
+  gobject_class->get_property = i_u_predicate_get_property;
+  gobject_class->set_property = i_u_predicate_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_PREDICATE_TERM,
+     PROP_I_U_PREDICATE_TERM,
      g_param_spec_object ("term",
                          NULL,
                          NULL,
-                         TYPE_CONDITION_COMPARE,
+                         TYPE_I__CONDITION_COMPARE,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_PREDICATE_AND_,
+     PROP_I_U_PREDICATE_AND_,
      g_param_spec_boxed ("and_",
                          NULL,
                          NULL,
@@ -3991,7 +3991,7 @@ u_predicate_class_init (uPredicateClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_PREDICATE_OR_,
+     PROP_I_U_PREDICATE_OR_,
      g_param_spec_boxed ("or_",
                          NULL,
                          NULL,
@@ -4000,7 +4000,7 @@ u_predicate_class_init (uPredicateClass * cls)
 }
 
 GType
-u_predicate_get_type (void)
+i_u_predicate_get_type (void)
 {
   static GType type = 0;
 
@@ -4008,36 +4008,36 @@ u_predicate_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (uPredicateClass),
+      sizeof (I_uPredicateClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) u_predicate_class_init,
+      (GClassInitFunc) i_u_predicate_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (uPredicate),
+      sizeof (I_uPredicate),
       0, /* n_preallocs */
-      (GInstanceInitFunc) u_predicate_instance_init,
+      (GInstanceInitFunc) i_u_predicate_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "uPredicateType",
+                                   "I_uPredicateType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _PredicateProperties
+enum _I_PredicateProperties
 {
-  PROP_PREDICATE_0,
-  PROP_PREDICATE_TYPE,
-  PROP_PREDICATE_PREDICATE
+  PROP_I__PREDICATE_0,
+  PROP_I__PREDICATE_TYPE,
+  PROP_I__PREDICATE_PREDICATE
 };
 
-/* reads a predicate object */
+/* reads a i__predicate object */
 static gint32
-predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -4046,7 +4046,7 @@ predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Predicate * this_object = PREDICATE(object);
+  I_Predicate * this_object = I__PREDICATE(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -4091,7 +4091,7 @@ predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast13, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (PredicateType)ecast13;
+          this_object->type = (I_PredicateType)ecast13;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -4133,14 +4133,14 @@ predicate_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Predicate * this_object = PREDICATE(object);
+  I_Predicate * this_object = I__PREDICATE(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Predicate", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Predicate", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "type", T_I32, 1, error)) < 0)
@@ -4174,21 +4174,21 @@ predicate_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-predicate_set_property (GObject *object,
-                        guint property_id,
-                        const GValue *value,
-                        GParamSpec *pspec)
+i__predicate_set_property (GObject *object,
+                           guint property_id,
+                           const GValue *value,
+                           GParamSpec *pspec)
 {
-  Predicate *self = PREDICATE (object);
+  I_Predicate *self = I__PREDICATE (object);
 
   switch (property_id)
   {
-    case PROP_PREDICATE_TYPE:
+    case PROP_I__PREDICATE_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_PREDICATE_PREDICATE:
+    case PROP_I__PREDICATE_PREDICATE:
       if (self->predicate != NULL)
         g_object_unref (self->predicate);
       self->predicate = g_value_dup_object (value);
@@ -4202,20 +4202,20 @@ predicate_set_property (GObject *object,
 }
 
 static void
-predicate_get_property (GObject *object,
-                        guint property_id,
-                        GValue *value,
-                        GParamSpec *pspec)
+i__predicate_get_property (GObject *object,
+                           guint property_id,
+                           GValue *value,
+                           GParamSpec *pspec)
 {
-  Predicate *self = PREDICATE (object);
+  I_Predicate *self = I__PREDICATE (object);
 
   switch (property_id)
   {
-    case PROP_PREDICATE_TYPE:
+    case PROP_I__PREDICATE_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_PREDICATE_PREDICATE:
+    case PROP_I__PREDICATE_PREDICATE:
       g_value_set_object (value, self->predicate);
       break;
 
@@ -4226,19 +4226,19 @@ predicate_get_property (GObject *object,
 }
 
 static void 
-predicate_instance_init (Predicate * object)
+i__predicate_instance_init (I_Predicate * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_type = FALSE;
-  object->predicate = g_object_new (TYPE_U_PREDICATE, NULL);
+  object->predicate = g_object_new (TYPE_I_U_PREDICATE, NULL);
   object->__isset_predicate = FALSE;
 }
 
 static void 
-predicate_finalize (GObject *object)
+i__predicate_finalize (GObject *object)
 {
-  Predicate *tobject = PREDICATE (object);
+  I_Predicate *tobject = I__PREDICATE (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -4250,21 +4250,21 @@ predicate_finalize (GObject *object)
 }
 
 static void
-predicate_class_init (PredicateClass * cls)
+i__predicate_class_init (I_PredicateClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = predicate_read;
-  struct_class->write = predicate_write;
+  struct_class->read = i__predicate_read;
+  struct_class->write = i__predicate_write;
 
-  gobject_class->finalize = predicate_finalize;
-  gobject_class->get_property = predicate_get_property;
-  gobject_class->set_property = predicate_set_property;
+  gobject_class->finalize = i__predicate_finalize;
+  gobject_class->get_property = i__predicate_get_property;
+  gobject_class->set_property = i__predicate_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_PREDICATE_TYPE,
+     PROP_I__PREDICATE_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -4275,16 +4275,16 @@ predicate_class_init (PredicateClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_PREDICATE_PREDICATE,
+     PROP_I__PREDICATE_PREDICATE,
      g_param_spec_object ("predicate",
                          NULL,
                          NULL,
-                         TYPE_U_PREDICATE,
+                         TYPE_I_U_PREDICATE,
                          G_PARAM_READWRITE));
 }
 
 GType
-predicate_get_type (void)
+i__predicate_get_type (void)
 {
   static GType type = 0;
 
@@ -4292,37 +4292,37 @@ predicate_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (PredicateClass),
+      sizeof (I_PredicateClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) predicate_class_init,
+      (GClassInitFunc) i__predicate_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Predicate),
+      sizeof (I_Predicate),
       0, /* n_preallocs */
-      (GInstanceInitFunc) predicate_instance_init,
+      (GInstanceInitFunc) i__predicate_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "PredicateType",
+                                   "I_PredicateType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeConditionProperties
+enum _I_NodeConditionProperties
 {
-  PROP_NODE_CONDITION_0,
-  PROP_NODE_CONDITION_IS_NULL,
-  PROP_NODE_CONDITION_SCHEMA,
-  PROP_NODE_CONDITION_PREDICATES
+  PROP_I__NODE_CONDITION_0,
+  PROP_I__NODE_CONDITION_IS_NULL,
+  PROP_I__NODE_CONDITION_SCHEMA,
+  PROP_I__NODE_CONDITION_PREDICATES
 };
 
-/* reads a node_condition object */
+/* reads a i__node_condition object */
 static gint32
-node_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -4331,7 +4331,7 @@ node_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  NodeCondition * this_object = NODE_CONDITION(object);
+  I_NodeCondition * this_object = I__NODE_CONDITION(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -4416,12 +4416,12 @@ node_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Predicate * _elem14 = NULL;
+              I_Predicate * _elem14 = NULL;
               if ( _elem14 != NULL)
               {
                 g_object_unref (_elem14);
               }
-              _elem14 = g_object_new (TYPE_PREDICATE, NULL);
+              _elem14 = g_object_new (TYPE_I__PREDICATE, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem14), protocol, error)) < 0)
               {
                 g_object_unref (_elem14);
@@ -4460,14 +4460,14 @@ node_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
 }
 
 static gint32
-node_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  NodeCondition * this_object = NODE_CONDITION(object);
+  I_NodeCondition * this_object = I__NODE_CONDITION(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "NodeCondition", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_NodeCondition", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "is_null", T_BOOL, 1, error)) < 0)
@@ -4524,28 +4524,28 @@ node_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **e
 }
 
 static void
-node_condition_set_property (GObject *object,
-                             guint property_id,
-                             const GValue *value,
-                             GParamSpec *pspec)
+i__node_condition_set_property (GObject *object,
+                                guint property_id,
+                                const GValue *value,
+                                GParamSpec *pspec)
 {
-  NodeCondition *self = NODE_CONDITION (object);
+  I_NodeCondition *self = I__NODE_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_NODE_CONDITION_IS_NULL:
+    case PROP_I__NODE_CONDITION_IS_NULL:
       self->is_null = g_value_get_boolean (value);
       self->__isset_is_null = TRUE;
       break;
 
-    case PROP_NODE_CONDITION_SCHEMA:
+    case PROP_I__NODE_CONDITION_SCHEMA:
       if (self->schema != NULL)
         g_free (self->schema);
       self->schema = g_value_dup_string (value);
       self->__isset_schema = TRUE;
       break;
 
-    case PROP_NODE_CONDITION_PREDICATES:
+    case PROP_I__NODE_CONDITION_PREDICATES:
       if (self->predicates != NULL)
         g_ptr_array_unref (self->predicates);
       self->predicates = g_value_dup_boxed (value);
@@ -4559,24 +4559,24 @@ node_condition_set_property (GObject *object,
 }
 
 static void
-node_condition_get_property (GObject *object,
-                             guint property_id,
-                             GValue *value,
-                             GParamSpec *pspec)
+i__node_condition_get_property (GObject *object,
+                                guint property_id,
+                                GValue *value,
+                                GParamSpec *pspec)
 {
-  NodeCondition *self = NODE_CONDITION (object);
+  I_NodeCondition *self = I__NODE_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_NODE_CONDITION_IS_NULL:
+    case PROP_I__NODE_CONDITION_IS_NULL:
       g_value_set_boolean (value, self->is_null);
       break;
 
-    case PROP_NODE_CONDITION_SCHEMA:
+    case PROP_I__NODE_CONDITION_SCHEMA:
       g_value_set_string (value, self->schema);
       break;
 
-    case PROP_NODE_CONDITION_PREDICATES:
+    case PROP_I__NODE_CONDITION_PREDICATES:
       g_value_set_boxed (value, self->predicates);
       break;
 
@@ -4587,7 +4587,7 @@ node_condition_get_property (GObject *object,
 }
 
 static void 
-node_condition_instance_init (NodeCondition * object)
+i__node_condition_instance_init (I_NodeCondition * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -4600,9 +4600,9 @@ node_condition_instance_init (NodeCondition * object)
 }
 
 static void 
-node_condition_finalize (GObject *object)
+i__node_condition_finalize (GObject *object)
 {
-  NodeCondition *tobject = NODE_CONDITION (object);
+  I_NodeCondition *tobject = I__NODE_CONDITION (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -4619,21 +4619,21 @@ node_condition_finalize (GObject *object)
 }
 
 static void
-node_condition_class_init (NodeConditionClass * cls)
+i__node_condition_class_init (I_NodeConditionClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_condition_read;
-  struct_class->write = node_condition_write;
+  struct_class->read = i__node_condition_read;
+  struct_class->write = i__node_condition_write;
 
-  gobject_class->finalize = node_condition_finalize;
-  gobject_class->get_property = node_condition_get_property;
-  gobject_class->set_property = node_condition_set_property;
+  gobject_class->finalize = i__node_condition_finalize;
+  gobject_class->get_property = i__node_condition_get_property;
+  gobject_class->set_property = i__node_condition_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_CONDITION_IS_NULL,
+     PROP_I__NODE_CONDITION_IS_NULL,
      g_param_spec_boolean ("is_null",
                            NULL,
                            NULL,
@@ -4642,7 +4642,7 @@ node_condition_class_init (NodeConditionClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_CONDITION_SCHEMA,
+     PROP_I__NODE_CONDITION_SCHEMA,
      g_param_spec_string ("schema",
                           NULL,
                           NULL,
@@ -4651,7 +4651,7 @@ node_condition_class_init (NodeConditionClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_CONDITION_PREDICATES,
+     PROP_I__NODE_CONDITION_PREDICATES,
      g_param_spec_boxed ("predicates",
                          NULL,
                          NULL,
@@ -4660,7 +4660,7 @@ node_condition_class_init (NodeConditionClass * cls)
 }
 
 GType
-node_condition_get_type (void)
+i__node_condition_get_type (void)
 {
   static GType type = 0;
 
@@ -4668,37 +4668,37 @@ node_condition_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeConditionClass),
+      sizeof (I_NodeConditionClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_condition_class_init,
+      (GClassInitFunc) i__node_condition_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (NodeCondition),
+      sizeof (I_NodeCondition),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_condition_instance_init,
+      (GInstanceInitFunc) i__node_condition_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeConditionType",
+                                   "I_NodeConditionType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _LinkConditionProperties
+enum _I_LinkConditionProperties
 {
-  PROP_LINK_CONDITION_0,
-  PROP_LINK_CONDITION_IS_NULL,
-  PROP_LINK_CONDITION_LINK_TYPE,
-  PROP_LINK_CONDITION_LINK_NAME
+  PROP_I__LINK_CONDITION_0,
+  PROP_I__LINK_CONDITION_IS_NULL,
+  PROP_I__LINK_CONDITION_LINK_TYPE,
+  PROP_I__LINK_CONDITION_LINK_NAME
 };
 
-/* reads a link_condition object */
+/* reads a i__link_condition object */
 static gint32
-link_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -4707,7 +4707,7 @@ link_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  LinkCondition * this_object = LINK_CONDITION(object);
+  I_LinkCondition * this_object = I__LINK_CONDITION(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -4765,7 +4765,7 @@ link_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast16, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->link_type = (LinkType)ecast16;
+          this_object->link_type = (I_LinkType)ecast16;
           this_object->__isset_link_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -4811,14 +4811,14 @@ link_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
 }
 
 static gint32
-link_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  LinkCondition * this_object = LINK_CONDITION(object);
+  I_LinkCondition * this_object = I__LINK_CONDITION(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "LinkCondition", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_LinkCondition", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "is_null", T_BOOL, 1, error)) < 0)
@@ -4862,26 +4862,26 @@ link_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **e
 }
 
 static void
-link_condition_set_property (GObject *object,
-                             guint property_id,
-                             const GValue *value,
-                             GParamSpec *pspec)
+i__link_condition_set_property (GObject *object,
+                                guint property_id,
+                                const GValue *value,
+                                GParamSpec *pspec)
 {
-  LinkCondition *self = LINK_CONDITION (object);
+  I_LinkCondition *self = I__LINK_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_LINK_CONDITION_IS_NULL:
+    case PROP_I__LINK_CONDITION_IS_NULL:
       self->is_null = g_value_get_boolean (value);
       self->__isset_is_null = TRUE;
       break;
 
-    case PROP_LINK_CONDITION_LINK_TYPE:
+    case PROP_I__LINK_CONDITION_LINK_TYPE:
       self->link_type = g_value_get_int (value);
       self->__isset_link_type = TRUE;
       break;
 
-    case PROP_LINK_CONDITION_LINK_NAME:
+    case PROP_I__LINK_CONDITION_LINK_NAME:
       if (self->link_name != NULL)
         g_free (self->link_name);
       self->link_name = g_value_dup_string (value);
@@ -4895,24 +4895,24 @@ link_condition_set_property (GObject *object,
 }
 
 static void
-link_condition_get_property (GObject *object,
-                             guint property_id,
-                             GValue *value,
-                             GParamSpec *pspec)
+i__link_condition_get_property (GObject *object,
+                                guint property_id,
+                                GValue *value,
+                                GParamSpec *pspec)
 {
-  LinkCondition *self = LINK_CONDITION (object);
+  I_LinkCondition *self = I__LINK_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_LINK_CONDITION_IS_NULL:
+    case PROP_I__LINK_CONDITION_IS_NULL:
       g_value_set_boolean (value, self->is_null);
       break;
 
-    case PROP_LINK_CONDITION_LINK_TYPE:
+    case PROP_I__LINK_CONDITION_LINK_TYPE:
       g_value_set_int (value, self->link_type);
       break;
 
-    case PROP_LINK_CONDITION_LINK_NAME:
+    case PROP_I__LINK_CONDITION_LINK_NAME:
       g_value_set_string (value, self->link_name);
       break;
 
@@ -4923,7 +4923,7 @@ link_condition_get_property (GObject *object,
 }
 
 static void 
-link_condition_instance_init (LinkCondition * object)
+i__link_condition_instance_init (I_LinkCondition * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -4935,9 +4935,9 @@ link_condition_instance_init (LinkCondition * object)
 }
 
 static void 
-link_condition_finalize (GObject *object)
+i__link_condition_finalize (GObject *object)
 {
-  LinkCondition *tobject = LINK_CONDITION (object);
+  I_LinkCondition *tobject = I__LINK_CONDITION (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -4949,21 +4949,21 @@ link_condition_finalize (GObject *object)
 }
 
 static void
-link_condition_class_init (LinkConditionClass * cls)
+i__link_condition_class_init (I_LinkConditionClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = link_condition_read;
-  struct_class->write = link_condition_write;
+  struct_class->read = i__link_condition_read;
+  struct_class->write = i__link_condition_write;
 
-  gobject_class->finalize = link_condition_finalize;
-  gobject_class->get_property = link_condition_get_property;
-  gobject_class->set_property = link_condition_set_property;
+  gobject_class->finalize = i__link_condition_finalize;
+  gobject_class->get_property = i__link_condition_get_property;
+  gobject_class->set_property = i__link_condition_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_CONDITION_IS_NULL,
+     PROP_I__LINK_CONDITION_IS_NULL,
      g_param_spec_boolean ("is_null",
                            NULL,
                            NULL,
@@ -4972,7 +4972,7 @@ link_condition_class_init (LinkConditionClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_CONDITION_LINK_TYPE,
+     PROP_I__LINK_CONDITION_LINK_TYPE,
      g_param_spec_int ("link_type",
                        NULL,
                        NULL,
@@ -4983,7 +4983,7 @@ link_condition_class_init (LinkConditionClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_CONDITION_LINK_NAME,
+     PROP_I__LINK_CONDITION_LINK_NAME,
      g_param_spec_string ("link_name",
                           NULL,
                           NULL,
@@ -4992,7 +4992,7 @@ link_condition_class_init (LinkConditionClass * cls)
 }
 
 GType
-link_condition_get_type (void)
+i__link_condition_get_type (void)
 {
   static GType type = 0;
 
@@ -5000,39 +5000,39 @@ link_condition_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (LinkConditionClass),
+      sizeof (I_LinkConditionClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) link_condition_class_init,
+      (GClassInitFunc) i__link_condition_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (LinkCondition),
+      sizeof (I_LinkCondition),
       0, /* n_preallocs */
-      (GInstanceInitFunc) link_condition_instance_init,
+      (GInstanceInitFunc) i__link_condition_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "LinkConditionType",
+                                   "I_LinkConditionType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _MatchConditionProperties
+enum _I_MatchConditionProperties
 {
-  PROP_MATCH_CONDITION_0,
-  PROP_MATCH_CONDITION_IS_NULL,
-  PROP_MATCH_CONDITION_NODE_FIRST_CONDITION,
-  PROP_MATCH_CONDITION_NODE_SECOND_CONDITION,
-  PROP_MATCH_CONDITION_NODE_CROSS_CONDITION,
-  PROP_MATCH_CONDITION_LINK_CONDITION
+  PROP_I__MATCH_CONDITION_0,
+  PROP_I__MATCH_CONDITION_IS_NULL,
+  PROP_I__MATCH_CONDITION_NODE_FIRST_CONDITION,
+  PROP_I__MATCH_CONDITION_NODE_SECOND_CONDITION,
+  PROP_I__MATCH_CONDITION_NODE_CROSS_CONDITION,
+  PROP_I__MATCH_CONDITION_LINK_CONDITION
 };
 
-/* reads a match_condition object */
+/* reads a i__match_condition object */
 static gint32
-match_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__match_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -5041,7 +5041,7 @@ match_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **e
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  MatchCondition * this_object = MATCH_CONDITION(object);
+  I_MatchCondition * this_object = I__MATCH_CONDITION(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -5171,14 +5171,14 @@ match_condition_read (ThriftStruct *object, ThriftProtocol *protocol, GError **e
 }
 
 static gint32
-match_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__match_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  MatchCondition * this_object = MATCH_CONDITION(object);
+  I_MatchCondition * this_object = I__MATCH_CONDITION(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "MatchCondition", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_MatchCondition", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "is_null", T_BOOL, 1, error)) < 0)
@@ -5242,42 +5242,42 @@ match_condition_write (ThriftStruct *object, ThriftProtocol *protocol, GError **
 }
 
 static void
-match_condition_set_property (GObject *object,
-                              guint property_id,
-                              const GValue *value,
-                              GParamSpec *pspec)
+i__match_condition_set_property (GObject *object,
+                                 guint property_id,
+                                 const GValue *value,
+                                 GParamSpec *pspec)
 {
-  MatchCondition *self = MATCH_CONDITION (object);
+  I_MatchCondition *self = I__MATCH_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_MATCH_CONDITION_IS_NULL:
+    case PROP_I__MATCH_CONDITION_IS_NULL:
       self->is_null = g_value_get_boolean (value);
       self->__isset_is_null = TRUE;
       break;
 
-    case PROP_MATCH_CONDITION_NODE_FIRST_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_FIRST_CONDITION:
       if (self->node_first_condition != NULL)
         g_object_unref (self->node_first_condition);
       self->node_first_condition = g_value_dup_object (value);
       self->__isset_node_first_condition = TRUE;
       break;
 
-    case PROP_MATCH_CONDITION_NODE_SECOND_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_SECOND_CONDITION:
       if (self->node_second_condition != NULL)
         g_object_unref (self->node_second_condition);
       self->node_second_condition = g_value_dup_object (value);
       self->__isset_node_second_condition = TRUE;
       break;
 
-    case PROP_MATCH_CONDITION_NODE_CROSS_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_CROSS_CONDITION:
       if (self->node_cross_condition != NULL)
         g_object_unref (self->node_cross_condition);
       self->node_cross_condition = g_value_dup_object (value);
       self->__isset_node_cross_condition = TRUE;
       break;
 
-    case PROP_MATCH_CONDITION_LINK_CONDITION:
+    case PROP_I__MATCH_CONDITION_LINK_CONDITION:
       if (self->link_condition != NULL)
         g_object_unref (self->link_condition);
       self->link_condition = g_value_dup_object (value);
@@ -5291,32 +5291,32 @@ match_condition_set_property (GObject *object,
 }
 
 static void
-match_condition_get_property (GObject *object,
-                              guint property_id,
-                              GValue *value,
-                              GParamSpec *pspec)
+i__match_condition_get_property (GObject *object,
+                                 guint property_id,
+                                 GValue *value,
+                                 GParamSpec *pspec)
 {
-  MatchCondition *self = MATCH_CONDITION (object);
+  I_MatchCondition *self = I__MATCH_CONDITION (object);
 
   switch (property_id)
   {
-    case PROP_MATCH_CONDITION_IS_NULL:
+    case PROP_I__MATCH_CONDITION_IS_NULL:
       g_value_set_boolean (value, self->is_null);
       break;
 
-    case PROP_MATCH_CONDITION_NODE_FIRST_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_FIRST_CONDITION:
       g_value_set_object (value, self->node_first_condition);
       break;
 
-    case PROP_MATCH_CONDITION_NODE_SECOND_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_SECOND_CONDITION:
       g_value_set_object (value, self->node_second_condition);
       break;
 
-    case PROP_MATCH_CONDITION_NODE_CROSS_CONDITION:
+    case PROP_I__MATCH_CONDITION_NODE_CROSS_CONDITION:
       g_value_set_object (value, self->node_cross_condition);
       break;
 
-    case PROP_MATCH_CONDITION_LINK_CONDITION:
+    case PROP_I__MATCH_CONDITION_LINK_CONDITION:
       g_value_set_object (value, self->link_condition);
       break;
 
@@ -5327,26 +5327,26 @@ match_condition_get_property (GObject *object,
 }
 
 static void 
-match_condition_instance_init (MatchCondition * object)
+i__match_condition_instance_init (I_MatchCondition * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->is_null = 0;
   object->__isset_is_null = FALSE;
-  object->node_first_condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->node_first_condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_node_first_condition = FALSE;
-  object->node_second_condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->node_second_condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_node_second_condition = FALSE;
-  object->node_cross_condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->node_cross_condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_node_cross_condition = FALSE;
-  object->link_condition = g_object_new (TYPE_LINK_CONDITION, NULL);
+  object->link_condition = g_object_new (TYPE_I__LINK_CONDITION, NULL);
   object->__isset_link_condition = FALSE;
 }
 
 static void 
-match_condition_finalize (GObject *object)
+i__match_condition_finalize (GObject *object)
 {
-  MatchCondition *tobject = MATCH_CONDITION (object);
+  I_MatchCondition *tobject = I__MATCH_CONDITION (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -5373,21 +5373,21 @@ match_condition_finalize (GObject *object)
 }
 
 static void
-match_condition_class_init (MatchConditionClass * cls)
+i__match_condition_class_init (I_MatchConditionClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = match_condition_read;
-  struct_class->write = match_condition_write;
+  struct_class->read = i__match_condition_read;
+  struct_class->write = i__match_condition_write;
 
-  gobject_class->finalize = match_condition_finalize;
-  gobject_class->get_property = match_condition_get_property;
-  gobject_class->set_property = match_condition_set_property;
+  gobject_class->finalize = i__match_condition_finalize;
+  gobject_class->get_property = i__match_condition_get_property;
+  gobject_class->set_property = i__match_condition_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_CONDITION_IS_NULL,
+     PROP_I__MATCH_CONDITION_IS_NULL,
      g_param_spec_boolean ("is_null",
                            NULL,
                            NULL,
@@ -5396,43 +5396,43 @@ match_condition_class_init (MatchConditionClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_CONDITION_NODE_FIRST_CONDITION,
+     PROP_I__MATCH_CONDITION_NODE_FIRST_CONDITION,
      g_param_spec_object ("node_first_condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_CONDITION_NODE_SECOND_CONDITION,
+     PROP_I__MATCH_CONDITION_NODE_SECOND_CONDITION,
      g_param_spec_object ("node_second_condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_CONDITION_NODE_CROSS_CONDITION,
+     PROP_I__MATCH_CONDITION_NODE_CROSS_CONDITION,
      g_param_spec_object ("node_cross_condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_CONDITION_LINK_CONDITION,
+     PROP_I__MATCH_CONDITION_LINK_CONDITION,
      g_param_spec_object ("link_condition",
                          NULL,
                          NULL,
-                         TYPE_LINK_CONDITION,
+                         TYPE_I__LINK_CONDITION,
                          G_PARAM_READWRITE));
 }
 
 GType
-match_condition_get_type (void)
+i__match_condition_get_type (void)
 {
   static GType type = 0;
 
@@ -5440,35 +5440,35 @@ match_condition_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (MatchConditionClass),
+      sizeof (I_MatchConditionClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) match_condition_class_init,
+      (GClassInitFunc) i__match_condition_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (MatchCondition),
+      sizeof (I_MatchCondition),
       0, /* n_preallocs */
-      (GInstanceInitFunc) match_condition_instance_init,
+      (GInstanceInitFunc) i__match_condition_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "MatchConditionType",
+                                   "I_MatchConditionType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _SchemaCreateQueryProperties
+enum _I_SchemaCreateQueryProperties
 {
-  PROP_SCHEMA_CREATE_QUERY_0,
-  PROP_SCHEMA_CREATE_QUERY_SCHEMA
+  PROP_I__SCHEMA_CREATE_QUERY_0,
+  PROP_I__SCHEMA_CREATE_QUERY_SCHEMA
 };
 
-/* reads a schema_create_query object */
+/* reads a i__schema_create_query object */
 static gint32
-schema_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -5477,7 +5477,7 @@ schema_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  SchemaCreateQuery * this_object = SCHEMA_CREATE_QUERY(object);
+  I_SchemaCreateQuery * this_object = I__SCHEMA_CREATE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -5549,14 +5549,14 @@ schema_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError
 }
 
 static gint32
-schema_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  SchemaCreateQuery * this_object = SCHEMA_CREATE_QUERY(object);
+  I_SchemaCreateQuery * this_object = I__SCHEMA_CREATE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "SchemaCreateQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_SchemaCreateQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "schema", T_STRUCT, 1, error)) < 0)
@@ -5580,16 +5580,16 @@ schema_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GErro
 }
 
 static void
-schema_create_query_set_property (GObject *object,
-                                  guint property_id,
-                                  const GValue *value,
-                                  GParamSpec *pspec)
+i__schema_create_query_set_property (GObject *object,
+                                     guint property_id,
+                                     const GValue *value,
+                                     GParamSpec *pspec)
 {
-  SchemaCreateQuery *self = SCHEMA_CREATE_QUERY (object);
+  I_SchemaCreateQuery *self = I__SCHEMA_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_CREATE_QUERY_SCHEMA:
+    case PROP_I__SCHEMA_CREATE_QUERY_SCHEMA:
       if (self->schema != NULL)
         g_object_unref (self->schema);
       self->schema = g_value_dup_object (value);
@@ -5603,16 +5603,16 @@ schema_create_query_set_property (GObject *object,
 }
 
 static void
-schema_create_query_get_property (GObject *object,
-                                  guint property_id,
-                                  GValue *value,
-                                  GParamSpec *pspec)
+i__schema_create_query_get_property (GObject *object,
+                                     guint property_id,
+                                     GValue *value,
+                                     GParamSpec *pspec)
 {
-  SchemaCreateQuery *self = SCHEMA_CREATE_QUERY (object);
+  I_SchemaCreateQuery *self = I__SCHEMA_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_CREATE_QUERY_SCHEMA:
+    case PROP_I__SCHEMA_CREATE_QUERY_SCHEMA:
       g_value_set_object (value, self->schema);
       break;
 
@@ -5623,18 +5623,18 @@ schema_create_query_get_property (GObject *object,
 }
 
 static void 
-schema_create_query_instance_init (SchemaCreateQuery * object)
+i__schema_create_query_instance_init (I_SchemaCreateQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->schema = g_object_new (TYPE_SCHEMA, NULL);
+  object->schema = g_object_new (TYPE_I__SCHEMA, NULL);
   object->__isset_schema = FALSE;
 }
 
 static void 
-schema_create_query_finalize (GObject *object)
+i__schema_create_query_finalize (GObject *object)
 {
-  SchemaCreateQuery *tobject = SCHEMA_CREATE_QUERY (object);
+  I_SchemaCreateQuery *tobject = I__SCHEMA_CREATE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -5646,30 +5646,30 @@ schema_create_query_finalize (GObject *object)
 }
 
 static void
-schema_create_query_class_init (SchemaCreateQueryClass * cls)
+i__schema_create_query_class_init (I_SchemaCreateQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = schema_create_query_read;
-  struct_class->write = schema_create_query_write;
+  struct_class->read = i__schema_create_query_read;
+  struct_class->write = i__schema_create_query_write;
 
-  gobject_class->finalize = schema_create_query_finalize;
-  gobject_class->get_property = schema_create_query_get_property;
-  gobject_class->set_property = schema_create_query_set_property;
+  gobject_class->finalize = i__schema_create_query_finalize;
+  gobject_class->get_property = i__schema_create_query_get_property;
+  gobject_class->set_property = i__schema_create_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_SCHEMA_CREATE_QUERY_SCHEMA,
+     PROP_I__SCHEMA_CREATE_QUERY_SCHEMA,
      g_param_spec_object ("schema",
                          NULL,
                          NULL,
-                         TYPE_SCHEMA,
+                         TYPE_I__SCHEMA,
                          G_PARAM_READWRITE));
 }
 
 GType
-schema_create_query_get_type (void)
+i__schema_create_query_get_type (void)
 {
   static GType type = 0;
 
@@ -5677,35 +5677,35 @@ schema_create_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (SchemaCreateQueryClass),
+      sizeof (I_SchemaCreateQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) schema_create_query_class_init,
+      (GClassInitFunc) i__schema_create_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (SchemaCreateQuery),
+      sizeof (I_SchemaCreateQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) schema_create_query_instance_init,
+      (GInstanceInitFunc) i__schema_create_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "SchemaCreateQueryType",
+                                   "I_SchemaCreateQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _SchemaGetQueryProperties
+enum _I_SchemaGetQueryProperties
 {
-  PROP_SCHEMA_GET_QUERY_0,
-  PROP_SCHEMA_GET_QUERY_SCHEMA_NAME
+  PROP_I__SCHEMA_GET_QUERY_0,
+  PROP_I__SCHEMA_GET_QUERY_SCHEMA_NAME
 };
 
-/* reads a schema_get_query object */
+/* reads a i__schema_get_query object */
 static gint32
-schema_get_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_get_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -5714,7 +5714,7 @@ schema_get_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  SchemaGetQuery * this_object = SCHEMA_GET_QUERY(object);
+  I_SchemaGetQuery * this_object = I__SCHEMA_GET_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -5790,14 +5790,14 @@ schema_get_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **
 }
 
 static gint32
-schema_get_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_get_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  SchemaGetQuery * this_object = SCHEMA_GET_QUERY(object);
+  I_SchemaGetQuery * this_object = I__SCHEMA_GET_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "SchemaGetQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_SchemaGetQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "schema_name", T_STRING, 1, error)) < 0)
@@ -5821,257 +5821,16 @@ schema_get_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static void
-schema_get_query_set_property (GObject *object,
-                               guint property_id,
-                               const GValue *value,
-                               GParamSpec *pspec)
-{
-  SchemaGetQuery *self = SCHEMA_GET_QUERY (object);
-
-  switch (property_id)
-  {
-    case PROP_SCHEMA_GET_QUERY_SCHEMA_NAME:
-      if (self->schema_name != NULL)
-        g_free (self->schema_name);
-      self->schema_name = g_value_dup_string (value);
-      self->__isset_schema_name = TRUE;
-      break;
-
-    default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
-      break;
-  }
-}
-
-static void
-schema_get_query_get_property (GObject *object,
-                               guint property_id,
-                               GValue *value,
-                               GParamSpec *pspec)
-{
-  SchemaGetQuery *self = SCHEMA_GET_QUERY (object);
-
-  switch (property_id)
-  {
-    case PROP_SCHEMA_GET_QUERY_SCHEMA_NAME:
-      g_value_set_string (value, self->schema_name);
-      break;
-
-    default:
-      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
-      break;
-  }
-}
-
-static void 
-schema_get_query_instance_init (SchemaGetQuery * object)
-{
-  /* satisfy -Wall */
-  THRIFT_UNUSED_VAR (object);
-  object->schema_name = NULL;
-  object->__isset_schema_name = FALSE;
-}
-
-static void 
-schema_get_query_finalize (GObject *object)
-{
-  SchemaGetQuery *tobject = SCHEMA_GET_QUERY (object);
-
-  /* satisfy -Wall in case we don't use tobject */
-  THRIFT_UNUSED_VAR (tobject);
-  if (tobject->schema_name != NULL)
-  {
-    g_free(tobject->schema_name);
-    tobject->schema_name = NULL;
-  }
-}
-
-static void
-schema_get_query_class_init (SchemaGetQueryClass * cls)
-{
-  GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
-  ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
-
-  struct_class->read = schema_get_query_read;
-  struct_class->write = schema_get_query_write;
-
-  gobject_class->finalize = schema_get_query_finalize;
-  gobject_class->get_property = schema_get_query_get_property;
-  gobject_class->set_property = schema_get_query_set_property;
-
-  g_object_class_install_property
-    (gobject_class,
-     PROP_SCHEMA_GET_QUERY_SCHEMA_NAME,
-     g_param_spec_string ("schema_name",
-                          NULL,
-                          NULL,
-                          NULL,
-                          G_PARAM_READWRITE));
-}
-
-GType
-schema_get_query_get_type (void)
-{
-  static GType type = 0;
-
-  if (type == 0) 
-  {
-    static const GTypeInfo type_info = 
-    {
-      sizeof (SchemaGetQueryClass),
-      NULL, /* base_init */
-      NULL, /* base_finalize */
-      (GClassInitFunc) schema_get_query_class_init,
-      NULL, /* class_finalize */
-      NULL, /* class_data */
-      sizeof (SchemaGetQuery),
-      0, /* n_preallocs */
-      (GInstanceInitFunc) schema_get_query_instance_init,
-      NULL, /* value_table */
-    };
-
-    type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "SchemaGetQueryType",
-                                   &type_info, 0);
-  }
-
-  return type;
-}
-
-enum _SchemaDeleteQueryProperties
-{
-  PROP_SCHEMA_DELETE_QUERY_0,
-  PROP_SCHEMA_DELETE_QUERY_SCHEMA_NAME
-};
-
-/* reads a schema_delete_query object */
-static gint32
-schema_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
-{
-  gint32 ret;
-  gint32 xfer = 0;
-  gchar *name = NULL;
-  ThriftType ftype;
-  gint16 fid;
-  guint32 len = 0;
-  gpointer data = NULL;
-  SchemaDeleteQuery * this_object = SCHEMA_DELETE_QUERY(object);
-
-  /* satisfy -Wall in case these aren't used */
-  THRIFT_UNUSED_VAR (len);
-  THRIFT_UNUSED_VAR (data);
-  THRIFT_UNUSED_VAR (this_object);
-
-  /* read the struct begin marker */
-  if ((ret = thrift_protocol_read_struct_begin (protocol, &name, error)) < 0)
-  {
-    if (name) g_free (name);
-    return -1;
-  }
-  xfer += ret;
-  if (name) g_free (name);
-  name = NULL;
-
-  /* read the struct fields */
-  while (1)
-  {
-    /* read the beginning of a field */
-    if ((ret = thrift_protocol_read_field_begin (protocol, &name, &ftype, &fid, error)) < 0)
-    {
-      if (name) g_free (name);
-      return -1;
-    }
-    xfer += ret;
-    if (name) g_free (name);
-    name = NULL;
-
-    /* break if we get a STOP field */
-    if (ftype == T_STOP)
-    {
-      break;
-    }
-
-    switch (fid)
-    {
-      case 1:
-        if (ftype == T_STRING)
-        {
-          if (this_object->schema_name != NULL)
-          {
-            g_free(this_object->schema_name);
-            this_object->schema_name = NULL;
-          }
-
-          if ((ret = thrift_protocol_read_string (protocol, &this_object->schema_name, error)) < 0)
-            return -1;
-          xfer += ret;
-          this_object->__isset_schema_name = TRUE;
-        } else {
-          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
-            return -1;
-          xfer += ret;
-        }
-        break;
-      default:
-        if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
-          return -1;
-        xfer += ret;
-        break;
-    }
-    if ((ret = thrift_protocol_read_field_end (protocol, error)) < 0)
-      return -1;
-    xfer += ret;
-  }
-
-  if ((ret = thrift_protocol_read_struct_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
-
-  return xfer;
-}
-
-static gint32
-schema_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
-{
-  gint32 ret;
-  gint32 xfer = 0;
-
-  SchemaDeleteQuery * this_object = SCHEMA_DELETE_QUERY(object);
-  THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "SchemaDeleteQuery", error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "schema_name", T_STRING, 1, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_string (protocol, this_object->schema_name, error)) < 0)
-    return -1;
-  xfer += ret;
-
-  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_field_stop (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_struct_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
-
-  return xfer;
-}
-
-static void
-schema_delete_query_set_property (GObject *object,
+i__schema_get_query_set_property (GObject *object,
                                   guint property_id,
                                   const GValue *value,
                                   GParamSpec *pspec)
 {
-  SchemaDeleteQuery *self = SCHEMA_DELETE_QUERY (object);
+  I_SchemaGetQuery *self = I__SCHEMA_GET_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_DELETE_QUERY_SCHEMA_NAME:
+    case PROP_I__SCHEMA_GET_QUERY_SCHEMA_NAME:
       if (self->schema_name != NULL)
         g_free (self->schema_name);
       self->schema_name = g_value_dup_string (value);
@@ -6085,16 +5844,16 @@ schema_delete_query_set_property (GObject *object,
 }
 
 static void
-schema_delete_query_get_property (GObject *object,
+i__schema_get_query_get_property (GObject *object,
                                   guint property_id,
                                   GValue *value,
                                   GParamSpec *pspec)
 {
-  SchemaDeleteQuery *self = SCHEMA_DELETE_QUERY (object);
+  I_SchemaGetQuery *self = I__SCHEMA_GET_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_SCHEMA_DELETE_QUERY_SCHEMA_NAME:
+    case PROP_I__SCHEMA_GET_QUERY_SCHEMA_NAME:
       g_value_set_string (value, self->schema_name);
       break;
 
@@ -6105,7 +5864,7 @@ schema_delete_query_get_property (GObject *object,
 }
 
 static void 
-schema_delete_query_instance_init (SchemaDeleteQuery * object)
+i__schema_get_query_instance_init (I_SchemaGetQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -6114,9 +5873,9 @@ schema_delete_query_instance_init (SchemaDeleteQuery * object)
 }
 
 static void 
-schema_delete_query_finalize (GObject *object)
+i__schema_get_query_finalize (GObject *object)
 {
-  SchemaDeleteQuery *tobject = SCHEMA_DELETE_QUERY (object);
+  I_SchemaGetQuery *tobject = I__SCHEMA_GET_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -6128,21 +5887,21 @@ schema_delete_query_finalize (GObject *object)
 }
 
 static void
-schema_delete_query_class_init (SchemaDeleteQueryClass * cls)
+i__schema_get_query_class_init (I_SchemaGetQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = schema_delete_query_read;
-  struct_class->write = schema_delete_query_write;
+  struct_class->read = i__schema_get_query_read;
+  struct_class->write = i__schema_get_query_write;
 
-  gobject_class->finalize = schema_delete_query_finalize;
-  gobject_class->get_property = schema_delete_query_get_property;
-  gobject_class->set_property = schema_delete_query_set_property;
+  gobject_class->finalize = i__schema_get_query_finalize;
+  gobject_class->get_property = i__schema_get_query_get_property;
+  gobject_class->set_property = i__schema_get_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_SCHEMA_DELETE_QUERY_SCHEMA_NAME,
+     PROP_I__SCHEMA_GET_QUERY_SCHEMA_NAME,
      g_param_spec_string ("schema_name",
                           NULL,
                           NULL,
@@ -6151,7 +5910,7 @@ schema_delete_query_class_init (SchemaDeleteQueryClass * cls)
 }
 
 GType
-schema_delete_query_get_type (void)
+i__schema_get_query_get_type (void)
 {
   static GType type = 0;
 
@@ -6159,36 +5918,35 @@ schema_delete_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (SchemaDeleteQueryClass),
+      sizeof (I_SchemaGetQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) schema_delete_query_class_init,
+      (GClassInitFunc) i__schema_get_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (SchemaDeleteQuery),
+      sizeof (I_SchemaGetQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) schema_delete_query_instance_init,
+      (GInstanceInitFunc) i__schema_get_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "SchemaDeleteQueryType",
+                                   "I_SchemaGetQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeCreateQueryProperties
+enum _I_SchemaDeleteQueryProperties
 {
-  PROP_NODE_CREATE_QUERY_0,
-  PROP_NODE_CREATE_QUERY_SCHEMA_NAME,
-  PROP_NODE_CREATE_QUERY_NODE
+  PROP_I__SCHEMA_DELETE_QUERY_0,
+  PROP_I__SCHEMA_DELETE_QUERY_SCHEMA_NAME
 };
 
-/* reads a node_create_query object */
+/* reads a i__schema_delete_query object */
 static gint32
-node_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__schema_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -6197,7 +5955,249 @@ node_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  NodeCreateQuery * this_object = NODE_CREATE_QUERY(object);
+  I_SchemaDeleteQuery * this_object = I__SCHEMA_DELETE_QUERY(object);
+
+  /* satisfy -Wall in case these aren't used */
+  THRIFT_UNUSED_VAR (len);
+  THRIFT_UNUSED_VAR (data);
+  THRIFT_UNUSED_VAR (this_object);
+
+  /* read the struct begin marker */
+  if ((ret = thrift_protocol_read_struct_begin (protocol, &name, error)) < 0)
+  {
+    if (name) g_free (name);
+    return -1;
+  }
+  xfer += ret;
+  if (name) g_free (name);
+  name = NULL;
+
+  /* read the struct fields */
+  while (1)
+  {
+    /* read the beginning of a field */
+    if ((ret = thrift_protocol_read_field_begin (protocol, &name, &ftype, &fid, error)) < 0)
+    {
+      if (name) g_free (name);
+      return -1;
+    }
+    xfer += ret;
+    if (name) g_free (name);
+    name = NULL;
+
+    /* break if we get a STOP field */
+    if (ftype == T_STOP)
+    {
+      break;
+    }
+
+    switch (fid)
+    {
+      case 1:
+        if (ftype == T_STRING)
+        {
+          if (this_object->schema_name != NULL)
+          {
+            g_free(this_object->schema_name);
+            this_object->schema_name = NULL;
+          }
+
+          if ((ret = thrift_protocol_read_string (protocol, &this_object->schema_name, error)) < 0)
+            return -1;
+          xfer += ret;
+          this_object->__isset_schema_name = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      default:
+        if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+          return -1;
+        xfer += ret;
+        break;
+    }
+    if ((ret = thrift_protocol_read_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
+
+  if ((ret = thrift_protocol_read_struct_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  return xfer;
+}
+
+static gint32
+i__schema_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+{
+  gint32 ret;
+  gint32 xfer = 0;
+
+  I_SchemaDeleteQuery * this_object = I__SCHEMA_DELETE_QUERY(object);
+  THRIFT_UNUSED_VAR (this_object);
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_SchemaDeleteQuery", error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_begin (protocol, "schema_name", T_STRING, 1, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_string (protocol, this_object->schema_name, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_stop (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_struct_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  return xfer;
+}
+
+static void
+i__schema_delete_query_set_property (GObject *object,
+                                     guint property_id,
+                                     const GValue *value,
+                                     GParamSpec *pspec)
+{
+  I_SchemaDeleteQuery *self = I__SCHEMA_DELETE_QUERY (object);
+
+  switch (property_id)
+  {
+    case PROP_I__SCHEMA_DELETE_QUERY_SCHEMA_NAME:
+      if (self->schema_name != NULL)
+        g_free (self->schema_name);
+      self->schema_name = g_value_dup_string (value);
+      self->__isset_schema_name = TRUE;
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+      break;
+  }
+}
+
+static void
+i__schema_delete_query_get_property (GObject *object,
+                                     guint property_id,
+                                     GValue *value,
+                                     GParamSpec *pspec)
+{
+  I_SchemaDeleteQuery *self = I__SCHEMA_DELETE_QUERY (object);
+
+  switch (property_id)
+  {
+    case PROP_I__SCHEMA_DELETE_QUERY_SCHEMA_NAME:
+      g_value_set_string (value, self->schema_name);
+      break;
+
+    default:
+      G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
+      break;
+  }
+}
+
+static void 
+i__schema_delete_query_instance_init (I_SchemaDeleteQuery * object)
+{
+  /* satisfy -Wall */
+  THRIFT_UNUSED_VAR (object);
+  object->schema_name = NULL;
+  object->__isset_schema_name = FALSE;
+}
+
+static void 
+i__schema_delete_query_finalize (GObject *object)
+{
+  I_SchemaDeleteQuery *tobject = I__SCHEMA_DELETE_QUERY (object);
+
+  /* satisfy -Wall in case we don't use tobject */
+  THRIFT_UNUSED_VAR (tobject);
+  if (tobject->schema_name != NULL)
+  {
+    g_free(tobject->schema_name);
+    tobject->schema_name = NULL;
+  }
+}
+
+static void
+i__schema_delete_query_class_init (I_SchemaDeleteQueryClass * cls)
+{
+  GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
+  ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
+
+  struct_class->read = i__schema_delete_query_read;
+  struct_class->write = i__schema_delete_query_write;
+
+  gobject_class->finalize = i__schema_delete_query_finalize;
+  gobject_class->get_property = i__schema_delete_query_get_property;
+  gobject_class->set_property = i__schema_delete_query_set_property;
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I__SCHEMA_DELETE_QUERY_SCHEMA_NAME,
+     g_param_spec_string ("schema_name",
+                          NULL,
+                          NULL,
+                          NULL,
+                          G_PARAM_READWRITE));
+}
+
+GType
+i__schema_delete_query_get_type (void)
+{
+  static GType type = 0;
+
+  if (type == 0) 
+  {
+    static const GTypeInfo type_info = 
+    {
+      sizeof (I_SchemaDeleteQueryClass),
+      NULL, /* base_init */
+      NULL, /* base_finalize */
+      (GClassInitFunc) i__schema_delete_query_class_init,
+      NULL, /* class_finalize */
+      NULL, /* class_data */
+      sizeof (I_SchemaDeleteQuery),
+      0, /* n_preallocs */
+      (GInstanceInitFunc) i__schema_delete_query_instance_init,
+      NULL, /* value_table */
+    };
+
+    type = g_type_register_static (THRIFT_TYPE_STRUCT, 
+                                   "I_SchemaDeleteQueryType",
+                                   &type_info, 0);
+  }
+
+  return type;
+}
+
+enum _I_NodeCreateQueryProperties
+{
+  PROP_I__NODE_CREATE_QUERY_0,
+  PROP_I__NODE_CREATE_QUERY_SCHEMA_NAME,
+  PROP_I__NODE_CREATE_QUERY_NODE
+};
+
+/* reads a i__node_create_query object */
+static gint32
+i__node_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+{
+  gint32 ret;
+  gint32 xfer = 0;
+  gchar *name = NULL;
+  ThriftType ftype;
+  gint16 fid;
+  guint32 len = 0;
+  gpointer data = NULL;
+  I_NodeCreateQuery * this_object = I__NODE_CREATE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -6288,14 +6288,14 @@ node_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-node_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  NodeCreateQuery * this_object = NODE_CREATE_QUERY(object);
+  I_NodeCreateQuery * this_object = I__NODE_CREATE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "NodeCreateQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_NodeCreateQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "schema_name", T_STRING, 1, error)) < 0)
@@ -6329,23 +6329,23 @@ node_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-node_create_query_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__node_create_query_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeCreateQuery *self = NODE_CREATE_QUERY (object);
+  I_NodeCreateQuery *self = I__NODE_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_CREATE_QUERY_SCHEMA_NAME:
+    case PROP_I__NODE_CREATE_QUERY_SCHEMA_NAME:
       if (self->schema_name != NULL)
         g_free (self->schema_name);
       self->schema_name = g_value_dup_string (value);
       self->__isset_schema_name = TRUE;
       break;
 
-    case PROP_NODE_CREATE_QUERY_NODE:
+    case PROP_I__NODE_CREATE_QUERY_NODE:
       if (self->node != NULL)
         g_object_unref (self->node);
       self->node = g_value_dup_object (value);
@@ -6359,20 +6359,20 @@ node_create_query_set_property (GObject *object,
 }
 
 static void
-node_create_query_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__node_create_query_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeCreateQuery *self = NODE_CREATE_QUERY (object);
+  I_NodeCreateQuery *self = I__NODE_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_CREATE_QUERY_SCHEMA_NAME:
+    case PROP_I__NODE_CREATE_QUERY_SCHEMA_NAME:
       g_value_set_string (value, self->schema_name);
       break;
 
-    case PROP_NODE_CREATE_QUERY_NODE:
+    case PROP_I__NODE_CREATE_QUERY_NODE:
       g_value_set_object (value, self->node);
       break;
 
@@ -6383,20 +6383,20 @@ node_create_query_get_property (GObject *object,
 }
 
 static void 
-node_create_query_instance_init (NodeCreateQuery * object)
+i__node_create_query_instance_init (I_NodeCreateQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->schema_name = NULL;
   object->__isset_schema_name = FALSE;
-  object->node = g_object_new (TYPE_NODE, NULL);
+  object->node = g_object_new (TYPE_I__NODE, NULL);
   object->__isset_node = FALSE;
 }
 
 static void 
-node_create_query_finalize (GObject *object)
+i__node_create_query_finalize (GObject *object)
 {
-  NodeCreateQuery *tobject = NODE_CREATE_QUERY (object);
+  I_NodeCreateQuery *tobject = I__NODE_CREATE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -6413,21 +6413,21 @@ node_create_query_finalize (GObject *object)
 }
 
 static void
-node_create_query_class_init (NodeCreateQueryClass * cls)
+i__node_create_query_class_init (I_NodeCreateQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_create_query_read;
-  struct_class->write = node_create_query_write;
+  struct_class->read = i__node_create_query_read;
+  struct_class->write = i__node_create_query_write;
 
-  gobject_class->finalize = node_create_query_finalize;
-  gobject_class->get_property = node_create_query_get_property;
-  gobject_class->set_property = node_create_query_set_property;
+  gobject_class->finalize = i__node_create_query_finalize;
+  gobject_class->get_property = i__node_create_query_get_property;
+  gobject_class->set_property = i__node_create_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_CREATE_QUERY_SCHEMA_NAME,
+     PROP_I__NODE_CREATE_QUERY_SCHEMA_NAME,
      g_param_spec_string ("schema_name",
                           NULL,
                           NULL,
@@ -6436,16 +6436,16 @@ node_create_query_class_init (NodeCreateQueryClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_CREATE_QUERY_NODE,
+     PROP_I__NODE_CREATE_QUERY_NODE,
      g_param_spec_object ("node",
                          NULL,
                          NULL,
-                         TYPE_NODE,
+                         TYPE_I__NODE,
                          G_PARAM_READWRITE));
 }
 
 GType
-node_create_query_get_type (void)
+i__node_create_query_get_type (void)
 {
   static GType type = 0;
 
@@ -6453,36 +6453,36 @@ node_create_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeCreateQueryClass),
+      sizeof (I_NodeCreateQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_create_query_class_init,
+      (GClassInitFunc) i__node_create_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (NodeCreateQuery),
+      sizeof (I_NodeCreateQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_create_query_instance_init,
+      (GInstanceInitFunc) i__node_create_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeCreateQueryType",
+                                   "I_NodeCreateQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeUpdateQueryProperties
+enum _I_NodeUpdateQueryProperties
 {
-  PROP_NODE_UPDATE_QUERY_0,
-  PROP_NODE_UPDATE_QUERY_CONDITION,
-  PROP_NODE_UPDATE_QUERY_PROPERTIES
+  PROP_I__NODE_UPDATE_QUERY_0,
+  PROP_I__NODE_UPDATE_QUERY_CONDITION,
+  PROP_I__NODE_UPDATE_QUERY_PROPERTIES
 };
 
-/* reads a node_update_query object */
+/* reads a i__node_update_query object */
 static gint32
-node_update_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_update_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -6491,7 +6491,7 @@ node_update_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  NodeUpdateQuery * this_object = NODE_UPDATE_QUERY(object);
+  I_NodeUpdateQuery * this_object = I__NODE_UPDATE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -6559,12 +6559,12 @@ node_update_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Property * _elem17 = NULL;
+              I_Property * _elem17 = NULL;
               if ( _elem17 != NULL)
               {
                 g_object_unref (_elem17);
               }
-              _elem17 = g_object_new (TYPE_PROPERTY, NULL);
+              _elem17 = g_object_new (TYPE_I__PROPERTY, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem17), protocol, error)) < 0)
               {
                 g_object_unref (_elem17);
@@ -6603,14 +6603,14 @@ node_update_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-node_update_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_update_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  NodeUpdateQuery * this_object = NODE_UPDATE_QUERY(object);
+  I_NodeUpdateQuery * this_object = I__NODE_UPDATE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "NodeUpdateQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_NodeUpdateQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "condition", T_STRUCT, 1, error)) < 0)
@@ -6657,23 +6657,23 @@ node_update_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-node_update_query_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__node_update_query_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeUpdateQuery *self = NODE_UPDATE_QUERY (object);
+  I_NodeUpdateQuery *self = I__NODE_UPDATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_UPDATE_QUERY_CONDITION:
+    case PROP_I__NODE_UPDATE_QUERY_CONDITION:
       if (self->condition != NULL)
         g_object_unref (self->condition);
       self->condition = g_value_dup_object (value);
       self->__isset_condition = TRUE;
       break;
 
-    case PROP_NODE_UPDATE_QUERY_PROPERTIES:
+    case PROP_I__NODE_UPDATE_QUERY_PROPERTIES:
       if (self->properties != NULL)
         g_ptr_array_unref (self->properties);
       self->properties = g_value_dup_boxed (value);
@@ -6687,20 +6687,20 @@ node_update_query_set_property (GObject *object,
 }
 
 static void
-node_update_query_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__node_update_query_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeUpdateQuery *self = NODE_UPDATE_QUERY (object);
+  I_NodeUpdateQuery *self = I__NODE_UPDATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_UPDATE_QUERY_CONDITION:
+    case PROP_I__NODE_UPDATE_QUERY_CONDITION:
       g_value_set_object (value, self->condition);
       break;
 
-    case PROP_NODE_UPDATE_QUERY_PROPERTIES:
+    case PROP_I__NODE_UPDATE_QUERY_PROPERTIES:
       g_value_set_boxed (value, self->properties);
       break;
 
@@ -6711,20 +6711,20 @@ node_update_query_get_property (GObject *object,
 }
 
 static void 
-node_update_query_instance_init (NodeUpdateQuery * object)
+i__node_update_query_instance_init (I_NodeUpdateQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_condition = FALSE;
   object->properties = g_ptr_array_new_with_free_func (g_object_unref);
   object->__isset_properties = FALSE;
 }
 
 static void 
-node_update_query_finalize (GObject *object)
+i__node_update_query_finalize (GObject *object)
 {
-  NodeUpdateQuery *tobject = NODE_UPDATE_QUERY (object);
+  I_NodeUpdateQuery *tobject = I__NODE_UPDATE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -6741,30 +6741,30 @@ node_update_query_finalize (GObject *object)
 }
 
 static void
-node_update_query_class_init (NodeUpdateQueryClass * cls)
+i__node_update_query_class_init (I_NodeUpdateQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_update_query_read;
-  struct_class->write = node_update_query_write;
+  struct_class->read = i__node_update_query_read;
+  struct_class->write = i__node_update_query_write;
 
-  gobject_class->finalize = node_update_query_finalize;
-  gobject_class->get_property = node_update_query_get_property;
-  gobject_class->set_property = node_update_query_set_property;
+  gobject_class->finalize = i__node_update_query_finalize;
+  gobject_class->get_property = i__node_update_query_get_property;
+  gobject_class->set_property = i__node_update_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_UPDATE_QUERY_CONDITION,
+     PROP_I__NODE_UPDATE_QUERY_CONDITION,
      g_param_spec_object ("condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_UPDATE_QUERY_PROPERTIES,
+     PROP_I__NODE_UPDATE_QUERY_PROPERTIES,
      g_param_spec_boxed ("properties",
                          NULL,
                          NULL,
@@ -6773,7 +6773,7 @@ node_update_query_class_init (NodeUpdateQueryClass * cls)
 }
 
 GType
-node_update_query_get_type (void)
+i__node_update_query_get_type (void)
 {
   static GType type = 0;
 
@@ -6781,35 +6781,35 @@ node_update_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeUpdateQueryClass),
+      sizeof (I_NodeUpdateQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_update_query_class_init,
+      (GClassInitFunc) i__node_update_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (NodeUpdateQuery),
+      sizeof (I_NodeUpdateQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_update_query_instance_init,
+      (GInstanceInitFunc) i__node_update_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeUpdateQueryType",
+                                   "I_NodeUpdateQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeDeleteQueryProperties
+enum _I_NodeDeleteQueryProperties
 {
-  PROP_NODE_DELETE_QUERY_0,
-  PROP_NODE_DELETE_QUERY_CONDITION
+  PROP_I__NODE_DELETE_QUERY_0,
+  PROP_I__NODE_DELETE_QUERY_CONDITION
 };
 
-/* reads a node_delete_query object */
+/* reads a i__node_delete_query object */
 static gint32
-node_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -6818,7 +6818,7 @@ node_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  NodeDeleteQuery * this_object = NODE_DELETE_QUERY(object);
+  I_NodeDeleteQuery * this_object = I__NODE_DELETE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -6890,14 +6890,14 @@ node_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-node_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  NodeDeleteQuery * this_object = NODE_DELETE_QUERY(object);
+  I_NodeDeleteQuery * this_object = I__NODE_DELETE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "NodeDeleteQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_NodeDeleteQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "condition", T_STRUCT, 1, error)) < 0)
@@ -6921,16 +6921,16 @@ node_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-node_delete_query_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__node_delete_query_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeDeleteQuery *self = NODE_DELETE_QUERY (object);
+  I_NodeDeleteQuery *self = I__NODE_DELETE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_DELETE_QUERY_CONDITION:
+    case PROP_I__NODE_DELETE_QUERY_CONDITION:
       if (self->condition != NULL)
         g_object_unref (self->condition);
       self->condition = g_value_dup_object (value);
@@ -6944,16 +6944,16 @@ node_delete_query_set_property (GObject *object,
 }
 
 static void
-node_delete_query_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__node_delete_query_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  NodeDeleteQuery *self = NODE_DELETE_QUERY (object);
+  I_NodeDeleteQuery *self = I__NODE_DELETE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_DELETE_QUERY_CONDITION:
+    case PROP_I__NODE_DELETE_QUERY_CONDITION:
       g_value_set_object (value, self->condition);
       break;
 
@@ -6964,18 +6964,18 @@ node_delete_query_get_property (GObject *object,
 }
 
 static void 
-node_delete_query_instance_init (NodeDeleteQuery * object)
+i__node_delete_query_instance_init (I_NodeDeleteQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_condition = FALSE;
 }
 
 static void 
-node_delete_query_finalize (GObject *object)
+i__node_delete_query_finalize (GObject *object)
 {
-  NodeDeleteQuery *tobject = NODE_DELETE_QUERY (object);
+  I_NodeDeleteQuery *tobject = I__NODE_DELETE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -6987,30 +6987,30 @@ node_delete_query_finalize (GObject *object)
 }
 
 static void
-node_delete_query_class_init (NodeDeleteQueryClass * cls)
+i__node_delete_query_class_init (I_NodeDeleteQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_delete_query_read;
-  struct_class->write = node_delete_query_write;
+  struct_class->read = i__node_delete_query_read;
+  struct_class->write = i__node_delete_query_write;
 
-  gobject_class->finalize = node_delete_query_finalize;
-  gobject_class->get_property = node_delete_query_get_property;
-  gobject_class->set_property = node_delete_query_set_property;
+  gobject_class->finalize = i__node_delete_query_finalize;
+  gobject_class->get_property = i__node_delete_query_get_property;
+  gobject_class->set_property = i__node_delete_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_DELETE_QUERY_CONDITION,
+     PROP_I__NODE_DELETE_QUERY_CONDITION,
      g_param_spec_object ("condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 }
 
 GType
-node_delete_query_get_type (void)
+i__node_delete_query_get_type (void)
 {
   static GType type = 0;
 
@@ -7018,35 +7018,35 @@ node_delete_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeDeleteQueryClass),
+      sizeof (I_NodeDeleteQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_delete_query_class_init,
+      (GClassInitFunc) i__node_delete_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (NodeDeleteQuery),
+      sizeof (I_NodeDeleteQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_delete_query_instance_init,
+      (GInstanceInitFunc) i__node_delete_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeDeleteQueryType",
+                                   "I_NodeDeleteQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _NodeMatchQueryProperties
+enum _I_NodeMatchQueryProperties
 {
-  PROP_NODE_MATCH_QUERY_0,
-  PROP_NODE_MATCH_QUERY_CONDITION
+  PROP_I__NODE_MATCH_QUERY_0,
+  PROP_I__NODE_MATCH_QUERY_CONDITION
 };
 
-/* reads a node_match_query object */
+/* reads a i__node_match_query object */
 static gint32
-node_match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -7055,7 +7055,7 @@ node_match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  NodeMatchQuery * this_object = NODE_MATCH_QUERY(object);
+  I_NodeMatchQuery * this_object = I__NODE_MATCH_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -7127,14 +7127,14 @@ node_match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **
 }
 
 static gint32
-node_match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__node_match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  NodeMatchQuery * this_object = NODE_MATCH_QUERY(object);
+  I_NodeMatchQuery * this_object = I__NODE_MATCH_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "NodeMatchQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_NodeMatchQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "condition", T_STRUCT, 1, error)) < 0)
@@ -7158,16 +7158,16 @@ node_match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static void
-node_match_query_set_property (GObject *object,
-                               guint property_id,
-                               const GValue *value,
-                               GParamSpec *pspec)
+i__node_match_query_set_property (GObject *object,
+                                  guint property_id,
+                                  const GValue *value,
+                                  GParamSpec *pspec)
 {
-  NodeMatchQuery *self = NODE_MATCH_QUERY (object);
+  I_NodeMatchQuery *self = I__NODE_MATCH_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_MATCH_QUERY_CONDITION:
+    case PROP_I__NODE_MATCH_QUERY_CONDITION:
       if (self->condition != NULL)
         g_object_unref (self->condition);
       self->condition = g_value_dup_object (value);
@@ -7181,16 +7181,16 @@ node_match_query_set_property (GObject *object,
 }
 
 static void
-node_match_query_get_property (GObject *object,
-                               guint property_id,
-                               GValue *value,
-                               GParamSpec *pspec)
+i__node_match_query_get_property (GObject *object,
+                                  guint property_id,
+                                  GValue *value,
+                                  GParamSpec *pspec)
 {
-  NodeMatchQuery *self = NODE_MATCH_QUERY (object);
+  I_NodeMatchQuery *self = I__NODE_MATCH_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_NODE_MATCH_QUERY_CONDITION:
+    case PROP_I__NODE_MATCH_QUERY_CONDITION:
       g_value_set_object (value, self->condition);
       break;
 
@@ -7201,18 +7201,18 @@ node_match_query_get_property (GObject *object,
 }
 
 static void 
-node_match_query_instance_init (NodeMatchQuery * object)
+i__node_match_query_instance_init (I_NodeMatchQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->condition = g_object_new (TYPE_NODE_CONDITION, NULL);
+  object->condition = g_object_new (TYPE_I__NODE_CONDITION, NULL);
   object->__isset_condition = FALSE;
 }
 
 static void 
-node_match_query_finalize (GObject *object)
+i__node_match_query_finalize (GObject *object)
 {
-  NodeMatchQuery *tobject = NODE_MATCH_QUERY (object);
+  I_NodeMatchQuery *tobject = I__NODE_MATCH_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -7224,30 +7224,30 @@ node_match_query_finalize (GObject *object)
 }
 
 static void
-node_match_query_class_init (NodeMatchQueryClass * cls)
+i__node_match_query_class_init (I_NodeMatchQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = node_match_query_read;
-  struct_class->write = node_match_query_write;
+  struct_class->read = i__node_match_query_read;
+  struct_class->write = i__node_match_query_write;
 
-  gobject_class->finalize = node_match_query_finalize;
-  gobject_class->get_property = node_match_query_get_property;
-  gobject_class->set_property = node_match_query_set_property;
+  gobject_class->finalize = i__node_match_query_finalize;
+  gobject_class->get_property = i__node_match_query_get_property;
+  gobject_class->set_property = i__node_match_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_NODE_MATCH_QUERY_CONDITION,
+     PROP_I__NODE_MATCH_QUERY_CONDITION,
      g_param_spec_object ("condition",
                          NULL,
                          NULL,
-                         TYPE_NODE_CONDITION,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 }
 
 GType
-node_match_query_get_type (void)
+i__node_match_query_get_type (void)
 {
   static GType type = 0;
 
@@ -7255,35 +7255,35 @@ node_match_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (NodeMatchQueryClass),
+      sizeof (I_NodeMatchQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) node_match_query_class_init,
+      (GClassInitFunc) i__node_match_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (NodeMatchQuery),
+      sizeof (I_NodeMatchQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) node_match_query_instance_init,
+      (GInstanceInitFunc) i__node_match_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "NodeMatchQueryType",
+                                   "I_NodeMatchQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _LinkCreateQueryProperties
+enum _I_LinkCreateQueryProperties
 {
-  PROP_LINK_CREATE_QUERY_0,
-  PROP_LINK_CREATE_QUERY_LINK
+  PROP_I__LINK_CREATE_QUERY_0,
+  PROP_I__LINK_CREATE_QUERY_LINK
 };
 
-/* reads a link_create_query object */
+/* reads a i__link_create_query object */
 static gint32
-link_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -7292,7 +7292,7 @@ link_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  LinkCreateQuery * this_object = LINK_CREATE_QUERY(object);
+  I_LinkCreateQuery * this_object = I__LINK_CREATE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -7364,14 +7364,14 @@ link_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-link_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  LinkCreateQuery * this_object = LINK_CREATE_QUERY(object);
+  I_LinkCreateQuery * this_object = I__LINK_CREATE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "LinkCreateQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_LinkCreateQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "link", T_STRUCT, 1, error)) < 0)
@@ -7395,16 +7395,16 @@ link_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-link_create_query_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__link_create_query_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  LinkCreateQuery *self = LINK_CREATE_QUERY (object);
+  I_LinkCreateQuery *self = I__LINK_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_LINK_CREATE_QUERY_LINK:
+    case PROP_I__LINK_CREATE_QUERY_LINK:
       if (self->link != NULL)
         g_object_unref (self->link);
       self->link = g_value_dup_object (value);
@@ -7418,16 +7418,16 @@ link_create_query_set_property (GObject *object,
 }
 
 static void
-link_create_query_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__link_create_query_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  LinkCreateQuery *self = LINK_CREATE_QUERY (object);
+  I_LinkCreateQuery *self = I__LINK_CREATE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_LINK_CREATE_QUERY_LINK:
+    case PROP_I__LINK_CREATE_QUERY_LINK:
       g_value_set_object (value, self->link);
       break;
 
@@ -7438,18 +7438,18 @@ link_create_query_get_property (GObject *object,
 }
 
 static void 
-link_create_query_instance_init (LinkCreateQuery * object)
+i__link_create_query_instance_init (I_LinkCreateQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->link = g_object_new (TYPE_LINK, NULL);
+  object->link = g_object_new (TYPE_I__LINK, NULL);
   object->__isset_link = FALSE;
 }
 
 static void 
-link_create_query_finalize (GObject *object)
+i__link_create_query_finalize (GObject *object)
 {
-  LinkCreateQuery *tobject = LINK_CREATE_QUERY (object);
+  I_LinkCreateQuery *tobject = I__LINK_CREATE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -7461,30 +7461,30 @@ link_create_query_finalize (GObject *object)
 }
 
 static void
-link_create_query_class_init (LinkCreateQueryClass * cls)
+i__link_create_query_class_init (I_LinkCreateQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = link_create_query_read;
-  struct_class->write = link_create_query_write;
+  struct_class->read = i__link_create_query_read;
+  struct_class->write = i__link_create_query_write;
 
-  gobject_class->finalize = link_create_query_finalize;
-  gobject_class->get_property = link_create_query_get_property;
-  gobject_class->set_property = link_create_query_set_property;
+  gobject_class->finalize = i__link_create_query_finalize;
+  gobject_class->get_property = i__link_create_query_get_property;
+  gobject_class->set_property = i__link_create_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_CREATE_QUERY_LINK,
+     PROP_I__LINK_CREATE_QUERY_LINK,
      g_param_spec_object ("link",
                          NULL,
                          NULL,
-                         TYPE_LINK,
+                         TYPE_I__LINK,
                          G_PARAM_READWRITE));
 }
 
 GType
-link_create_query_get_type (void)
+i__link_create_query_get_type (void)
 {
   static GType type = 0;
 
@@ -7492,35 +7492,35 @@ link_create_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (LinkCreateQueryClass),
+      sizeof (I_LinkCreateQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) link_create_query_class_init,
+      (GClassInitFunc) i__link_create_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (LinkCreateQuery),
+      sizeof (I_LinkCreateQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) link_create_query_instance_init,
+      (GInstanceInitFunc) i__link_create_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "LinkCreateQueryType",
+                                   "I_LinkCreateQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _LinkDeleteQueryProperties
+enum _I_LinkDeleteQueryProperties
 {
-  PROP_LINK_DELETE_QUERY_0,
-  PROP_LINK_DELETE_QUERY_CONDITION
+  PROP_I__LINK_DELETE_QUERY_0,
+  PROP_I__LINK_DELETE_QUERY_CONDITION
 };
 
-/* reads a link_delete_query object */
+/* reads a i__link_delete_query object */
 static gint32
-link_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -7529,7 +7529,7 @@ link_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  LinkDeleteQuery * this_object = LINK_DELETE_QUERY(object);
+  I_LinkDeleteQuery * this_object = I__LINK_DELETE_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -7601,14 +7601,14 @@ link_delete_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError *
 }
 
 static gint32
-link_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__link_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  LinkDeleteQuery * this_object = LINK_DELETE_QUERY(object);
+  I_LinkDeleteQuery * this_object = I__LINK_DELETE_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "LinkDeleteQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_LinkDeleteQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "condition", T_STRUCT, 1, error)) < 0)
@@ -7632,16 +7632,16 @@ link_delete_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError 
 }
 
 static void
-link_delete_query_set_property (GObject *object,
-                                guint property_id,
-                                const GValue *value,
-                                GParamSpec *pspec)
+i__link_delete_query_set_property (GObject *object,
+                                   guint property_id,
+                                   const GValue *value,
+                                   GParamSpec *pspec)
 {
-  LinkDeleteQuery *self = LINK_DELETE_QUERY (object);
+  I_LinkDeleteQuery *self = I__LINK_DELETE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_LINK_DELETE_QUERY_CONDITION:
+    case PROP_I__LINK_DELETE_QUERY_CONDITION:
       if (self->condition != NULL)
         g_object_unref (self->condition);
       self->condition = g_value_dup_object (value);
@@ -7655,16 +7655,16 @@ link_delete_query_set_property (GObject *object,
 }
 
 static void
-link_delete_query_get_property (GObject *object,
-                                guint property_id,
-                                GValue *value,
-                                GParamSpec *pspec)
+i__link_delete_query_get_property (GObject *object,
+                                   guint property_id,
+                                   GValue *value,
+                                   GParamSpec *pspec)
 {
-  LinkDeleteQuery *self = LINK_DELETE_QUERY (object);
+  I_LinkDeleteQuery *self = I__LINK_DELETE_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_LINK_DELETE_QUERY_CONDITION:
+    case PROP_I__LINK_DELETE_QUERY_CONDITION:
       g_value_set_object (value, self->condition);
       break;
 
@@ -7675,18 +7675,18 @@ link_delete_query_get_property (GObject *object,
 }
 
 static void 
-link_delete_query_instance_init (LinkDeleteQuery * object)
+i__link_delete_query_instance_init (I_LinkDeleteQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->condition = g_object_new (TYPE_MATCH_CONDITION, NULL);
+  object->condition = g_object_new (TYPE_I__MATCH_CONDITION, NULL);
   object->__isset_condition = FALSE;
 }
 
 static void 
-link_delete_query_finalize (GObject *object)
+i__link_delete_query_finalize (GObject *object)
 {
-  LinkDeleteQuery *tobject = LINK_DELETE_QUERY (object);
+  I_LinkDeleteQuery *tobject = I__LINK_DELETE_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -7698,30 +7698,30 @@ link_delete_query_finalize (GObject *object)
 }
 
 static void
-link_delete_query_class_init (LinkDeleteQueryClass * cls)
+i__link_delete_query_class_init (I_LinkDeleteQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = link_delete_query_read;
-  struct_class->write = link_delete_query_write;
+  struct_class->read = i__link_delete_query_read;
+  struct_class->write = i__link_delete_query_write;
 
-  gobject_class->finalize = link_delete_query_finalize;
-  gobject_class->get_property = link_delete_query_get_property;
-  gobject_class->set_property = link_delete_query_set_property;
+  gobject_class->finalize = i__link_delete_query_finalize;
+  gobject_class->get_property = i__link_delete_query_get_property;
+  gobject_class->set_property = i__link_delete_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_LINK_DELETE_QUERY_CONDITION,
+     PROP_I__LINK_DELETE_QUERY_CONDITION,
      g_param_spec_object ("condition",
                          NULL,
                          NULL,
-                         TYPE_MATCH_CONDITION,
+                         TYPE_I__MATCH_CONDITION,
                          G_PARAM_READWRITE));
 }
 
 GType
-link_delete_query_get_type (void)
+i__link_delete_query_get_type (void)
 {
   static GType type = 0;
 
@@ -7729,35 +7729,35 @@ link_delete_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (LinkDeleteQueryClass),
+      sizeof (I_LinkDeleteQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) link_delete_query_class_init,
+      (GClassInitFunc) i__link_delete_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (LinkDeleteQuery),
+      sizeof (I_LinkDeleteQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) link_delete_query_instance_init,
+      (GInstanceInitFunc) i__link_delete_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "LinkDeleteQueryType",
+                                   "I_LinkDeleteQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _MatchQueryProperties
+enum _I_MatchQueryProperties
 {
-  PROP_MATCH_QUERY_0,
-  PROP_MATCH_QUERY_CONDITION
+  PROP_I__MATCH_QUERY_0,
+  PROP_I__MATCH_QUERY_CONDITION
 };
 
-/* reads a match_query object */
+/* reads a i__match_query object */
 static gint32
-match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -7766,7 +7766,7 @@ match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  MatchQuery * this_object = MATCH_QUERY(object);
+  I_MatchQuery * this_object = I__MATCH_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -7838,14 +7838,14 @@ match_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error
 }
 
 static gint32
-match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  MatchQuery * this_object = MATCH_QUERY(object);
+  I_MatchQuery * this_object = I__MATCH_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "MatchQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_MatchQuery", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "condition", T_STRUCT, 1, error)) < 0)
@@ -7869,16 +7869,16 @@ match_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
 }
 
 static void
-match_query_set_property (GObject *object,
-                          guint property_id,
-                          const GValue *value,
-                          GParamSpec *pspec)
+i__match_query_set_property (GObject *object,
+                             guint property_id,
+                             const GValue *value,
+                             GParamSpec *pspec)
 {
-  MatchQuery *self = MATCH_QUERY (object);
+  I_MatchQuery *self = I__MATCH_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_MATCH_QUERY_CONDITION:
+    case PROP_I__MATCH_QUERY_CONDITION:
       if (self->condition != NULL)
         g_object_unref (self->condition);
       self->condition = g_value_dup_object (value);
@@ -7892,16 +7892,16 @@ match_query_set_property (GObject *object,
 }
 
 static void
-match_query_get_property (GObject *object,
-                          guint property_id,
-                          GValue *value,
-                          GParamSpec *pspec)
+i__match_query_get_property (GObject *object,
+                             guint property_id,
+                             GValue *value,
+                             GParamSpec *pspec)
 {
-  MatchQuery *self = MATCH_QUERY (object);
+  I_MatchQuery *self = I__MATCH_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_MATCH_QUERY_CONDITION:
+    case PROP_I__MATCH_QUERY_CONDITION:
       g_value_set_object (value, self->condition);
       break;
 
@@ -7912,18 +7912,18 @@ match_query_get_property (GObject *object,
 }
 
 static void 
-match_query_instance_init (MatchQuery * object)
+i__match_query_instance_init (I_MatchQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->condition = g_object_new (TYPE_MATCH_CONDITION, NULL);
+  object->condition = g_object_new (TYPE_I__MATCH_CONDITION, NULL);
   object->__isset_condition = FALSE;
 }
 
 static void 
-match_query_finalize (GObject *object)
+i__match_query_finalize (GObject *object)
 {
-  MatchQuery *tobject = MATCH_QUERY (object);
+  I_MatchQuery *tobject = I__MATCH_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -7935,30 +7935,30 @@ match_query_finalize (GObject *object)
 }
 
 static void
-match_query_class_init (MatchQueryClass * cls)
+i__match_query_class_init (I_MatchQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = match_query_read;
-  struct_class->write = match_query_write;
+  struct_class->read = i__match_query_read;
+  struct_class->write = i__match_query_write;
 
-  gobject_class->finalize = match_query_finalize;
-  gobject_class->get_property = match_query_get_property;
-  gobject_class->set_property = match_query_set_property;
+  gobject_class->finalize = i__match_query_finalize;
+  gobject_class->get_property = i__match_query_get_property;
+  gobject_class->set_property = i__match_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_MATCH_QUERY_CONDITION,
+     PROP_I__MATCH_QUERY_CONDITION,
      g_param_spec_object ("condition",
                          NULL,
                          NULL,
-                         TYPE_MATCH_CONDITION,
+                         TYPE_I__MATCH_CONDITION,
                          G_PARAM_READWRITE));
 }
 
 GType
-match_query_get_type (void)
+i__match_query_get_type (void)
 {
   static GType type = 0;
 
@@ -7966,44 +7966,44 @@ match_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (MatchQueryClass),
+      sizeof (I_MatchQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) match_query_class_init,
+      (GClassInitFunc) i__match_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (MatchQuery),
+      sizeof (I_MatchQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) match_query_instance_init,
+      (GInstanceInitFunc) i__match_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "MatchQueryType",
+                                   "I_MatchQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _uQueryProperties
+enum _I_uQueryProperties
 {
-  PROP_U_QUERY_0,
-  PROP_U_QUERY_SCHEMA_CREATE_QUERY,
-  PROP_U_QUERY_SCHEMA_GET_QUERY,
-  PROP_U_QUERY_SCHEMA_DELETE_QUERY,
-  PROP_U_QUERY_NODE_CREATE_QUERY,
-  PROP_U_QUERY_NODE_UPDATE_QUERY,
-  PROP_U_QUERY_NODE_DELETE_QUERY,
-  PROP_U_QUERY_NODE_MATCH_QUERY,
-  PROP_U_QUERY_LINK_CREATE_QUERY,
-  PROP_U_QUERY_LINK_DELETE_QUERY,
-  PROP_U_QUERY_MATCH_QUERY
+  PROP_I_U_QUERY_0,
+  PROP_I_U_QUERY_SCHEMA_CREATE_QUERY,
+  PROP_I_U_QUERY_SCHEMA_GET_QUERY,
+  PROP_I_U_QUERY_SCHEMA_DELETE_QUERY,
+  PROP_I_U_QUERY_NODE_CREATE_QUERY,
+  PROP_I_U_QUERY_NODE_UPDATE_QUERY,
+  PROP_I_U_QUERY_NODE_DELETE_QUERY,
+  PROP_I_U_QUERY_NODE_MATCH_QUERY,
+  PROP_I_U_QUERY_LINK_CREATE_QUERY,
+  PROP_I_U_QUERY_LINK_DELETE_QUERY,
+  PROP_I_U_QUERY_MATCH_QUERY
 };
 
-/* reads a u_query object */
+/* reads a i_u_query object */
 static gint32
-u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -8012,7 +8012,7 @@ u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  uQuery * this_object = U_QUERY(object);
+  I_uQuery * this_object = I_U_QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -8219,14 +8219,14 @@ u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  uQuery * this_object = U_QUERY(object);
+  I_uQuery * this_object = I_U_QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "uQuery", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_uQuery", error)) < 0)
     return -1;
   xfer += ret;
   if (this_object->__isset_schema_create_query == TRUE) {
@@ -8360,79 +8360,79 @@ u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-u_query_set_property (GObject *object,
-                      guint property_id,
-                      const GValue *value,
-                      GParamSpec *pspec)
+i_u_query_set_property (GObject *object,
+                        guint property_id,
+                        const GValue *value,
+                        GParamSpec *pspec)
 {
-  uQuery *self = U_QUERY (object);
+  I_uQuery *self = I_U_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_U_QUERY_SCHEMA_CREATE_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_CREATE_QUERY:
       if (self->schema_create_query != NULL)
         g_object_unref (self->schema_create_query);
       self->schema_create_query = g_value_dup_object (value);
       self->__isset_schema_create_query = TRUE;
       break;
 
-    case PROP_U_QUERY_SCHEMA_GET_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_GET_QUERY:
       if (self->schema_get_query != NULL)
         g_object_unref (self->schema_get_query);
       self->schema_get_query = g_value_dup_object (value);
       self->__isset_schema_get_query = TRUE;
       break;
 
-    case PROP_U_QUERY_SCHEMA_DELETE_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_DELETE_QUERY:
       if (self->schema_delete_query != NULL)
         g_object_unref (self->schema_delete_query);
       self->schema_delete_query = g_value_dup_object (value);
       self->__isset_schema_delete_query = TRUE;
       break;
 
-    case PROP_U_QUERY_NODE_CREATE_QUERY:
+    case PROP_I_U_QUERY_NODE_CREATE_QUERY:
       if (self->node_create_query != NULL)
         g_object_unref (self->node_create_query);
       self->node_create_query = g_value_dup_object (value);
       self->__isset_node_create_query = TRUE;
       break;
 
-    case PROP_U_QUERY_NODE_UPDATE_QUERY:
+    case PROP_I_U_QUERY_NODE_UPDATE_QUERY:
       if (self->node_update_query != NULL)
         g_object_unref (self->node_update_query);
       self->node_update_query = g_value_dup_object (value);
       self->__isset_node_update_query = TRUE;
       break;
 
-    case PROP_U_QUERY_NODE_DELETE_QUERY:
+    case PROP_I_U_QUERY_NODE_DELETE_QUERY:
       if (self->node_delete_query != NULL)
         g_object_unref (self->node_delete_query);
       self->node_delete_query = g_value_dup_object (value);
       self->__isset_node_delete_query = TRUE;
       break;
 
-    case PROP_U_QUERY_NODE_MATCH_QUERY:
+    case PROP_I_U_QUERY_NODE_MATCH_QUERY:
       if (self->node_match_query != NULL)
         g_object_unref (self->node_match_query);
       self->node_match_query = g_value_dup_object (value);
       self->__isset_node_match_query = TRUE;
       break;
 
-    case PROP_U_QUERY_LINK_CREATE_QUERY:
+    case PROP_I_U_QUERY_LINK_CREATE_QUERY:
       if (self->link_create_query != NULL)
         g_object_unref (self->link_create_query);
       self->link_create_query = g_value_dup_object (value);
       self->__isset_link_create_query = TRUE;
       break;
 
-    case PROP_U_QUERY_LINK_DELETE_QUERY:
+    case PROP_I_U_QUERY_LINK_DELETE_QUERY:
       if (self->link_delete_query != NULL)
         g_object_unref (self->link_delete_query);
       self->link_delete_query = g_value_dup_object (value);
       self->__isset_link_delete_query = TRUE;
       break;
 
-    case PROP_U_QUERY_MATCH_QUERY:
+    case PROP_I_U_QUERY_MATCH_QUERY:
       if (self->match_query != NULL)
         g_object_unref (self->match_query);
       self->match_query = g_value_dup_object (value);
@@ -8446,52 +8446,52 @@ u_query_set_property (GObject *object,
 }
 
 static void
-u_query_get_property (GObject *object,
-                      guint property_id,
-                      GValue *value,
-                      GParamSpec *pspec)
+i_u_query_get_property (GObject *object,
+                        guint property_id,
+                        GValue *value,
+                        GParamSpec *pspec)
 {
-  uQuery *self = U_QUERY (object);
+  I_uQuery *self = I_U_QUERY (object);
 
   switch (property_id)
   {
-    case PROP_U_QUERY_SCHEMA_CREATE_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_CREATE_QUERY:
       g_value_set_object (value, self->schema_create_query);
       break;
 
-    case PROP_U_QUERY_SCHEMA_GET_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_GET_QUERY:
       g_value_set_object (value, self->schema_get_query);
       break;
 
-    case PROP_U_QUERY_SCHEMA_DELETE_QUERY:
+    case PROP_I_U_QUERY_SCHEMA_DELETE_QUERY:
       g_value_set_object (value, self->schema_delete_query);
       break;
 
-    case PROP_U_QUERY_NODE_CREATE_QUERY:
+    case PROP_I_U_QUERY_NODE_CREATE_QUERY:
       g_value_set_object (value, self->node_create_query);
       break;
 
-    case PROP_U_QUERY_NODE_UPDATE_QUERY:
+    case PROP_I_U_QUERY_NODE_UPDATE_QUERY:
       g_value_set_object (value, self->node_update_query);
       break;
 
-    case PROP_U_QUERY_NODE_DELETE_QUERY:
+    case PROP_I_U_QUERY_NODE_DELETE_QUERY:
       g_value_set_object (value, self->node_delete_query);
       break;
 
-    case PROP_U_QUERY_NODE_MATCH_QUERY:
+    case PROP_I_U_QUERY_NODE_MATCH_QUERY:
       g_value_set_object (value, self->node_match_query);
       break;
 
-    case PROP_U_QUERY_LINK_CREATE_QUERY:
+    case PROP_I_U_QUERY_LINK_CREATE_QUERY:
       g_value_set_object (value, self->link_create_query);
       break;
 
-    case PROP_U_QUERY_LINK_DELETE_QUERY:
+    case PROP_I_U_QUERY_LINK_DELETE_QUERY:
       g_value_set_object (value, self->link_delete_query);
       break;
 
-    case PROP_U_QUERY_MATCH_QUERY:
+    case PROP_I_U_QUERY_MATCH_QUERY:
       g_value_set_object (value, self->match_query);
       break;
 
@@ -8502,36 +8502,36 @@ u_query_get_property (GObject *object,
 }
 
 static void 
-u_query_instance_init (uQuery * object)
+i_u_query_instance_init (I_uQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->schema_create_query = g_object_new (TYPE_SCHEMA_CREATE_QUERY, NULL);
+  object->schema_create_query = g_object_new (TYPE_I__SCHEMA_CREATE_QUERY, NULL);
   object->__isset_schema_create_query = FALSE;
-  object->schema_get_query = g_object_new (TYPE_SCHEMA_GET_QUERY, NULL);
+  object->schema_get_query = g_object_new (TYPE_I__SCHEMA_GET_QUERY, NULL);
   object->__isset_schema_get_query = FALSE;
-  object->schema_delete_query = g_object_new (TYPE_SCHEMA_DELETE_QUERY, NULL);
+  object->schema_delete_query = g_object_new (TYPE_I__SCHEMA_DELETE_QUERY, NULL);
   object->__isset_schema_delete_query = FALSE;
-  object->node_create_query = g_object_new (TYPE_NODE_CREATE_QUERY, NULL);
+  object->node_create_query = g_object_new (TYPE_I__NODE_CREATE_QUERY, NULL);
   object->__isset_node_create_query = FALSE;
-  object->node_update_query = g_object_new (TYPE_NODE_UPDATE_QUERY, NULL);
+  object->node_update_query = g_object_new (TYPE_I__NODE_UPDATE_QUERY, NULL);
   object->__isset_node_update_query = FALSE;
-  object->node_delete_query = g_object_new (TYPE_NODE_DELETE_QUERY, NULL);
+  object->node_delete_query = g_object_new (TYPE_I__NODE_DELETE_QUERY, NULL);
   object->__isset_node_delete_query = FALSE;
-  object->node_match_query = g_object_new (TYPE_NODE_MATCH_QUERY, NULL);
+  object->node_match_query = g_object_new (TYPE_I__NODE_MATCH_QUERY, NULL);
   object->__isset_node_match_query = FALSE;
-  object->link_create_query = g_object_new (TYPE_LINK_CREATE_QUERY, NULL);
+  object->link_create_query = g_object_new (TYPE_I__LINK_CREATE_QUERY, NULL);
   object->__isset_link_create_query = FALSE;
-  object->link_delete_query = g_object_new (TYPE_LINK_DELETE_QUERY, NULL);
+  object->link_delete_query = g_object_new (TYPE_I__LINK_DELETE_QUERY, NULL);
   object->__isset_link_delete_query = FALSE;
-  object->match_query = g_object_new (TYPE_MATCH_QUERY, NULL);
+  object->match_query = g_object_new (TYPE_I__MATCH_QUERY, NULL);
   object->__isset_match_query = FALSE;
 }
 
 static void 
-u_query_finalize (GObject *object)
+i_u_query_finalize (GObject *object)
 {
-  uQuery *tobject = U_QUERY (object);
+  I_uQuery *tobject = I_U_QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -8588,111 +8588,111 @@ u_query_finalize (GObject *object)
 }
 
 static void
-u_query_class_init (uQueryClass * cls)
+i_u_query_class_init (I_uQueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = u_query_read;
-  struct_class->write = u_query_write;
+  struct_class->read = i_u_query_read;
+  struct_class->write = i_u_query_write;
 
-  gobject_class->finalize = u_query_finalize;
-  gobject_class->get_property = u_query_get_property;
-  gobject_class->set_property = u_query_set_property;
+  gobject_class->finalize = i_u_query_finalize;
+  gobject_class->get_property = i_u_query_get_property;
+  gobject_class->set_property = i_u_query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_SCHEMA_CREATE_QUERY,
+     PROP_I_U_QUERY_SCHEMA_CREATE_QUERY,
      g_param_spec_object ("schema_create_query",
                          NULL,
                          NULL,
-                         TYPE_SCHEMA_CREATE_QUERY,
+                         TYPE_I__SCHEMA_CREATE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_SCHEMA_GET_QUERY,
+     PROP_I_U_QUERY_SCHEMA_GET_QUERY,
      g_param_spec_object ("schema_get_query",
                          NULL,
                          NULL,
-                         TYPE_SCHEMA_GET_QUERY,
+                         TYPE_I__SCHEMA_GET_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_SCHEMA_DELETE_QUERY,
+     PROP_I_U_QUERY_SCHEMA_DELETE_QUERY,
      g_param_spec_object ("schema_delete_query",
                          NULL,
                          NULL,
-                         TYPE_SCHEMA_DELETE_QUERY,
+                         TYPE_I__SCHEMA_DELETE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_NODE_CREATE_QUERY,
+     PROP_I_U_QUERY_NODE_CREATE_QUERY,
      g_param_spec_object ("node_create_query",
                          NULL,
                          NULL,
-                         TYPE_NODE_CREATE_QUERY,
+                         TYPE_I__NODE_CREATE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_NODE_UPDATE_QUERY,
+     PROP_I_U_QUERY_NODE_UPDATE_QUERY,
      g_param_spec_object ("node_update_query",
                          NULL,
                          NULL,
-                         TYPE_NODE_UPDATE_QUERY,
+                         TYPE_I__NODE_UPDATE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_NODE_DELETE_QUERY,
+     PROP_I_U_QUERY_NODE_DELETE_QUERY,
      g_param_spec_object ("node_delete_query",
                          NULL,
                          NULL,
-                         TYPE_NODE_DELETE_QUERY,
+                         TYPE_I__NODE_DELETE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_NODE_MATCH_QUERY,
+     PROP_I_U_QUERY_NODE_MATCH_QUERY,
      g_param_spec_object ("node_match_query",
                          NULL,
                          NULL,
-                         TYPE_NODE_MATCH_QUERY,
+                         TYPE_I__NODE_MATCH_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_LINK_CREATE_QUERY,
+     PROP_I_U_QUERY_LINK_CREATE_QUERY,
      g_param_spec_object ("link_create_query",
                          NULL,
                          NULL,
-                         TYPE_LINK_CREATE_QUERY,
+                         TYPE_I__LINK_CREATE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_LINK_DELETE_QUERY,
+     PROP_I_U_QUERY_LINK_DELETE_QUERY,
      g_param_spec_object ("link_delete_query",
                          NULL,
                          NULL,
-                         TYPE_LINK_DELETE_QUERY,
+                         TYPE_I__LINK_DELETE_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_MATCH_QUERY,
+     PROP_I_U_QUERY_MATCH_QUERY,
      g_param_spec_object ("match_query",
                          NULL,
                          NULL,
-                         TYPE_MATCH_QUERY,
+                         TYPE_I__MATCH_QUERY,
                          G_PARAM_READWRITE));
 }
 
 GType
-u_query_get_type (void)
+i_u_query_get_type (void)
 {
   static GType type = 0;
 
@@ -8700,36 +8700,36 @@ u_query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (uQueryClass),
+      sizeof (I_uQueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) u_query_class_init,
+      (GClassInitFunc) i_u_query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (uQuery),
+      sizeof (I_uQuery),
       0, /* n_preallocs */
-      (GInstanceInitFunc) u_query_instance_init,
+      (GInstanceInitFunc) i_u_query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "uQueryType",
+                                   "I_uQueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _QueryProperties
+enum _I_QueryProperties
 {
-  PROP_QUERY_0,
-  PROP_QUERY_TYPE,
-  PROP_QUERY_QUERY
+  PROP_I__QUERY_0,
+  PROP_I__QUERY_TYPE,
+  PROP_I__QUERY_QUERY
 };
 
-/* reads a query object */
+/* reads a i__query object */
 static gint32
-query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -8738,7 +8738,7 @@ query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Query * this_object = QUERY(object);
+  I_Query * this_object = I__QUERY(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -8783,7 +8783,7 @@ query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast19, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (QueryType)ecast19;
+          this_object->type = (I_QueryType)ecast19;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -8825,14 +8825,14 @@ query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Query * this_object = QUERY(object);
+  I_Query * this_object = I__QUERY(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Query", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Query", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "type", T_I32, 1, error)) < 0)
@@ -8866,21 +8866,21 @@ query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-query_set_property (GObject *object,
-                    guint property_id,
-                    const GValue *value,
-                    GParamSpec *pspec)
+i__query_set_property (GObject *object,
+                       guint property_id,
+                       const GValue *value,
+                       GParamSpec *pspec)
 {
-  Query *self = QUERY (object);
+  I_Query *self = I__QUERY (object);
 
   switch (property_id)
   {
-    case PROP_QUERY_TYPE:
+    case PROP_I__QUERY_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_QUERY_QUERY:
+    case PROP_I__QUERY_QUERY:
       if (self->query != NULL)
         g_object_unref (self->query);
       self->query = g_value_dup_object (value);
@@ -8894,20 +8894,20 @@ query_set_property (GObject *object,
 }
 
 static void
-query_get_property (GObject *object,
-                    guint property_id,
-                    GValue *value,
-                    GParamSpec *pspec)
+i__query_get_property (GObject *object,
+                       guint property_id,
+                       GValue *value,
+                       GParamSpec *pspec)
 {
-  Query *self = QUERY (object);
+  I_Query *self = I__QUERY (object);
 
   switch (property_id)
   {
-    case PROP_QUERY_TYPE:
+    case PROP_I__QUERY_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_QUERY_QUERY:
+    case PROP_I__QUERY_QUERY:
       g_value_set_object (value, self->query);
       break;
 
@@ -8918,19 +8918,19 @@ query_get_property (GObject *object,
 }
 
 static void 
-query_instance_init (Query * object)
+i__query_instance_init (I_Query * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_type = FALSE;
-  object->query = g_object_new (TYPE_U_QUERY, NULL);
+  object->query = g_object_new (TYPE_I_U_QUERY, NULL);
   object->__isset_query = FALSE;
 }
 
 static void 
-query_finalize (GObject *object)
+i__query_finalize (GObject *object)
 {
-  Query *tobject = QUERY (object);
+  I_Query *tobject = I__QUERY (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -8942,21 +8942,21 @@ query_finalize (GObject *object)
 }
 
 static void
-query_class_init (QueryClass * cls)
+i__query_class_init (I_QueryClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = query_read;
-  struct_class->write = query_write;
+  struct_class->read = i__query_read;
+  struct_class->write = i__query_write;
 
-  gobject_class->finalize = query_finalize;
-  gobject_class->get_property = query_get_property;
-  gobject_class->set_property = query_set_property;
+  gobject_class->finalize = i__query_finalize;
+  gobject_class->get_property = i__query_get_property;
+  gobject_class->set_property = i__query_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_QUERY_TYPE,
+     PROP_I__QUERY_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -8967,16 +8967,16 @@ query_class_init (QueryClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_QUERY_QUERY,
+     PROP_I__QUERY_QUERY,
      g_param_spec_object ("query",
                          NULL,
                          NULL,
-                         TYPE_U_QUERY,
+                         TYPE_I_U_QUERY,
                          G_PARAM_READWRITE));
 }
 
 GType
-query_get_type (void)
+i__query_get_type (void)
 {
   static GType type = 0;
 
@@ -8984,38 +8984,38 @@ query_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (QueryClass),
+      sizeof (I_QueryClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) query_class_init,
+      (GClassInitFunc) i__query_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Query),
+      sizeof (I_Query),
       0, /* n_preallocs */
-      (GInstanceInitFunc) query_instance_init,
+      (GInstanceInitFunc) i__query_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "QueryType",
+                                   "I_QueryType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _ResultProperties
+enum _I_ResultProperties
 {
-  PROP_RESULT_0,
-  PROP_RESULT_RETURN_ITEMS,
-  PROP_RESULT_FIRST,
-  PROP_RESULT_LINK,
-  PROP_RESULT_SECOND
+  PROP_I__RESULT_0,
+  PROP_I__RESULT_RETURN_ITEMS,
+  PROP_I__RESULT_FIRST,
+  PROP_I__RESULT_LINK,
+  PROP_I__RESULT_SECOND
 };
 
-/* reads a result object */
+/* reads a i__result object */
 static gint32
-result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -9024,7 +9024,7 @@ result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  Result * this_object = RESULT(object);
+  I_Result * this_object = I__RESULT(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -9069,7 +9069,7 @@ result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast20, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->return_items = (Return)ecast20;
+          this_object->return_items = (I_Return)ecast20;
           this_object->__isset_return_items = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -9141,14 +9141,14 @@ result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static gint32
-result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  Result * this_object = RESULT(object);
+  I_Result * this_object = I__RESULT(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "Result", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Result", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "return_items", T_I32, 1, error)) < 0)
@@ -9208,35 +9208,35 @@ result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 }
 
 static void
-result_set_property (GObject *object,
-                     guint property_id,
-                     const GValue *value,
-                     GParamSpec *pspec)
+i__result_set_property (GObject *object,
+                        guint property_id,
+                        const GValue *value,
+                        GParamSpec *pspec)
 {
-  Result *self = RESULT (object);
+  I_Result *self = I__RESULT (object);
 
   switch (property_id)
   {
-    case PROP_RESULT_RETURN_ITEMS:
+    case PROP_I__RESULT_RETURN_ITEMS:
       self->return_items = g_value_get_int (value);
       self->__isset_return_items = TRUE;
       break;
 
-    case PROP_RESULT_FIRST:
+    case PROP_I__RESULT_FIRST:
       if (self->first != NULL)
         g_object_unref (self->first);
       self->first = g_value_dup_object (value);
       self->__isset_first = TRUE;
       break;
 
-    case PROP_RESULT_LINK:
+    case PROP_I__RESULT_LINK:
       if (self->link != NULL)
         g_object_unref (self->link);
       self->link = g_value_dup_object (value);
       self->__isset_link = TRUE;
       break;
 
-    case PROP_RESULT_SECOND:
+    case PROP_I__RESULT_SECOND:
       if (self->second != NULL)
         g_object_unref (self->second);
       self->second = g_value_dup_object (value);
@@ -9250,28 +9250,28 @@ result_set_property (GObject *object,
 }
 
 static void
-result_get_property (GObject *object,
-                     guint property_id,
-                     GValue *value,
-                     GParamSpec *pspec)
+i__result_get_property (GObject *object,
+                        guint property_id,
+                        GValue *value,
+                        GParamSpec *pspec)
 {
-  Result *self = RESULT (object);
+  I_Result *self = I__RESULT (object);
 
   switch (property_id)
   {
-    case PROP_RESULT_RETURN_ITEMS:
+    case PROP_I__RESULT_RETURN_ITEMS:
       g_value_set_int (value, self->return_items);
       break;
 
-    case PROP_RESULT_FIRST:
+    case PROP_I__RESULT_FIRST:
       g_value_set_object (value, self->first);
       break;
 
-    case PROP_RESULT_LINK:
+    case PROP_I__RESULT_LINK:
       g_value_set_object (value, self->link);
       break;
 
-    case PROP_RESULT_SECOND:
+    case PROP_I__RESULT_SECOND:
       g_value_set_object (value, self->second);
       break;
 
@@ -9282,23 +9282,23 @@ result_get_property (GObject *object,
 }
 
 static void 
-result_instance_init (Result * object)
+i__result_instance_init (I_Result * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_return_items = FALSE;
-  object->first = g_object_new (TYPE_NODE, NULL);
+  object->first = g_object_new (TYPE_I__NODE, NULL);
   object->__isset_first = FALSE;
-  object->link = g_object_new (TYPE_LINK, NULL);
+  object->link = g_object_new (TYPE_I__LINK, NULL);
   object->__isset_link = FALSE;
-  object->second = g_object_new (TYPE_NODE, NULL);
+  object->second = g_object_new (TYPE_I__NODE, NULL);
   object->__isset_second = FALSE;
 }
 
 static void 
-result_finalize (GObject *object)
+i__result_finalize (GObject *object)
 {
-  Result *tobject = RESULT (object);
+  I_Result *tobject = I__RESULT (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -9320,21 +9320,21 @@ result_finalize (GObject *object)
 }
 
 static void
-result_class_init (ResultClass * cls)
+i__result_class_init (I_ResultClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = result_read;
-  struct_class->write = result_write;
+  struct_class->read = i__result_read;
+  struct_class->write = i__result_write;
 
-  gobject_class->finalize = result_finalize;
-  gobject_class->get_property = result_get_property;
-  gobject_class->set_property = result_set_property;
+  gobject_class->finalize = i__result_finalize;
+  gobject_class->get_property = i__result_get_property;
+  gobject_class->set_property = i__result_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_RESULT_RETURN_ITEMS,
+     PROP_I__RESULT_RETURN_ITEMS,
      g_param_spec_int ("return_items",
                        NULL,
                        NULL,
@@ -9345,34 +9345,34 @@ result_class_init (ResultClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_RESULT_FIRST,
+     PROP_I__RESULT_FIRST,
      g_param_spec_object ("first",
                          NULL,
                          NULL,
-                         TYPE_NODE,
+                         TYPE_I__NODE,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_RESULT_LINK,
+     PROP_I__RESULT_LINK,
      g_param_spec_object ("link",
                          NULL,
                          NULL,
-                         TYPE_LINK,
+                         TYPE_I__LINK,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
     (gobject_class,
-     PROP_RESULT_SECOND,
+     PROP_I__RESULT_SECOND,
      g_param_spec_object ("second",
                          NULL,
                          NULL,
-                         TYPE_NODE,
+                         TYPE_I__NODE,
                          G_PARAM_READWRITE));
 }
 
 GType
-result_get_type (void)
+i__result_get_type (void)
 {
   static GType type = 0;
 
@@ -9380,36 +9380,36 @@ result_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (ResultClass),
+      sizeof (I_ResultClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) result_class_init,
+      (GClassInitFunc) i__result_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (Result),
+      sizeof (I_Result),
       0, /* n_preallocs */
-      (GInstanceInitFunc) result_instance_init,
+      (GInstanceInitFunc) i__result_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "ResultType",
+                                   "I_ResultType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _uQueryResultProperties
+enum _I_uQueryResultProperties
 {
-  PROP_U_QUERY_RESULT_0,
-  PROP_U_QUERY_RESULT_SCHEMA,
-  PROP_U_QUERY_RESULT_ITEMS
+  PROP_I_U_QUERY_RESULT_0,
+  PROP_I_U_QUERY_RESULT_SCHEMA,
+  PROP_I_U_QUERY_RESULT_ITEMS
 };
 
-/* reads a u_query_result object */
+/* reads a i_u_query_result object */
 static gint32
-u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -9418,7 +9418,7 @@ u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  uQueryResult * this_object = U_QUERY_RESULT(object);
+  I_uQueryResult * this_object = I_U_QUERY_RESULT(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -9471,12 +9471,12 @@ u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Schema * _elem21 = NULL;
+              I_Schema * _elem21 = NULL;
               if ( _elem21 != NULL)
               {
                 g_object_unref (_elem21);
               }
-              _elem21 = g_object_new (TYPE_SCHEMA, NULL);
+              _elem21 = g_object_new (TYPE_I__SCHEMA, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem21), protocol, error)) < 0)
               {
                 g_object_unref (_elem21);
@@ -9511,12 +9511,12 @@ u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
             /* iterate through list elements */
             for (i = 0; i < size; i++)
             {
-              Result * _elem22 = NULL;
+              I_Result * _elem22 = NULL;
               if ( _elem22 != NULL)
               {
                 g_object_unref (_elem22);
               }
-              _elem22 = g_object_new (TYPE_RESULT, NULL);
+              _elem22 = g_object_new (TYPE_I__RESULT, NULL);
               if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem22), protocol, error)) < 0)
               {
                 g_object_unref (_elem22);
@@ -9555,14 +9555,14 @@ u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **er
 }
 
 static gint32
-u_query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i_u_query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  uQueryResult * this_object = U_QUERY_RESULT(object);
+  I_uQueryResult * this_object = I_U_QUERY_RESULT(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "uQueryResult", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_uQueryResult", error)) < 0)
     return -1;
   xfer += ret;
   if (this_object->__isset_schema == TRUE) {
@@ -9626,23 +9626,23 @@ u_query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **e
 }
 
 static void
-u_query_result_set_property (GObject *object,
-                             guint property_id,
-                             const GValue *value,
-                             GParamSpec *pspec)
+i_u_query_result_set_property (GObject *object,
+                               guint property_id,
+                               const GValue *value,
+                               GParamSpec *pspec)
 {
-  uQueryResult *self = U_QUERY_RESULT (object);
+  I_uQueryResult *self = I_U_QUERY_RESULT (object);
 
   switch (property_id)
   {
-    case PROP_U_QUERY_RESULT_SCHEMA:
+    case PROP_I_U_QUERY_RESULT_SCHEMA:
       if (self->schema != NULL)
         g_ptr_array_unref (self->schema);
       self->schema = g_value_dup_boxed (value);
       self->__isset_schema = TRUE;
       break;
 
-    case PROP_U_QUERY_RESULT_ITEMS:
+    case PROP_I_U_QUERY_RESULT_ITEMS:
       if (self->items != NULL)
         g_ptr_array_unref (self->items);
       self->items = g_value_dup_boxed (value);
@@ -9656,20 +9656,20 @@ u_query_result_set_property (GObject *object,
 }
 
 static void
-u_query_result_get_property (GObject *object,
-                             guint property_id,
-                             GValue *value,
-                             GParamSpec *pspec)
+i_u_query_result_get_property (GObject *object,
+                               guint property_id,
+                               GValue *value,
+                               GParamSpec *pspec)
 {
-  uQueryResult *self = U_QUERY_RESULT (object);
+  I_uQueryResult *self = I_U_QUERY_RESULT (object);
 
   switch (property_id)
   {
-    case PROP_U_QUERY_RESULT_SCHEMA:
+    case PROP_I_U_QUERY_RESULT_SCHEMA:
       g_value_set_boxed (value, self->schema);
       break;
 
-    case PROP_U_QUERY_RESULT_ITEMS:
+    case PROP_I_U_QUERY_RESULT_ITEMS:
       g_value_set_boxed (value, self->items);
       break;
 
@@ -9680,7 +9680,7 @@ u_query_result_get_property (GObject *object,
 }
 
 static void 
-u_query_result_instance_init (uQueryResult * object)
+i_u_query_result_instance_init (I_uQueryResult * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
@@ -9691,9 +9691,9 @@ u_query_result_instance_init (uQueryResult * object)
 }
 
 static void 
-u_query_result_finalize (GObject *object)
+i_u_query_result_finalize (GObject *object)
 {
-  uQueryResult *tobject = U_QUERY_RESULT (object);
+  I_uQueryResult *tobject = I_U_QUERY_RESULT (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -9710,21 +9710,21 @@ u_query_result_finalize (GObject *object)
 }
 
 static void
-u_query_result_class_init (uQueryResultClass * cls)
+i_u_query_result_class_init (I_uQueryResultClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = u_query_result_read;
-  struct_class->write = u_query_result_write;
+  struct_class->read = i_u_query_result_read;
+  struct_class->write = i_u_query_result_write;
 
-  gobject_class->finalize = u_query_result_finalize;
-  gobject_class->get_property = u_query_result_get_property;
-  gobject_class->set_property = u_query_result_set_property;
+  gobject_class->finalize = i_u_query_result_finalize;
+  gobject_class->get_property = i_u_query_result_get_property;
+  gobject_class->set_property = i_u_query_result_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_RESULT_SCHEMA,
+     PROP_I_U_QUERY_RESULT_SCHEMA,
      g_param_spec_boxed ("schema",
                          NULL,
                          NULL,
@@ -9733,7 +9733,7 @@ u_query_result_class_init (uQueryResultClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_U_QUERY_RESULT_ITEMS,
+     PROP_I_U_QUERY_RESULT_ITEMS,
      g_param_spec_boxed ("items",
                          NULL,
                          NULL,
@@ -9742,7 +9742,7 @@ u_query_result_class_init (uQueryResultClass * cls)
 }
 
 GType
-u_query_result_get_type (void)
+i_u_query_result_get_type (void)
 {
   static GType type = 0;
 
@@ -9750,37 +9750,37 @@ u_query_result_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (uQueryResultClass),
+      sizeof (I_uQueryResultClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) u_query_result_class_init,
+      (GClassInitFunc) i_u_query_result_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (uQueryResult),
+      sizeof (I_uQueryResult),
       0, /* n_preallocs */
-      (GInstanceInitFunc) u_query_result_instance_init,
+      (GInstanceInitFunc) i_u_query_result_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "uQueryResultType",
+                                   "I_uQueryResultType",
                                    &type_info, 0);
   }
 
   return type;
 }
 
-enum _QueryResultProperties
+enum _I_QueryResultProperties
 {
-  PROP_QUERY_RESULT_0,
-  PROP_QUERY_RESULT_TYPE,
-  PROP_QUERY_RESULT_MESSAGE,
-  PROP_QUERY_RESULT_RESULT
+  PROP_I__QUERY_RESULT_0,
+  PROP_I__QUERY_RESULT_TYPE,
+  PROP_I__QUERY_RESULT_MESSAGE,
+  PROP_I__QUERY_RESULT_RESULT
 };
 
-/* reads a query_result object */
+/* reads a i__query_result object */
 static gint32
-query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
@@ -9789,7 +9789,7 @@ query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
   gint16 fid;
   guint32 len = 0;
   gpointer data = NULL;
-  QueryResult * this_object = QUERY_RESULT(object);
+  I_QueryResult * this_object = I__QUERY_RESULT(object);
 
   /* satisfy -Wall in case these aren't used */
   THRIFT_UNUSED_VAR (len);
@@ -9834,7 +9834,7 @@ query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
           if ((ret = thrift_protocol_read_i32 (protocol, &ecast25, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (QueryResultType)ecast25;
+          this_object->type = (I_QueryResultType)ecast25;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -9895,14 +9895,14 @@ query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
 }
 
 static gint32
-query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+i__query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
 {
   gint32 ret;
   gint32 xfer = 0;
 
-  QueryResult * this_object = QUERY_RESULT(object);
+  I_QueryResult * this_object = I__QUERY_RESULT(object);
   THRIFT_UNUSED_VAR (this_object);
-  if ((ret = thrift_protocol_write_struct_begin (protocol, "QueryResult", error)) < 0)
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_QueryResult", error)) < 0)
     return -1;
   xfer += ret;
   if ((ret = thrift_protocol_write_field_begin (protocol, "type", T_I32, 1, error)) < 0)
@@ -9948,28 +9948,28 @@ query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **err
 }
 
 static void
-query_result_set_property (GObject *object,
-                           guint property_id,
-                           const GValue *value,
-                           GParamSpec *pspec)
+i__query_result_set_property (GObject *object,
+                              guint property_id,
+                              const GValue *value,
+                              GParamSpec *pspec)
 {
-  QueryResult *self = QUERY_RESULT (object);
+  I_QueryResult *self = I__QUERY_RESULT (object);
 
   switch (property_id)
   {
-    case PROP_QUERY_RESULT_TYPE:
+    case PROP_I__QUERY_RESULT_TYPE:
       self->type = g_value_get_int (value);
       self->__isset_type = TRUE;
       break;
 
-    case PROP_QUERY_RESULT_MESSAGE:
+    case PROP_I__QUERY_RESULT_MESSAGE:
       if (self->message != NULL)
         g_free (self->message);
       self->message = g_value_dup_string (value);
       self->__isset_message = TRUE;
       break;
 
-    case PROP_QUERY_RESULT_RESULT:
+    case PROP_I__QUERY_RESULT_RESULT:
       if (self->result != NULL)
         g_object_unref (self->result);
       self->result = g_value_dup_object (value);
@@ -9983,24 +9983,24 @@ query_result_set_property (GObject *object,
 }
 
 static void
-query_result_get_property (GObject *object,
-                           guint property_id,
-                           GValue *value,
-                           GParamSpec *pspec)
+i__query_result_get_property (GObject *object,
+                              guint property_id,
+                              GValue *value,
+                              GParamSpec *pspec)
 {
-  QueryResult *self = QUERY_RESULT (object);
+  I_QueryResult *self = I__QUERY_RESULT (object);
 
   switch (property_id)
   {
-    case PROP_QUERY_RESULT_TYPE:
+    case PROP_I__QUERY_RESULT_TYPE:
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_QUERY_RESULT_MESSAGE:
+    case PROP_I__QUERY_RESULT_MESSAGE:
       g_value_set_string (value, self->message);
       break;
 
-    case PROP_QUERY_RESULT_RESULT:
+    case PROP_I__QUERY_RESULT_RESULT:
       g_value_set_object (value, self->result);
       break;
 
@@ -10011,21 +10011,21 @@ query_result_get_property (GObject *object,
 }
 
 static void 
-query_result_instance_init (QueryResult * object)
+i__query_result_instance_init (I_QueryResult * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
   object->__isset_type = FALSE;
   object->message = NULL;
   object->__isset_message = FALSE;
-  object->result = g_object_new (TYPE_U_QUERY_RESULT, NULL);
+  object->result = g_object_new (TYPE_I_U_QUERY_RESULT, NULL);
   object->__isset_result = FALSE;
 }
 
 static void 
-query_result_finalize (GObject *object)
+i__query_result_finalize (GObject *object)
 {
-  QueryResult *tobject = QUERY_RESULT (object);
+  I_QueryResult *tobject = I__QUERY_RESULT (object);
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
@@ -10042,21 +10042,21 @@ query_result_finalize (GObject *object)
 }
 
 static void
-query_result_class_init (QueryResultClass * cls)
+i__query_result_class_init (I_QueryResultClass * cls)
 {
   GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
   ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
 
-  struct_class->read = query_result_read;
-  struct_class->write = query_result_write;
+  struct_class->read = i__query_result_read;
+  struct_class->write = i__query_result_write;
 
-  gobject_class->finalize = query_result_finalize;
-  gobject_class->get_property = query_result_get_property;
-  gobject_class->set_property = query_result_set_property;
+  gobject_class->finalize = i__query_result_finalize;
+  gobject_class->get_property = i__query_result_get_property;
+  gobject_class->set_property = i__query_result_set_property;
 
   g_object_class_install_property
     (gobject_class,
-     PROP_QUERY_RESULT_TYPE,
+     PROP_I__QUERY_RESULT_TYPE,
      g_param_spec_int ("type",
                        NULL,
                        NULL,
@@ -10067,7 +10067,7 @@ query_result_class_init (QueryResultClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_QUERY_RESULT_MESSAGE,
+     PROP_I__QUERY_RESULT_MESSAGE,
      g_param_spec_string ("message",
                           NULL,
                           NULL,
@@ -10076,16 +10076,16 @@ query_result_class_init (QueryResultClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_QUERY_RESULT_RESULT,
+     PROP_I__QUERY_RESULT_RESULT,
      g_param_spec_object ("result",
                          NULL,
                          NULL,
-                         TYPE_U_QUERY_RESULT,
+                         TYPE_I_U_QUERY_RESULT,
                          G_PARAM_READWRITE));
 }
 
 GType
-query_result_get_type (void)
+i__query_result_get_type (void)
 {
   static GType type = 0;
 
@@ -10093,20 +10093,20 @@ query_result_get_type (void)
   {
     static const GTypeInfo type_info = 
     {
-      sizeof (QueryResultClass),
+      sizeof (I_QueryResultClass),
       NULL, /* base_init */
       NULL, /* base_finalize */
-      (GClassInitFunc) query_result_class_init,
+      (GClassInitFunc) i__query_result_class_init,
       NULL, /* class_finalize */
       NULL, /* class_data */
-      sizeof (QueryResult),
+      sizeof (I_QueryResult),
       0, /* n_preallocs */
-      (GInstanceInitFunc) query_result_instance_init,
+      (GInstanceInitFunc) i__query_result_instance_init,
       NULL, /* value_table */
     };
 
     type = g_type_register_static (THRIFT_TYPE_STRUCT, 
-                                   "QueryResultType",
+                                   "I_QueryResultType",
                                    &type_info, 0);
   }
 
@@ -10282,7 +10282,7 @@ query_svc_execute_args_instance_init (querySvcExecuteArgs * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->query = g_object_new (TYPE_QUERY, NULL);
+  object->query = g_object_new (TYPE_I__QUERY, NULL);
   object->__isset_query = FALSE;
 }
 
@@ -10319,7 +10319,7 @@ query_svc_execute_args_class_init (querySvcExecuteArgsClass * cls)
      g_param_spec_object ("query",
                          NULL,
                          NULL,
-                         TYPE_QUERY,
+                         TYPE_I__QUERY,
                          G_PARAM_READWRITE));
 }
 
@@ -10521,7 +10521,7 @@ query_svc_execute_result_instance_init (querySvcExecuteResult * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->success = g_object_new (TYPE_QUERY_RESULT, NULL);
+  object->success = g_object_new (TYPE_I__QUERY_RESULT, NULL);
   object->__isset_success = FALSE;
 }
 
@@ -10558,7 +10558,7 @@ query_svc_execute_result_class_init (querySvcExecuteResultClass * cls)
      g_param_spec_object ("success",
                          NULL,
                          NULL,
-                         TYPE_QUERY_RESULT,
+                         TYPE_I__QUERY_RESULT,
                          G_PARAM_READWRITE));
 }
 
