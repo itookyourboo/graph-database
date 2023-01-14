@@ -20,7 +20,6 @@ typedef enum {
     NODE_MATCH,
     
     LINK_CREATE,
-    LINK_UPDATE,
     LINK_DELETE,
     
     MATCH

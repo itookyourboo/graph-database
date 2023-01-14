@@ -110,7 +110,7 @@ QueryResult execute_link_create(Query query, Connection *connection) {
     NodeVector *nodes_first = node_vector_fetch_all(generator);
 
     update_node_condition(&q.second, connection);
-    generator = match_nodes(q.first, connection);
+    generator = match_nodes(q.second, connection);
     NodeVector *nodes_second = node_vector_fetch_all(generator);
 
     RC rc = RC_OK;
@@ -192,7 +192,7 @@ QueryResult (*executors[EXECUTORS_NUM])(Query, Connection*) = {
         &execute_node_match,
 
         &execute_link_create,
-        &execute_link_update,
+//        &execute_link_update,
         &execute_link_delete,
 
         &execute_match

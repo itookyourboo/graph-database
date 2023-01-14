@@ -14,6 +14,7 @@ set(LIB_PARSER_DIR parser_lib)
 
 set(THRIFT_LIB thrift_c_glib)
 set(THRIFT_GEN gen-c_glib)
+set(LIB_THRIFT thrift_lib)
 
 add_library(${LIB_DB} STATIC
         ${LIB_DB_DIR}/main.c
@@ -124,26 +125,28 @@ target_link_libraries(${LIB_DB} m)
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLIB REQUIRED glib-2.0 gobject-2.0)
 
+
+add_library(${LIB_THRIFT}
+        ${THRIFT_GEN}/query_svc.c
+        ${THRIFT_GEN}/query_svc.h
+        ${THRIFT_GEN}/query_types.c
+        ${THRIFT_GEN}/query_types.h)
+target_include_directories(${LIB_THRIFT} PUBLIC ${GLIB_INCLUDE_DIRS})
+target_link_libraries(${LIB_THRIFT} PUBLIC ${THRIFT_LIB} ${GLIB_LDFLAGS})
+
+
 add_executable(${SERVER_EXE}
         server.c
         server_convert.c
         server_convert.h
-        ${THRIFT_GEN}/query_svc.c
-        ${THRIFT_GEN}/query_types.c
-        ${THRIFT_GEN}/query_svc.h
-        ${THRIFT_GEN}/query_types.h
         )
 target_include_directories(${SERVER_EXE} PUBLIC ${GLIB_INCLUDE_DIRS})
-target_link_libraries(${SERVER_EXE} PUBLIC ${LIB_DB} ${THRIFT_LIB} ${GLIB_LDFLAGS})
+target_link_libraries(${SERVER_EXE} PUBLIC ${LIB_DB} ${THRIFT_LIB} ${GLIB_LDFLAGS} ${LIB_THRIFT})
 
 add_executable(${CLIENT_EXE}
         client.c
         client_convert.c
         client_convert.h
-        ${THRIFT_GEN}/query_svc.c
-        ${THRIFT_GEN}/query_types.c
-        ${THRIFT_GEN}/query_svc.h
-        ${THRIFT_GEN}/query_types.h
         )
 target_include_directories(${CLIENT_EXE} PUBLIC ${GLIB_INCLUDE_DIRS})
-target_link_libraries(${CLIENT_EXE} PUBLIC ${LIB_PARSER} ${THRIFT_LIB} ${GLIB_LDFLAGS})
+target_link_libraries(${CLIENT_EXE} PUBLIC ${LIB_PARSER} ${THRIFT_LIB} ${GLIB_LDFLAGS} ${LIB_THRIFT})

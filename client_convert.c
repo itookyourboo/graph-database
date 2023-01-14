@@ -58,9 +58,9 @@ ARR_CONVERTER(Attribute, attribute)
 
 I_Property *convert_property(Property *property) {
     I_Property *result = g_object_new(TYPE_I__PROPERTY,
-                                       "field", g_strdup(property->field),
-                                       "value", convert_value(property->value),
-                                       NULL);
+                                      "field", g_strdup(property->field),
+                                      "value", convert_value(property->value),
+                                      NULL);
     return result;
 }
 
@@ -83,9 +83,9 @@ I_Schema *convert_schema(Schema *schema) {
 
 I_Node *convert_node(Node *node) {
     I_Node *result = g_object_new(TYPE_I__NODE,
-                                    "name", g_strdup(node->name),
-                                    "properties", convert_property_list(node->properties),
-                                    NULL);
+                                  "name", g_strdup(node->name),
+                                  "properties", convert_property_list(node->properties),
+                                  NULL);
     return result;
 }
 
@@ -126,9 +126,9 @@ I_NodeCreateQuery *convert_node_create_query(NodeCreateQuery query) {
 I_Comparable *convert_comparable(Comparable *comparable) {
     I_uComparable *u_comparable = g_object_new(TYPE_I_U_COMPARABLE, NULL);
     I_Comparable *result = g_object_new(TYPE_I__COMPARABLE,
-                                              "type", comparable->type,
-                                              "comparable", u_comparable,
-                                              NULL);
+                                        "type", comparable->type,
+                                        "comparable", u_comparable,
+                                        NULL);
     switch (comparable->type) {
         case CMPT_FIELD:
             g_object_set(u_comparable,
@@ -146,9 +146,9 @@ I_Comparable *convert_comparable(Comparable *comparable) {
 
 I_Compare *convert_compare(Compare *compare) {
     I_Compare *result = g_object_new(TYPE_I__COMPARE,
-                                              "cmp", compare->cmp,
-                                              "with_", convert_comparable(compare->with),
-                                              NULL);
+                                     "cmp", compare->cmp,
+                                     "with_", convert_comparable(compare->with),
+                                     NULL);
     return result;
 }
 
@@ -174,9 +174,9 @@ GPtrArray *convert_predicate_list(Predicate *predicate) {
 I_Predicate *convert_predicate(Predicate *predicate) {
     I_uPredicate *u_predicate = g_object_new(TYPE_I_U_PREDICATE, NULL);
     I_Predicate *result = g_object_new(TYPE_I__PREDICATE,
-                                      "type", predicate->type,
-                                      "predicate", u_predicate,
-                                      NULL);
+                                       "type", predicate->type,
+                                       "predicate", u_predicate,
+                                       NULL);
     switch (predicate->type) {
         case PT_TERM:
             g_object_set(u_predicate,
@@ -209,10 +209,18 @@ GPtrArray *convert_predicates(Predicate *predicates) {
 I_NodeCondition *convert_node_condition(NodeCondition *node_condition) {
     I_NodeCondition *result = g_object_new(
             TYPE_I__NODE_CONDITION,
-            "is_null", node_condition->is_null,
-            "schema", g_strdup(node_condition->schema),
-            "predicates", convert_predicates(node_condition->predicates),
             NULL);
+    if (!node_condition)
+        g_object_set(result,
+                     "is_null", true,
+                     NULL);
+    else {
+        g_object_set(result,
+                "is_null", node_condition->is_null,
+                "schema", g_strdup(node_condition->schema),
+                "predicates", convert_predicates(node_condition->predicates),
+                NULL);
+    }
     return result;
 }
 
@@ -269,8 +277,6 @@ I_LinkCreateQuery *convert_link_create_query(LinkCreateQuery query) {
     I_NodeCondition *first = convert_node_condition(query.first);
     I_NodeCondition *second = convert_node_condition(query.second);
 
-    // Че за херня
-
     I_LinkCreateQuery *result = g_object_new(
             TYPE_I__LINK_CREATE_QUERY,
             NULL);
@@ -293,9 +299,10 @@ I_LinkDeleteQuery *convert_link_delete_query(LinkDeleteQuery query) {
 
 I_MatchQuery *convert_match_query(MatchQuery query) {
     I_MatchQuery *result = g_object_new(
-            I__QUERY_TYPE_MATCH,
+            TYPE_I__MATCH_QUERY,
             "condition", convert_match_condition(query.condition),
             NULL);
+    return result;
 }
 
 I_Query *convert_query(Query *query) {
@@ -414,7 +421,7 @@ void print_value(I_Value *value) {
                  NULL);
     switch (type) {
         case I__VALUE_TYPE_VT_INTEGER:
-            printf("%*d", padlen,  u_value->integer);
+            printf("%*d", padlen, u_value->integer);
             break;
         case I__VALUE_TYPE_VT_STRING:
             printf("%*s", padlen, u_value->string_);

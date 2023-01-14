@@ -16,10 +16,10 @@ toString_I_ValueType(int value)
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case I__VALUE_TYPE_VT_INTEGER:return "VT_INTEGER";
-  case I__VALUE_TYPE_VT_STRING:return "VT_STRING";
-  case I__VALUE_TYPE_VT_FLOATING:return "VT_FLOATING";
-  case I__VALUE_TYPE_VT_BOOLEAN:return "VT_BOOLEAN";
+  case I__VALUE_TYPE_VT_INTEGER:return "I__VALUE_TYPE_VT_INTEGER";
+  case I__VALUE_TYPE_VT_STRING:return "I__VALUE_TYPE_VT_STRING";
+  case I__VALUE_TYPE_VT_FLOATING:return "I__VALUE_TYPE_VT_FLOATING";
+  case I__VALUE_TYPE_VT_BOOLEAN:return "I__VALUE_TYPE_VT_BOOLEAN";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
@@ -86,17 +86,17 @@ toString_I_QueryType(int value)
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case I__QUERY_TYPE_SCHEMA_CREATE:return "SCHEMA_CREATE";
-  case I__QUERY_TYPE_SCHEMA_GET:return "SCHEMA_GET";
-  case I__QUERY_TYPE_SCHEMA_GET_ALL:return "SCHEMA_GET_ALL";
-  case I__QUERY_TYPE_SCHEMA_DELETE:return "SCHEMA_DELETE";
-  case I__QUERY_TYPE_NODE_CREATE:return "NODE_CREATE";
-  case I__QUERY_TYPE_NODE_UPDATE:return "NODE_UPDATE";
-  case I__QUERY_TYPE_NODE_DELETE:return "NODE_DELETE";
-  case I__QUERY_TYPE_NODE_MATCH:return "NODE_MATCH";
-  case I__QUERY_TYPE_LINK_CREATE:return "LINK_CREATE";
-  case I__QUERY_TYPE_LINK_DELETE:return "LINK_DELETE";
-  case I__QUERY_TYPE_MATCH:return "MATCH";
+  case I__QUERY_TYPE_SCHEMA_CREATE:return "I__QUERY_TYPE_SCHEMA_CREATE";
+  case I__QUERY_TYPE_SCHEMA_GET:return "I__QUERY_TYPE_SCHEMA_GET";
+  case I__QUERY_TYPE_SCHEMA_GET_ALL:return "I__QUERY_TYPE_SCHEMA_GET_ALL";
+  case I__QUERY_TYPE_SCHEMA_DELETE:return "I__QUERY_TYPE_SCHEMA_DELETE";
+  case I__QUERY_TYPE_NODE_CREATE:return "I__QUERY_TYPE_NODE_CREATE";
+  case I__QUERY_TYPE_NODE_UPDATE:return "I__QUERY_TYPE_NODE_UPDATE";
+  case I__QUERY_TYPE_NODE_DELETE:return "I__QUERY_TYPE_NODE_DELETE";
+  case I__QUERY_TYPE_NODE_MATCH:return "I__QUERY_TYPE_NODE_MATCH";
+  case I__QUERY_TYPE_LINK_CREATE:return "I__QUERY_TYPE_LINK_CREATE";
+  case I__QUERY_TYPE_LINK_DELETE:return "I__QUERY_TYPE_LINK_DELETE";
+  case I__QUERY_TYPE_MATCH:return "I__QUERY_TYPE_MATCH";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }

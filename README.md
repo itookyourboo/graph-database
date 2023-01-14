@@ -167,9 +167,44 @@ Result code: 0 (RC_OK)
     g.V("students").has("id", eq(1)), 
     g.V("students").has("id", eq(2))
 );
+Result code: 0 (RC_OK)
 ```
 
 #### Получение
 
+```
+> g.V("students").both("FRIENDS");
+Result code: 0 (RC_OK)
+0. [         1      Alex  5.000000     false]<--[FRIENDS]-->[         2     Boris  5.000000     false]
+1. [         1      Alex  5.000000     false]<--[FRIENDS]-->[         3     Pasha  4.700000     false]
+```
+
+```
+> g.V("students").has("score", eq(5))
+    .both("FRIENDS")
+    .V("students").has("score", eq(5));
+Result code: 0 (RC_OK)
+0. [         1      Alex  5.000000     false]<--[FRIENDS]-->[         2     Boris  5.000000     false]
+```
+
 #### Удаление
 
+```
+> g.V("students").has("score", eq(5))
+    .both("FRIENDS")
+    .V("students").has("score", lt(4.9))
+    .dropE();
+Result code: 0 (RC_OK)
+```
+
+```
+> g.V("students").both("FRIENDS");
+Result code: 0 (RC_OK)
+0. [         1      Alex  5.000000     false]<--[FRIENDS]-->[         2     Boris  5.000000     false]
+```
+
+## Выводы
+
+Я познакомился с клиент-серверным взаимодействием на языке Си с использованием RPC-фреймворка Apache Thrift. Наверное, это была самая неприятная лаба из всех трёх, потому что было много обезьяней работы в виде сериализации: Клиент<->Thrift, Thrift<->Сервер.
+
+Также обнаружил несколько недочётов в предыдущих работах, поэтому пришлось еще и их доделывать. В любом случае это было интересно и полезно, поэтому все круто!)

@@ -414,9 +414,6 @@ Query convert_query(I_Query *query) {
                          NULL);
             result.link_create_query = convert_link_create_query(link_create_query);
             break;
-        case LINK_UPDATE:
-            // Not implemented. Use delete + create
-            break;
         case LINK_DELETE:
             g_object_get(u_query,
                          "link_delete_query", &link_delete_query,
@@ -552,6 +549,7 @@ GPtrArray *get_items(Generator *generator, QueryType q_type) {
                          "second", get_node(result->second),
                          "link", get_link(result->link),
                          NULL);
+            g_ptr_array_add(items, i_result);
         }
     }
 

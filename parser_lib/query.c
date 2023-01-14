@@ -121,6 +121,8 @@ void free_node_condition(NodeCondition *node_condition) {
 
 MatchCondition *create_match_condition() {
     MatchCondition *x = malloc(sizeof(MatchCondition));
+    x->node_cross_condition = create_node_condition();
+    x->node_cross_condition->is_null = true;
     return x;
 }
 
