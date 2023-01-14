@@ -35,7 +35,6 @@ bool check_node_condition(
 ) {
     if (condition.is_null)
         return true;
-
     Schema *schema = condition.schema;
     if (schema == NULL)
         return true;
@@ -171,7 +170,8 @@ Node *node_next(Generator *generator) {
         if (matched) {
             rc = db_node_to_node(db_node, node, connection);
             node->_db_ptr = context->cur;
-            throw_if_not_ok(rc);
+            if (rc != RC_OK)
+                exit(rc);
         }
 
         context->prev = current_node_pointer;
@@ -228,7 +228,8 @@ RC update_nodes(
         for (amount j = 0; j < attributes_to_update_number; j++) {
             amount index = get_attribute_index(schema, attributes_to_update[j]);
             connection_move_to_pointer(db_node->value_pointers[index], connection);
-            value_update(new_values[j], connection);
+            rc = value_update(new_values[j], connection);
+            throw_if_not_ok(rc);
         }
     }
 

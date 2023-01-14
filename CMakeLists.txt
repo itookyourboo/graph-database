@@ -13,6 +13,7 @@ set(LIB_PARSER parser_lib)
 set(LIB_PARSER_DIR parser_lib)
 
 set(THRIFT_LIB thrift_c_glib)
+set(THRIFT_GEN gen-c_glib)
 
 add_library(${LIB_DB} STATIC
         ${LIB_DB_DIR}/main.c
@@ -127,10 +128,10 @@ add_executable(${SERVER_EXE}
         server.c
         server_convert.c
         server_convert.h
-        gen-c_glib/query_svc.c
-        gen-c_glib/query_types.c
-        gen-c_glib/query_svc.h
-        gen-c_glib/query_types.h
+        ${THRIFT_GEN}/query_svc.c
+        ${THRIFT_GEN}/query_types.c
+        ${THRIFT_GEN}/query_svc.h
+        ${THRIFT_GEN}/query_types.h
         )
 target_include_directories(${SERVER_EXE} PUBLIC ${GLIB_INCLUDE_DIRS})
 target_link_libraries(${SERVER_EXE} PUBLIC ${LIB_DB} ${THRIFT_LIB} ${GLIB_LDFLAGS})
@@ -139,10 +140,10 @@ add_executable(${CLIENT_EXE}
         client.c
         client_convert.c
         client_convert.h
-        gen-c_glib/query_svc.c
-        gen-c_glib/query_types.c
-        gen-c_glib/query_svc.h
-        gen-c_glib/query_types.h
+        ${THRIFT_GEN}/query_svc.c
+        ${THRIFT_GEN}/query_types.c
+        ${THRIFT_GEN}/query_svc.h
+        ${THRIFT_GEN}/query_types.h
         )
 target_include_directories(${CLIENT_EXE} PUBLIC ${GLIB_INCLUDE_DIRS})
 target_link_libraries(${CLIENT_EXE} PUBLIC ${LIB_PARSER} ${THRIFT_LIB} ${GLIB_LDFLAGS})

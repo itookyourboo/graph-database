@@ -295,10 +295,6 @@ struct _I_Link
   gboolean __isset_name;
   I_LinkType type;
   gboolean __isset_type;
-  gchar * first;
-  gboolean __isset_first;
-  gchar * second;
-  gboolean __isset_second;
 };
 typedef struct _I_Link I_Link;
 
@@ -621,6 +617,29 @@ GType i__schema_get_query_get_type (void);
 #define IS_I__SCHEMA_GET_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA_GET_QUERY))
 #define I__SCHEMA_GET_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA_GET_QUERY, I_SchemaGetQueryClass))
 
+/* struct I_SchemaGetAllQuery */
+struct _I_SchemaGetAllQuery
+{ 
+  ThriftStruct parent; 
+
+  /* public */
+};
+typedef struct _I_SchemaGetAllQuery I_SchemaGetAllQuery;
+
+struct _I_SchemaGetAllQueryClass
+{
+  ThriftStructClass parent;
+};
+typedef struct _I_SchemaGetAllQueryClass I_SchemaGetAllQueryClass;
+
+GType i__schema_get_all_query_get_type (void);
+#define TYPE_I__SCHEMA_GET_ALL_QUERY (i__schema_get_all_query_get_type())
+#define I__SCHEMA_GET_ALL_QUERY(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), TYPE_I__SCHEMA_GET_ALL_QUERY, I_SchemaGetAllQuery))
+#define I__SCHEMA_GET_ALL_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_CAST ((c), _TYPE_I__SCHEMA_GET_ALL_QUERY, I_SchemaGetAllQueryClass))
+#define IS_I__SCHEMA_GET_ALL_QUERY(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), TYPE_I__SCHEMA_GET_ALL_QUERY))
+#define IS_I__SCHEMA_GET_ALL_QUERY_CLASS(c) (G_TYPE_CHECK_CLASS_TYPE ((c), TYPE_I__SCHEMA_GET_ALL_QUERY))
+#define I__SCHEMA_GET_ALL_QUERY_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), TYPE_I__SCHEMA_GET_ALL_QUERY, I_SchemaGetAllQueryClass))
+
 /* struct I_SchemaDeleteQuery */
 struct _I_SchemaDeleteQuery
 { 
@@ -756,8 +775,14 @@ struct _I_LinkCreateQuery
   ThriftStruct parent; 
 
   /* public */
-  I_Link * link;
-  gboolean __isset_link;
+  gchar * link_name;
+  gboolean __isset_link_name;
+  I_LinkType link_type;
+  gboolean __isset_link_type;
+  I_NodeCondition * first;
+  gboolean __isset_first;
+  I_NodeCondition * second;
+  gboolean __isset_second;
 };
 typedef struct _I_LinkCreateQuery I_LinkCreateQuery;
 
@@ -835,6 +860,8 @@ struct _I_uQuery
   gboolean __isset_schema_create_query;
   I_SchemaGetQuery * schema_get_query;
   gboolean __isset_schema_get_query;
+  I_SchemaGetAllQuery * schema_get_all_query;
+  gboolean __isset_schema_get_all_query;
   I_SchemaDeleteQuery * schema_delete_query;
   gboolean __isset_schema_delete_query;
   I_NodeCreateQuery * node_create_query;
@@ -909,6 +936,8 @@ struct _I_Result
   gboolean __isset_link;
   I_Node * second;
   gboolean __isset_second;
+  I_Schema * schema;
+  gboolean __isset_schema;
 };
 typedef struct _I_Result I_Result;
 
@@ -932,7 +961,7 @@ struct _I_uQueryResult
   ThriftStruct parent; 
 
   /* public */
-  GPtrArray * schema;
+  I_Schema * schema;
   gboolean __isset_schema;
   GPtrArray * items;
   gboolean __isset_items;

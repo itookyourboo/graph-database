@@ -1,5 +1,4 @@
 #include "parser_lib/query.h"
-#include "parser_lib/printer.h"
 #include "parser_lib/main.h"
 #include "client_convert.h"
 
@@ -69,14 +68,12 @@ main(void) {
             break;
 
         Query q = get_query(buffer);
-        print_query(q);
         I_Query *i_query = convert_query(&q);
 
         result = g_object_new(TYPE_I__QUERY_RESULT, NULL);
         success = query_svc_if_execute(client, &result, i_query, &error);
         if (success) {
-            g_object_get(result, "message", &message, NULL);
-            puts(message);
+            print_result(result);
         } else {
             fprintf(stderr, "Client caught an exception: %s\n", error->message);
             g_clear_error(&error);

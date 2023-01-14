@@ -32,6 +32,7 @@ typedef struct {
     bool is_null;
 
     Schema *schema;
+    char *schema_name;
 
     amount conditions_num;
     ConditionCompare *compare_conditions;

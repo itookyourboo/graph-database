@@ -18,7 +18,7 @@ struct I_Value {
 }
 
 struct I_Property {
-    1: string field
+    1: optional string field
     2: I_Value value
 }
 
@@ -33,7 +33,7 @@ struct I_Schema {
 }
 
 struct I_Node {
-    1: string name
+    1: optional string name
     2: list<I_Property> properties
 }
 
@@ -48,8 +48,6 @@ enum I_LinkType {
 struct I_Link {
     1: string name
     2: I_LinkType type
-    3: string first
-    4: string second
 }
 
 enum I_Comparation {
@@ -151,6 +149,8 @@ struct I_SchemaGetQuery {
     1: string schema_name
 }
 
+struct I_SchemaGetAllQuery {}
+
 struct I_SchemaDeleteQuery {
     1: string schema_name
 }
@@ -174,7 +174,10 @@ struct I_NodeMatchQuery {
 }
 
 struct I_LinkCreateQuery {
-    1: I_Link link
+    1: string link_name
+    2: I_LinkType link_type
+    3: I_NodeCondition first
+    4: I_NodeCondition second
 }
 
 struct I_LinkDeleteQuery {
@@ -188,17 +191,18 @@ struct I_MatchQuery {
 union I_uQuery {
     1: I_SchemaCreateQuery schema_create_query
     2: I_SchemaGetQuery schema_get_query
-    3: I_SchemaDeleteQuery schema_delete_query
+    3: I_SchemaGetAllQuery schema_get_all_query;
+    4: I_SchemaDeleteQuery schema_delete_query
 
-    4: I_NodeCreateQuery node_create_query
-    5: I_NodeUpdateQuery node_update_query
-    6: I_NodeDeleteQuery node_delete_query
-    7: I_NodeMatchQuery node_match_query
+    5: I_NodeCreateQuery node_create_query
+    6: I_NodeUpdateQuery node_update_query
+    7: I_NodeDeleteQuery node_delete_query
+    8: I_NodeMatchQuery node_match_query
 
-    8: I_LinkCreateQuery link_create_query
-    9: I_LinkDeleteQuery link_delete_query
+    9: I_LinkCreateQuery link_create_query
+    10: I_LinkDeleteQuery link_delete_query
 
-    10: I_MatchQuery match_query
+    11: I_MatchQuery match_query
 }
 
 struct I_Query {
@@ -221,6 +225,7 @@ struct I_Result {
     2: optional I_Node first
     3: optional I_Link link
     4: optional I_Node second
+    5: optional I_Schema schema
 }
 
 enum I_QueryResultType {
@@ -230,7 +235,7 @@ enum I_QueryResultType {
 }
 
 union I_uQueryResult {
-    1: list<I_Schema> schema
+    1: I_Schema schema
     2: list<I_Result> items
 }
 

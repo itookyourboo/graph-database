@@ -66,8 +66,8 @@ RC database_init(Connection *connection) {
         block_heap_push(block_node, free_blocks);
     }
 
-    printf("Free blocks:\n");
-    printf("\n");
+//    printf("Free blocks:\n");
+//    printf("\n");
     block_heap_build(free_blocks);
     block_heap_print(free_blocks);
 

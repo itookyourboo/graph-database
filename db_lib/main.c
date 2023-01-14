@@ -1,13 +1,18 @@
 #include "main.h"
-#include "database/visualize.h"
 
-QueryResult execute_db_query(Query query) {
-    printf("Executing query...\n");
-    if (query.type == SCHEMA_CREATE) {
-        printf("Creating schema:\n");
-        schema_print(query.schema_create_query.schema);
-    }
-    return (QueryResult) {
-        .type = RESULT_NONE
-    };
+static char *db_name = "database.qdb";
+
+Connection *connect() {
+    Connection *connection = malloc(sizeof(Connection));
+    database_open(db_name, connection);
+    return connection;
+}
+
+QueryResult execute_db_query(Query query, Connection *connection) {
+    return query_execute(query, connection);
+}
+
+void close_connection(Connection *connection) {
+    database_close(connection);
+    free(connection);
 }

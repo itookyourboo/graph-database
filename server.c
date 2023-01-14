@@ -69,16 +69,12 @@ example_query_svc_handler_execute(querySvcIf *iface,
     THRIFT_UNUSED_VAR(error);
 
     printf("Got query: %s\n", toString_I_QueryType(query->type));
+
+    Connection *connection = connect();
     Query to_execute = convert_query(query);
-    QueryResult qr = execute_db_query(to_execute);
-
-    g_object_set(
-            *_return,
-            "type", qr.type,
-            "message", "200, Query executed",
-            NULL
-    );
-
+    QueryResult qr = execute_db_query(to_execute, connection);
+    *_return = convert_result(qr, to_execute.type);
+    close_connection(connection);
     return TRUE;
 }
 

@@ -72,7 +72,7 @@ RC schema_find(char *name, pointer *schema_pointer, DB_Schema *db_schema_found, 
         string_retrieve(schema_name, connection);
         MV_BACK();
 
-        if (strcmp(name, schema_name->content) == 0) {
+        if (strncmp(name, schema_name->content, schema_name->size) == 0) {
             *schema_pointer = current_schema_pointer;
             memcpy(db_schema_found, db_schema, sizeof(*db_schema));
             rc = RC_OK;

@@ -145,7 +145,10 @@ typedef struct {
 } NodeMatchQuery;
 
 typedef struct {
-    Link *link;
+    char *name;
+    LinkType link_type;
+    NodeCondition *first;
+    NodeCondition *second;
 } LinkCreateQuery;
 
 typedef struct {
@@ -161,6 +164,37 @@ typedef enum {
     RESULT_GENERATOR,
     RESULT_NONE
 } QueryResultType;
+
+
+
+typedef enum {
+    RETURN_NOTHING      = 0b000,
+    RETURN_NODE_FIRST   = 0b001,
+    RETURN_NODE_SECOND  = 0b010,
+    RETURN_LINK         = 0b100,
+    RETURN_ALL          = 0b111,
+
+    RETURN_UNDEF        = 0b1000,
+} Return;
+
+
+typedef struct {
+    Return return_items;
+    Node *first;
+    Link *link;
+    Node *second;
+    Schema *schema;
+    struct Result *next;
+} Result;
+
+typedef struct {
+    QueryResultType type;
+    union {
+        Schema *schema;
+        Result *results;
+    };
+    char *message;
+} QueryResult;
 
 typedef struct {
     QueryType type;

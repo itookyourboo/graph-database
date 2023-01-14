@@ -397,9 +397,17 @@ void print_link_create_query(Query _query, int depth) {
 
     printf("{\n");
     print_tabs(depth + 1);
-    printf("link: ");
-    print_link(query.link, depth + 1);
-    printf("\n");
+    printf("name: %s,\n", query.name);
+    print_tabs(depth + 1);
+    printf("link_type: %s,\n", link_types[query.link_type]);
+    print_tabs(depth + 1);
+    printf("first: ");
+    print_node_condition(query.first, depth + 1);
+    printf(",\n");
+    print_tabs(depth + 1);
+    printf("second: ");
+    print_node_condition(query.second, depth + 1);
+    printf(",\n");
     print_tabs(depth);
     printf("}");
 }

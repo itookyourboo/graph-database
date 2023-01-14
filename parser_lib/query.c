@@ -36,7 +36,7 @@ void free_query(Query *query) {
             free_node_condition(query->node_match_query.condition);
             break;
         case LINK_CREATE:
-            free_link(query->link_create_query.link);
+//            free_link(query->link_create_query.link);
             break;
         case LINK_DELETE:
             free_match_condition(query->link_delete_query.condition);
@@ -109,6 +109,7 @@ void free_predicate(Predicate *predicate) {
 
 NodeCondition *create_node_condition() {
     NodeCondition *x = malloc(sizeof(NodeCondition));
+    x->predicates = NULL;
     return x;
 }
 

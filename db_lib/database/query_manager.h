@@ -39,31 +39,32 @@ typedef struct {
 } SchemaDeleteQuery;
 
 typedef struct {
+    char *schema_name;
     Schema *schema;
     Node *node;
 } NodeCreateQuery;
-
-typedef struct {
-    Schema *schema;
-    NodeVector *node_vector;
-    amount attributes_to_update_number;
-    char **attributes_to_update;
-    Value **new_values;
-} NodeUpdateQuery;
-
-typedef struct {
-    Schema *schema;
-    NodeVector *node_vector;
-} NodeDeleteQuery;
 
 typedef struct {
     NodeCondition condition;
 } NodeMatchQuery;
 
 typedef struct {
+    NodeCondition condition;
+    amount attributes_to_update_number;
+    char **attributes_to_update;
+    Value **new_values;
+} NodeUpdateQuery;
+
+typedef struct {
+    NodeCondition condition;
+} NodeDeleteQuery;
+
+typedef struct {
     Link *link;
-    Node *first;
-    Node *second;
+    NodeCondition first;
+    NodeCondition second;
+//    Node *first;
+//    Node *second;
 } LinkCreateQuery;
 
 typedef struct {
@@ -73,7 +74,7 @@ typedef struct {
 } LinkUpdateQuery;
 
 typedef struct {
-    LinkVector *link_vector;
+    MatchCondition condition;
 } LinkDeleteQuery;
 
 typedef struct {

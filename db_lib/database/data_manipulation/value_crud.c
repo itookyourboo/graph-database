@@ -54,7 +54,10 @@ RC value_update(Value *new_value, Connection *connection) {
     rc = db_value_retrieve(db_value, connection);
     throw_if_not_ok(rc);
 
-    if (db_value->data_type != new_value->data_type)
+    if (
+            db_value->data_type == DT_STRING && new_value->data_type != DT_STRING ||
+            db_value->data_type != DT_STRING && new_value->data_type == DT_STRING
+    )
         return RC_DATA_TYPES_ARE_NOT_EQUAL;
 
     if (db_value->data_type == DT_STRING) {
@@ -65,7 +68,14 @@ RC value_update(Value *new_value, Connection *connection) {
         throw_if_not_ok(rc);
         db_value->string_pointer = block_string_pointer;
     } else {
-        db_value->integer = new_value->integer;
+        if (db_value->data_type == DT_FLOATING && new_value->data_type == DT_FLOATING)
+            db_value->floating = new_value->floating;
+        else if (db_value->data_type == DT_FLOATING)
+            db_value->floating = (float) new_value->integer;
+        else if (new_value->floating == DT_FLOATING)
+            db_value->integer = (int) new_value->floating;
+        else
+            db_value->integer = new_value->integer;
     }
 
     BACK();

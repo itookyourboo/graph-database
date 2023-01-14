@@ -18,7 +18,7 @@ amount db_schema_size(DB_Schema *db_schema) {
 }
 
 void db_schema_free(DB_Schema *db_schema) {
-    free(db_schema->attr_pointers);
+    // free(db_schema->attr_pointers);
     free(db_schema);
 }
 

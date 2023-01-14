@@ -148,11 +148,14 @@ _links
 ;
 
 create_link
-: g DOT f_addE DOT _link_init {
-    $5->name = $3;
-
+: g DOT f_addE DOT _link_dir L match_nodes_condition COMMA match_nodes_condition R {
     Query *q = create_query(LINK_CREATE);
-    q->link_create_query = (LinkCreateQuery) { $5 };
+    q->link_create_query = (LinkCreateQuery) {
+        .name = $3,
+        .link_type = $5,
+        .first = $7,
+        .second = $9
+    };
     $$ = q;
 }
 ;
@@ -536,7 +539,7 @@ f_drop
 void yyerror(Query *q, const char *str)
 {
     fprintf(stderr, "error: %s in line %d, column %d\n", str, yylineno, column);
-    fprintf(stderr, "%s", lineptr);
+    // fprintf(stderr, "%s", lineptr);
     for(int i = 0; i < column - 1; i++)
         fprintf(stderr, "_");
     fprintf(stderr, "^\n");

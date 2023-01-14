@@ -65,7 +65,9 @@ void free_link(Link *link) {
 }
 
 Property *create_property() {
-    return malloc(sizeof(Property));
+    Property *property = malloc(sizeof(Property));
+    property->next = NULL;
+    return property;
 }
 
 void free_property(Property *property) {

@@ -69,22 +69,35 @@ void value_free(Value *value) {
 CMP value_compare(Value *value1, Value *value2) {
     if (value1 == NULL || value2 == NULL)
         return CMP_UNDEFINED;
-    if (value1->data_type != value2->data_type)
+    if (
+            value1->data_type == DT_STRING && value2->data_type != DT_STRING ||
+            value2->data_type == DT_STRING && value1->data_type != DT_STRING
+        )
         return CMP_UNDEFINED;
 
     int res;
     if (value1->data_type == DT_STRING)
         res = strncmp(value1->string->content, value2->string->content, value1->string->size);
-    else if (value1->data_type == DT_FLOATING)
-        res = SIGN(value1->floating, value2->floating);
-    else if (value1->data_type == DT_INTEGER)
-        res = SIGN(value1->integer, value2->integer);
-    else if (value1->data_type == DT_BOOLEAN)
-        res = value1->boolean - value2->boolean;
+    else {
+        float first, second;
+        if (value1->data_type == DT_FLOATING)
+            first = value1->floating;
+        else
+            first = (float) value1->integer;
+
+        if (value2->data_type == DT_FLOATING)
+            second = value2->floating;
+        else
+            second = (float) value2->integer;
+
+        res = SIGN(first, second);
+    }
 
     if (res < 0) return CMP_LESS;
     else if (res == 0) return CMP_EQUAL;
     else if (res > 0) return CMP_GREATER;
+
+    return CMP_UNDEFINED;
 }
 
 Value *value_copy(Value *src) {

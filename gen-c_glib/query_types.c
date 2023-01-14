@@ -16,10 +16,10 @@ toString_I_ValueType(int value)
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case I__VALUE_TYPE_VT_INTEGER:return "I__VALUE_TYPE_VT_INTEGER";
-  case I__VALUE_TYPE_VT_STRING:return "I__VALUE_TYPE_VT_STRING";
-  case I__VALUE_TYPE_VT_FLOATING:return "I__VALUE_TYPE_VT_FLOATING";
-  case I__VALUE_TYPE_VT_BOOLEAN:return "I__VALUE_TYPE_VT_BOOLEAN";
+  case I__VALUE_TYPE_VT_INTEGER:return "VT_INTEGER";
+  case I__VALUE_TYPE_VT_STRING:return "VT_STRING";
+  case I__VALUE_TYPE_VT_FLOATING:return "VT_FLOATING";
+  case I__VALUE_TYPE_VT_BOOLEAN:return "VT_BOOLEAN";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
@@ -86,17 +86,17 @@ toString_I_QueryType(int value)
 {
   static __thread char buf[16] = {0};
   switch(value) {
-  case I__QUERY_TYPE_SCHEMA_CREATE:return "I__QUERY_TYPE_SCHEMA_CREATE";
-  case I__QUERY_TYPE_SCHEMA_GET:return "I__QUERY_TYPE_SCHEMA_GET";
-  case I__QUERY_TYPE_SCHEMA_GET_ALL:return "I__QUERY_TYPE_SCHEMA_GET_ALL";
-  case I__QUERY_TYPE_SCHEMA_DELETE:return "I__QUERY_TYPE_SCHEMA_DELETE";
-  case I__QUERY_TYPE_NODE_CREATE:return "I__QUERY_TYPE_NODE_CREATE";
-  case I__QUERY_TYPE_NODE_UPDATE:return "I__QUERY_TYPE_NODE_UPDATE";
-  case I__QUERY_TYPE_NODE_DELETE:return "I__QUERY_TYPE_NODE_DELETE";
-  case I__QUERY_TYPE_NODE_MATCH:return "I__QUERY_TYPE_NODE_MATCH";
-  case I__QUERY_TYPE_LINK_CREATE:return "I__QUERY_TYPE_LINK_CREATE";
-  case I__QUERY_TYPE_LINK_DELETE:return "I__QUERY_TYPE_LINK_DELETE";
-  case I__QUERY_TYPE_MATCH:return "I__QUERY_TYPE_MATCH";
+  case I__QUERY_TYPE_SCHEMA_CREATE:return "SCHEMA_CREATE";
+  case I__QUERY_TYPE_SCHEMA_GET:return "SCHEMA_GET";
+  case I__QUERY_TYPE_SCHEMA_GET_ALL:return "SCHEMA_GET_ALL";
+  case I__QUERY_TYPE_SCHEMA_DELETE:return "SCHEMA_DELETE";
+  case I__QUERY_TYPE_NODE_CREATE:return "NODE_CREATE";
+  case I__QUERY_TYPE_NODE_UPDATE:return "NODE_UPDATE";
+  case I__QUERY_TYPE_NODE_DELETE:return "NODE_DELETE";
+  case I__QUERY_TYPE_NODE_MATCH:return "NODE_MATCH";
+  case I__QUERY_TYPE_LINK_CREATE:return "LINK_CREATE";
+  case I__QUERY_TYPE_LINK_DELETE:return "LINK_DELETE";
+  case I__QUERY_TYPE_MATCH:return "MATCH";
   default: g_snprintf(buf, 16, "%d", value); return buf;
   }
 }
@@ -918,16 +918,18 @@ i__property_write (ThriftStruct *object, ThriftProtocol *protocol, GError **erro
   if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Property", error)) < 0)
     return -1;
   xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "field", T_STRING, 1, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_string (protocol, this_object->field, error)) < 0)
-    return -1;
-  xfer += ret;
+  if (this_object->__isset_field == TRUE) {
+    if ((ret = thrift_protocol_write_field_begin (protocol, "field", T_STRING, 1, error)) < 0)
+      return -1;
+    xfer += ret;
+    if ((ret = thrift_protocol_write_string (protocol, this_object->field, error)) < 0)
+      return -1;
+    xfer += ret;
 
-  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
+    if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
   if ((ret = thrift_protocol_write_field_begin (protocol, "value", T_STRUCT, 2, error)) < 0)
     return -1;
   xfer += ret;
@@ -1857,16 +1859,18 @@ i__node_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   if ((ret = thrift_protocol_write_struct_begin (protocol, "I_Node", error)) < 0)
     return -1;
   xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_string (protocol, this_object->name, error)) < 0)
-    return -1;
-  xfer += ret;
+  if (this_object->__isset_name == TRUE) {
+    if ((ret = thrift_protocol_write_field_begin (protocol, "name", T_STRING, 1, error)) < 0)
+      return -1;
+    xfer += ret;
+    if ((ret = thrift_protocol_write_string (protocol, this_object->name, error)) < 0)
+      return -1;
+    xfer += ret;
 
-  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
+    if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
   if ((ret = thrift_protocol_write_field_begin (protocol, "properties", T_LIST, 2, error)) < 0)
     return -1;
   xfer += ret;
@@ -2049,9 +2053,7 @@ enum _I_LinkProperties
 {
   PROP_I__LINK_0,
   PROP_I__LINK_NAME,
-  PROP_I__LINK_TYPE,
-  PROP_I__LINK_FIRST,
-  PROP_I__LINK_SECOND
+  PROP_I__LINK_TYPE
 };
 
 /* reads a i__link object */
@@ -2137,44 +2139,6 @@ i__link_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 3:
-        if (ftype == T_STRING)
-        {
-          if (this_object->first != NULL)
-          {
-            g_free(this_object->first);
-            this_object->first = NULL;
-          }
-
-          if ((ret = thrift_protocol_read_string (protocol, &this_object->first, error)) < 0)
-            return -1;
-          xfer += ret;
-          this_object->__isset_first = TRUE;
-        } else {
-          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
-            return -1;
-          xfer += ret;
-        }
-        break;
-      case 4:
-        if (ftype == T_STRING)
-        {
-          if (this_object->second != NULL)
-          {
-            g_free(this_object->second);
-            this_object->second = NULL;
-          }
-
-          if ((ret = thrift_protocol_read_string (protocol, &this_object->second, error)) < 0)
-            return -1;
-          xfer += ret;
-          this_object->__isset_second = TRUE;
-        } else {
-          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
-            return -1;
-          xfer += ret;
-        }
-        break;
       default:
         if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
           return -1;
@@ -2224,26 +2188,6 @@ i__link_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
   if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
     return -1;
   xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "first", T_STRING, 3, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_string (protocol, this_object->first, error)) < 0)
-    return -1;
-  xfer += ret;
-
-  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "second", T_STRING, 4, error)) < 0)
-    return -1;
-  xfer += ret;
-  if ((ret = thrift_protocol_write_string (protocol, this_object->second, error)) < 0)
-    return -1;
-  xfer += ret;
-
-  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
-    return -1;
-  xfer += ret;
   if ((ret = thrift_protocol_write_field_stop (protocol, error)) < 0)
     return -1;
   xfer += ret;
@@ -2276,20 +2220,6 @@ i__link_set_property (GObject *object,
       self->__isset_type = TRUE;
       break;
 
-    case PROP_I__LINK_FIRST:
-      if (self->first != NULL)
-        g_free (self->first);
-      self->first = g_value_dup_string (value);
-      self->__isset_first = TRUE;
-      break;
-
-    case PROP_I__LINK_SECOND:
-      if (self->second != NULL)
-        g_free (self->second);
-      self->second = g_value_dup_string (value);
-      self->__isset_second = TRUE;
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
       break;
@@ -2314,14 +2244,6 @@ i__link_get_property (GObject *object,
       g_value_set_int (value, self->type);
       break;
 
-    case PROP_I__LINK_FIRST:
-      g_value_set_string (value, self->first);
-      break;
-
-    case PROP_I__LINK_SECOND:
-      g_value_set_string (value, self->second);
-      break;
-
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
       break;
@@ -2336,10 +2258,6 @@ i__link_instance_init (I_Link * object)
   object->name = NULL;
   object->__isset_name = FALSE;
   object->__isset_type = FALSE;
-  object->first = NULL;
-  object->__isset_first = FALSE;
-  object->second = NULL;
-  object->__isset_second = FALSE;
 }
 
 static void 
@@ -2353,16 +2271,6 @@ i__link_finalize (GObject *object)
   {
     g_free(tobject->name);
     tobject->name = NULL;
-  }
-  if (tobject->first != NULL)
-  {
-    g_free(tobject->first);
-    tobject->first = NULL;
-  }
-  if (tobject->second != NULL)
-  {
-    g_free(tobject->second);
-    tobject->second = NULL;
   }
 }
 
@@ -2398,24 +2306,6 @@ i__link_class_init (I_LinkClass * cls)
                        3,
                        0,
                        G_PARAM_READWRITE));
-
-  g_object_class_install_property
-    (gobject_class,
-     PROP_I__LINK_FIRST,
-     g_param_spec_string ("first",
-                          NULL,
-                          NULL,
-                          NULL,
-                          G_PARAM_READWRITE));
-
-  g_object_class_install_property
-    (gobject_class,
-     PROP_I__LINK_SECOND,
-     g_param_spec_string ("second",
-                          NULL,
-                          NULL,
-                          NULL,
-                          G_PARAM_READWRITE));
 }
 
 GType
@@ -5938,6 +5828,151 @@ i__schema_get_query_get_type (void)
   return type;
 }
 
+/* reads a i__schema_get_all_query object */
+static gint32
+i__schema_get_all_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+{
+  gint32 ret;
+  gint32 xfer = 0;
+  gchar *name = NULL;
+  ThriftType ftype;
+  gint16 fid;
+  guint32 len = 0;
+  gpointer data = NULL;
+  I_SchemaGetAllQuery * this_object = I__SCHEMA_GET_ALL_QUERY(object);
+
+  /* satisfy -Wall in case these aren't used */
+  THRIFT_UNUSED_VAR (len);
+  THRIFT_UNUSED_VAR (data);
+  THRIFT_UNUSED_VAR (this_object);
+
+  /* read the struct begin marker */
+  if ((ret = thrift_protocol_read_struct_begin (protocol, &name, error)) < 0)
+  {
+    if (name) g_free (name);
+    return -1;
+  }
+  xfer += ret;
+  if (name) g_free (name);
+  name = NULL;
+
+  /* read the struct fields */
+  while (1)
+  {
+    /* read the beginning of a field */
+    if ((ret = thrift_protocol_read_field_begin (protocol, &name, &ftype, &fid, error)) < 0)
+    {
+      if (name) g_free (name);
+      return -1;
+    }
+    xfer += ret;
+    if (name) g_free (name);
+    name = NULL;
+
+    /* break if we get a STOP field */
+    if (ftype == T_STOP)
+    {
+      break;
+    }
+
+    switch (fid)
+    {
+      default:
+        if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+          return -1;
+        xfer += ret;
+        break;
+    }
+    if ((ret = thrift_protocol_read_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
+
+  if ((ret = thrift_protocol_read_struct_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  return xfer;
+}
+
+static gint32
+i__schema_get_all_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
+{
+  gint32 ret;
+  gint32 xfer = 0;
+
+  I_SchemaGetAllQuery * this_object = I__SCHEMA_GET_ALL_QUERY(object);
+  THRIFT_UNUSED_VAR (this_object);
+  if ((ret = thrift_protocol_write_struct_begin (protocol, "I_SchemaGetAllQuery", error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_stop (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_struct_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  return xfer;
+}
+
+static void 
+i__schema_get_all_query_instance_init (I_SchemaGetAllQuery * object)
+{
+  /* satisfy -Wall */
+  THRIFT_UNUSED_VAR (object);
+}
+
+static void 
+i__schema_get_all_query_finalize (GObject *object)
+{
+  I_SchemaGetAllQuery *tobject = I__SCHEMA_GET_ALL_QUERY (object);
+
+  /* satisfy -Wall in case we don't use tobject */
+  THRIFT_UNUSED_VAR (tobject);
+}
+
+static void
+i__schema_get_all_query_class_init (I_SchemaGetAllQueryClass * cls)
+{
+  GObjectClass *gobject_class = G_OBJECT_CLASS (cls);
+  ThriftStructClass *struct_class = THRIFT_STRUCT_CLASS (cls);
+
+  struct_class->read = i__schema_get_all_query_read;
+  struct_class->write = i__schema_get_all_query_write;
+
+  gobject_class->finalize = i__schema_get_all_query_finalize;
+}
+
+GType
+i__schema_get_all_query_get_type (void)
+{
+  static GType type = 0;
+
+  if (type == 0) 
+  {
+    static const GTypeInfo type_info = 
+    {
+      sizeof (I_SchemaGetAllQueryClass),
+      NULL, /* base_init */
+      NULL, /* base_finalize */
+      (GClassInitFunc) i__schema_get_all_query_class_init,
+      NULL, /* class_finalize */
+      NULL, /* class_data */
+      sizeof (I_SchemaGetAllQuery),
+      0, /* n_preallocs */
+      (GInstanceInitFunc) i__schema_get_all_query_instance_init,
+      NULL, /* value_table */
+    };
+
+    type = g_type_register_static (THRIFT_TYPE_STRUCT, 
+                                   "I_SchemaGetAllQueryType",
+                                   &type_info, 0);
+  }
+
+  return type;
+}
+
 enum _I_SchemaDeleteQueryProperties
 {
   PROP_I__SCHEMA_DELETE_QUERY_0,
@@ -7278,7 +7313,10 @@ i__node_match_query_get_type (void)
 enum _I_LinkCreateQueryProperties
 {
   PROP_I__LINK_CREATE_QUERY_0,
-  PROP_I__LINK_CREATE_QUERY_LINK
+  PROP_I__LINK_CREATE_QUERY_LINK_NAME,
+  PROP_I__LINK_CREATE_QUERY_LINK_TYPE,
+  PROP_I__LINK_CREATE_QUERY_FIRST,
+  PROP_I__LINK_CREATE_QUERY_SECOND
 };
 
 /* reads a i__link_create_query object */
@@ -7331,14 +7369,63 @@ i__link_create_query_read (ThriftStruct *object, ThriftProtocol *protocol, GErro
     switch (fid)
     {
       case 1:
+        if (ftype == T_STRING)
+        {
+          if (this_object->link_name != NULL)
+          {
+            g_free(this_object->link_name);
+            this_object->link_name = NULL;
+          }
+
+          if ((ret = thrift_protocol_read_string (protocol, &this_object->link_name, error)) < 0)
+            return -1;
+          xfer += ret;
+          this_object->__isset_link_name = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      case 2:
+        if (ftype == T_I32)
+        {
+          gint32 ecast19;
+          if ((ret = thrift_protocol_read_i32 (protocol, &ecast19, error)) < 0)
+            return -1;
+          xfer += ret;
+          this_object->link_type = (I_LinkType)ecast19;
+          this_object->__isset_link_type = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      case 3:
         if (ftype == T_STRUCT)
         {
-          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->link), protocol, error)) < 0)
+          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->first), protocol, error)) < 0)
           {
             return -1;
           }
           xfer += ret;
-          this_object->__isset_link = TRUE;
+          this_object->__isset_first = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      case 4:
+        if (ftype == T_STRUCT)
+        {
+          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->second), protocol, error)) < 0)
+          {
+            return -1;
+          }
+          xfer += ret;
+          this_object->__isset_second = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
             return -1;
@@ -7374,10 +7461,40 @@ i__link_create_query_write (ThriftStruct *object, ThriftProtocol *protocol, GErr
   if ((ret = thrift_protocol_write_struct_begin (protocol, "I_LinkCreateQuery", error)) < 0)
     return -1;
   xfer += ret;
-  if ((ret = thrift_protocol_write_field_begin (protocol, "link", T_STRUCT, 1, error)) < 0)
+  if ((ret = thrift_protocol_write_field_begin (protocol, "link_name", T_STRING, 1, error)) < 0)
     return -1;
   xfer += ret;
-  if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->link), protocol, error)) < 0)
+  if ((ret = thrift_protocol_write_string (protocol, this_object->link_name, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_begin (protocol, "link_type", T_I32, 2, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_i32 (protocol, (gint32) this_object->link_type, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_begin (protocol, "first", T_STRUCT, 3, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->first), protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+
+  if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_protocol_write_field_begin (protocol, "second", T_STRUCT, 4, error)) < 0)
+    return -1;
+  xfer += ret;
+  if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->second), protocol, error)) < 0)
     return -1;
   xfer += ret;
 
@@ -7404,11 +7521,30 @@ i__link_create_query_set_property (GObject *object,
 
   switch (property_id)
   {
-    case PROP_I__LINK_CREATE_QUERY_LINK:
-      if (self->link != NULL)
-        g_object_unref (self->link);
-      self->link = g_value_dup_object (value);
-      self->__isset_link = TRUE;
+    case PROP_I__LINK_CREATE_QUERY_LINK_NAME:
+      if (self->link_name != NULL)
+        g_free (self->link_name);
+      self->link_name = g_value_dup_string (value);
+      self->__isset_link_name = TRUE;
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_LINK_TYPE:
+      self->link_type = g_value_get_int (value);
+      self->__isset_link_type = TRUE;
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_FIRST:
+      if (self->first != NULL)
+        g_object_unref (self->first);
+      self->first = g_value_dup_object (value);
+      self->__isset_first = TRUE;
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_SECOND:
+      if (self->second != NULL)
+        g_object_unref (self->second);
+      self->second = g_value_dup_object (value);
+      self->__isset_second = TRUE;
       break;
 
     default:
@@ -7427,8 +7563,20 @@ i__link_create_query_get_property (GObject *object,
 
   switch (property_id)
   {
-    case PROP_I__LINK_CREATE_QUERY_LINK:
-      g_value_set_object (value, self->link);
+    case PROP_I__LINK_CREATE_QUERY_LINK_NAME:
+      g_value_set_string (value, self->link_name);
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_LINK_TYPE:
+      g_value_set_int (value, self->link_type);
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_FIRST:
+      g_value_set_object (value, self->first);
+      break;
+
+    case PROP_I__LINK_CREATE_QUERY_SECOND:
+      g_value_set_object (value, self->second);
       break;
 
     default:
@@ -7442,8 +7590,13 @@ i__link_create_query_instance_init (I_LinkCreateQuery * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->link = g_object_new (TYPE_I__LINK, NULL);
-  object->__isset_link = FALSE;
+  object->link_name = NULL;
+  object->__isset_link_name = FALSE;
+  object->__isset_link_type = FALSE;
+  object->first = g_object_new (TYPE_I__NODE_CONDITION, NULL);
+  object->__isset_first = FALSE;
+  object->second = g_object_new (TYPE_I__NODE_CONDITION, NULL);
+  object->__isset_second = FALSE;
 }
 
 static void 
@@ -7453,10 +7606,20 @@ i__link_create_query_finalize (GObject *object)
 
   /* satisfy -Wall in case we don't use tobject */
   THRIFT_UNUSED_VAR (tobject);
-  if (tobject->link != NULL)
+  if (tobject->link_name != NULL)
   {
-    g_object_unref(tobject->link);
-    tobject->link = NULL;
+    g_free(tobject->link_name);
+    tobject->link_name = NULL;
+  }
+  if (tobject->first != NULL)
+  {
+    g_object_unref(tobject->first);
+    tobject->first = NULL;
+  }
+  if (tobject->second != NULL)
+  {
+    g_object_unref(tobject->second);
+    tobject->second = NULL;
   }
 }
 
@@ -7475,11 +7638,40 @@ i__link_create_query_class_init (I_LinkCreateQueryClass * cls)
 
   g_object_class_install_property
     (gobject_class,
-     PROP_I__LINK_CREATE_QUERY_LINK,
-     g_param_spec_object ("link",
+     PROP_I__LINK_CREATE_QUERY_LINK_NAME,
+     g_param_spec_string ("link_name",
+                          NULL,
+                          NULL,
+                          NULL,
+                          G_PARAM_READWRITE));
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I__LINK_CREATE_QUERY_LINK_TYPE,
+     g_param_spec_int ("link_type",
+                       NULL,
+                       NULL,
+                       0,
+                       3,
+                       0,
+                       G_PARAM_READWRITE));
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I__LINK_CREATE_QUERY_FIRST,
+     g_param_spec_object ("first",
                          NULL,
                          NULL,
-                         TYPE_I__LINK,
+                         TYPE_I__NODE_CONDITION,
+                         G_PARAM_READWRITE));
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I__LINK_CREATE_QUERY_SECOND,
+     g_param_spec_object ("second",
+                         NULL,
+                         NULL,
+                         TYPE_I__NODE_CONDITION,
                          G_PARAM_READWRITE));
 }
 
@@ -7991,6 +8183,7 @@ enum _I_uQueryProperties
   PROP_I_U_QUERY_0,
   PROP_I_U_QUERY_SCHEMA_CREATE_QUERY,
   PROP_I_U_QUERY_SCHEMA_GET_QUERY,
+  PROP_I_U_QUERY_SCHEMA_GET_ALL_QUERY,
   PROP_I_U_QUERY_SCHEMA_DELETE_QUERY,
   PROP_I_U_QUERY_NODE_CREATE_QUERY,
   PROP_I_U_QUERY_NODE_UPDATE_QUERY,
@@ -8083,6 +8276,21 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
       case 3:
         if (ftype == T_STRUCT)
         {
+          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->schema_get_all_query), protocol, error)) < 0)
+          {
+            return -1;
+          }
+          xfer += ret;
+          this_object->__isset_schema_get_all_query = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      case 4:
+        if (ftype == T_STRUCT)
+        {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->schema_delete_query), protocol, error)) < 0)
           {
             return -1;
@@ -8095,7 +8303,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 4:
+      case 5:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->node_create_query), protocol, error)) < 0)
@@ -8110,7 +8318,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 5:
+      case 6:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->node_update_query), protocol, error)) < 0)
@@ -8125,7 +8333,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 6:
+      case 7:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->node_delete_query), protocol, error)) < 0)
@@ -8140,7 +8348,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 7:
+      case 8:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->node_match_query), protocol, error)) < 0)
@@ -8155,7 +8363,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 8:
+      case 9:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->link_create_query), protocol, error)) < 0)
@@ -8170,7 +8378,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 9:
+      case 10:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->link_delete_query), protocol, error)) < 0)
@@ -8185,7 +8393,7 @@ i_u_query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           xfer += ret;
         }
         break;
-      case 10:
+      case 11:
         if (ftype == T_STRUCT)
         {
           if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->match_query), protocol, error)) < 0)
@@ -8253,8 +8461,20 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
       return -1;
     xfer += ret;
   }
+  if (this_object->__isset_schema_get_all_query == TRUE) {
+    if ((ret = thrift_protocol_write_field_begin (protocol, "schema_get_all_query", T_STRUCT, 3, error)) < 0)
+      return -1;
+    xfer += ret;
+    if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->schema_get_all_query), protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+
+    if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
   if (this_object->__isset_schema_delete_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "schema_delete_query", T_STRUCT, 3, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "schema_delete_query", T_STRUCT, 4, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->schema_delete_query), protocol, error)) < 0)
@@ -8266,7 +8486,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_node_create_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "node_create_query", T_STRUCT, 4, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "node_create_query", T_STRUCT, 5, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->node_create_query), protocol, error)) < 0)
@@ -8278,7 +8498,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_node_update_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "node_update_query", T_STRUCT, 5, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "node_update_query", T_STRUCT, 6, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->node_update_query), protocol, error)) < 0)
@@ -8290,7 +8510,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_node_delete_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "node_delete_query", T_STRUCT, 6, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "node_delete_query", T_STRUCT, 7, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->node_delete_query), protocol, error)) < 0)
@@ -8302,7 +8522,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_node_match_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "node_match_query", T_STRUCT, 7, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "node_match_query", T_STRUCT, 8, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->node_match_query), protocol, error)) < 0)
@@ -8314,7 +8534,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_link_create_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "link_create_query", T_STRUCT, 8, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "link_create_query", T_STRUCT, 9, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->link_create_query), protocol, error)) < 0)
@@ -8326,7 +8546,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_link_delete_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "link_delete_query", T_STRUCT, 9, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "link_delete_query", T_STRUCT, 10, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->link_delete_query), protocol, error)) < 0)
@@ -8338,7 +8558,7 @@ i_u_query_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
     xfer += ret;
   }
   if (this_object->__isset_match_query == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "match_query", T_STRUCT, 10, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "match_query", T_STRUCT, 11, error)) < 0)
       return -1;
     xfer += ret;
     if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->match_query), protocol, error)) < 0)
@@ -8381,6 +8601,13 @@ i_u_query_set_property (GObject *object,
         g_object_unref (self->schema_get_query);
       self->schema_get_query = g_value_dup_object (value);
       self->__isset_schema_get_query = TRUE;
+      break;
+
+    case PROP_I_U_QUERY_SCHEMA_GET_ALL_QUERY:
+      if (self->schema_get_all_query != NULL)
+        g_object_unref (self->schema_get_all_query);
+      self->schema_get_all_query = g_value_dup_object (value);
+      self->__isset_schema_get_all_query = TRUE;
       break;
 
     case PROP_I_U_QUERY_SCHEMA_DELETE_QUERY:
@@ -8463,6 +8690,10 @@ i_u_query_get_property (GObject *object,
       g_value_set_object (value, self->schema_get_query);
       break;
 
+    case PROP_I_U_QUERY_SCHEMA_GET_ALL_QUERY:
+      g_value_set_object (value, self->schema_get_all_query);
+      break;
+
     case PROP_I_U_QUERY_SCHEMA_DELETE_QUERY:
       g_value_set_object (value, self->schema_delete_query);
       break;
@@ -8510,6 +8741,8 @@ i_u_query_instance_init (I_uQuery * object)
   object->__isset_schema_create_query = FALSE;
   object->schema_get_query = g_object_new (TYPE_I__SCHEMA_GET_QUERY, NULL);
   object->__isset_schema_get_query = FALSE;
+  object->schema_get_all_query = g_object_new (TYPE_I__SCHEMA_GET_ALL_QUERY, NULL);
+  object->__isset_schema_get_all_query = FALSE;
   object->schema_delete_query = g_object_new (TYPE_I__SCHEMA_DELETE_QUERY, NULL);
   object->__isset_schema_delete_query = FALSE;
   object->node_create_query = g_object_new (TYPE_I__NODE_CREATE_QUERY, NULL);
@@ -8544,6 +8777,11 @@ i_u_query_finalize (GObject *object)
   {
     g_object_unref(tobject->schema_get_query);
     tobject->schema_get_query = NULL;
+  }
+  if (tobject->schema_get_all_query != NULL)
+  {
+    g_object_unref(tobject->schema_get_all_query);
+    tobject->schema_get_all_query = NULL;
   }
   if (tobject->schema_delete_query != NULL)
   {
@@ -8616,6 +8854,15 @@ i_u_query_class_init (I_uQueryClass * cls)
                          NULL,
                          NULL,
                          TYPE_I__SCHEMA_GET_QUERY,
+                         G_PARAM_READWRITE));
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I_U_QUERY_SCHEMA_GET_ALL_QUERY,
+     g_param_spec_object ("schema_get_all_query",
+                         NULL,
+                         NULL,
+                         TYPE_I__SCHEMA_GET_ALL_QUERY,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
@@ -8779,11 +9026,11 @@ i__query_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
       case 1:
         if (ftype == T_I32)
         {
-          gint32 ecast19;
-          if ((ret = thrift_protocol_read_i32 (protocol, &ecast19, error)) < 0)
+          gint32 ecast20;
+          if ((ret = thrift_protocol_read_i32 (protocol, &ecast20, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (I_QueryType)ecast19;
+          this_object->type = (I_QueryType)ecast20;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -9010,7 +9257,8 @@ enum _I_ResultProperties
   PROP_I__RESULT_RETURN_ITEMS,
   PROP_I__RESULT_FIRST,
   PROP_I__RESULT_LINK,
-  PROP_I__RESULT_SECOND
+  PROP_I__RESULT_SECOND,
+  PROP_I__RESULT_SCHEMA
 };
 
 /* reads a i__result object */
@@ -9065,11 +9313,11 @@ i__result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
       case 1:
         if (ftype == T_I32)
         {
-          gint32 ecast20;
-          if ((ret = thrift_protocol_read_i32 (protocol, &ecast20, error)) < 0)
+          gint32 ecast21;
+          if ((ret = thrift_protocol_read_i32 (protocol, &ecast21, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->return_items = (I_Return)ecast20;
+          this_object->return_items = (I_Return)ecast21;
           this_object->__isset_return_items = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -9116,6 +9364,21 @@ i__result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
           }
           xfer += ret;
           this_object->__isset_second = TRUE;
+        } else {
+          if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
+            return -1;
+          xfer += ret;
+        }
+        break;
+      case 5:
+        if (ftype == T_STRUCT)
+        {
+          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->schema), protocol, error)) < 0)
+          {
+            return -1;
+          }
+          xfer += ret;
+          this_object->__isset_schema = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
             return -1;
@@ -9197,6 +9460,18 @@ i__result_write (ThriftStruct *object, ThriftProtocol *protocol, GError **error)
       return -1;
     xfer += ret;
   }
+  if (this_object->__isset_schema == TRUE) {
+    if ((ret = thrift_protocol_write_field_begin (protocol, "schema", T_STRUCT, 5, error)) < 0)
+      return -1;
+    xfer += ret;
+    if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->schema), protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+
+    if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
+      return -1;
+    xfer += ret;
+  }
   if ((ret = thrift_protocol_write_field_stop (protocol, error)) < 0)
     return -1;
   xfer += ret;
@@ -9243,6 +9518,13 @@ i__result_set_property (GObject *object,
       self->__isset_second = TRUE;
       break;
 
+    case PROP_I__RESULT_SCHEMA:
+      if (self->schema != NULL)
+        g_object_unref (self->schema);
+      self->schema = g_value_dup_object (value);
+      self->__isset_schema = TRUE;
+      break;
+
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
       break;
@@ -9275,6 +9557,10 @@ i__result_get_property (GObject *object,
       g_value_set_object (value, self->second);
       break;
 
+    case PROP_I__RESULT_SCHEMA:
+      g_value_set_object (value, self->schema);
+      break;
+
     default:
       G_OBJECT_WARN_INVALID_PROPERTY_ID (object, property_id, pspec);
       break;
@@ -9293,6 +9579,8 @@ i__result_instance_init (I_Result * object)
   object->__isset_link = FALSE;
   object->second = g_object_new (TYPE_I__NODE, NULL);
   object->__isset_second = FALSE;
+  object->schema = g_object_new (TYPE_I__SCHEMA, NULL);
+  object->__isset_schema = FALSE;
 }
 
 static void 
@@ -9316,6 +9604,11 @@ i__result_finalize (GObject *object)
   {
     g_object_unref(tobject->second);
     tobject->second = NULL;
+  }
+  if (tobject->schema != NULL)
+  {
+    g_object_unref(tobject->schema);
+    tobject->schema = NULL;
   }
 }
 
@@ -9368,6 +9661,15 @@ i__result_class_init (I_ResultClass * cls)
                          NULL,
                          NULL,
                          TYPE_I__NODE,
+                         G_PARAM_READWRITE));
+
+  g_object_class_install_property
+    (gobject_class,
+     PROP_I__RESULT_SCHEMA,
+     g_param_spec_object ("schema",
+                         NULL,
+                         NULL,
+                         TYPE_I__SCHEMA,
                          G_PARAM_READWRITE));
 }
 
@@ -9457,38 +9759,13 @@ i_u_query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **
     switch (fid)
     {
       case 1:
-        if (ftype == T_LIST)
+        if (ftype == T_STRUCT)
         {
+          if ((ret = thrift_struct_read (THRIFT_STRUCT (this_object->schema), protocol, error)) < 0)
           {
-            guint32 size;
-            guint32 i;
-            ThriftType element_type;
-
-            if ((ret = thrift_protocol_read_list_begin (protocol, &element_type,&size, error)) < 0)
-              return -1;
-            xfer += ret;
-
-            /* iterate through list elements */
-            for (i = 0; i < size; i++)
-            {
-              I_Schema * _elem21 = NULL;
-              if ( _elem21 != NULL)
-              {
-                g_object_unref (_elem21);
-              }
-              _elem21 = g_object_new (TYPE_I__SCHEMA, NULL);
-              if ((ret = thrift_struct_read (THRIFT_STRUCT (_elem21), protocol, error)) < 0)
-              {
-                g_object_unref (_elem21);
-                return -1;
-              }
-              xfer += ret;
-              g_ptr_array_add (this_object->schema, _elem21);
-            }
-            if ((ret = thrift_protocol_read_list_end (protocol, error)) < 0)
-              return -1;
-            xfer += ret;
+            return -1;
           }
+          xfer += ret;
           this_object->__isset_schema = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
@@ -9566,26 +9843,13 @@ i_u_query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError *
     return -1;
   xfer += ret;
   if (this_object->__isset_schema == TRUE) {
-    if ((ret = thrift_protocol_write_field_begin (protocol, "schema", T_LIST, 1, error)) < 0)
+    if ((ret = thrift_protocol_write_field_begin (protocol, "schema", T_STRUCT, 1, error)) < 0)
       return -1;
     xfer += ret;
-    {
-      guint i23;
+    if ((ret = thrift_struct_write (THRIFT_STRUCT (this_object->schema), protocol, error)) < 0)
+      return -1;
+    xfer += ret;
 
-      if ((ret = thrift_protocol_write_list_begin (protocol, T_STRUCT, (gint32) (this_object->schema ? this_object->schema->len : 0), error)) < 0)
-        return -1;
-      xfer += ret;
-      for (i23 = 0; i23 < (this_object->schema ? this_object->schema->len : 0); i23++)
-      {
-        if ((ret = thrift_struct_write (THRIFT_STRUCT ((g_ptr_array_index ((GPtrArray *) this_object->schema, i23))), protocol, error)) < 0)
-          return -1;
-        xfer += ret;
-
-      }
-      if ((ret = thrift_protocol_write_list_end (protocol, error)) < 0)
-        return -1;
-      xfer += ret;
-    }
     if ((ret = thrift_protocol_write_field_end (protocol, error)) < 0)
       return -1;
     xfer += ret;
@@ -9595,14 +9859,14 @@ i_u_query_result_write (ThriftStruct *object, ThriftProtocol *protocol, GError *
       return -1;
     xfer += ret;
     {
-      guint i24;
+      guint i23;
 
       if ((ret = thrift_protocol_write_list_begin (protocol, T_STRUCT, (gint32) (this_object->items ? this_object->items->len : 0), error)) < 0)
         return -1;
       xfer += ret;
-      for (i24 = 0; i24 < (this_object->items ? this_object->items->len : 0); i24++)
+      for (i23 = 0; i23 < (this_object->items ? this_object->items->len : 0); i23++)
       {
-        if ((ret = thrift_struct_write (THRIFT_STRUCT ((g_ptr_array_index ((GPtrArray *) this_object->items, i24))), protocol, error)) < 0)
+        if ((ret = thrift_struct_write (THRIFT_STRUCT ((g_ptr_array_index ((GPtrArray *) this_object->items, i23))), protocol, error)) < 0)
           return -1;
         xfer += ret;
 
@@ -9637,8 +9901,8 @@ i_u_query_result_set_property (GObject *object,
   {
     case PROP_I_U_QUERY_RESULT_SCHEMA:
       if (self->schema != NULL)
-        g_ptr_array_unref (self->schema);
-      self->schema = g_value_dup_boxed (value);
+        g_object_unref (self->schema);
+      self->schema = g_value_dup_object (value);
       self->__isset_schema = TRUE;
       break;
 
@@ -9666,7 +9930,7 @@ i_u_query_result_get_property (GObject *object,
   switch (property_id)
   {
     case PROP_I_U_QUERY_RESULT_SCHEMA:
-      g_value_set_boxed (value, self->schema);
+      g_value_set_object (value, self->schema);
       break;
 
     case PROP_I_U_QUERY_RESULT_ITEMS:
@@ -9684,7 +9948,7 @@ i_u_query_result_instance_init (I_uQueryResult * object)
 {
   /* satisfy -Wall */
   THRIFT_UNUSED_VAR (object);
-  object->schema = g_ptr_array_new_with_free_func (g_object_unref);
+  object->schema = g_object_new (TYPE_I__SCHEMA, NULL);
   object->__isset_schema = FALSE;
   object->items = g_ptr_array_new_with_free_func (g_object_unref);
   object->__isset_items = FALSE;
@@ -9699,7 +9963,7 @@ i_u_query_result_finalize (GObject *object)
   THRIFT_UNUSED_VAR (tobject);
   if (tobject->schema != NULL)
   {
-    g_ptr_array_unref (tobject->schema);
+    g_object_unref(tobject->schema);
     tobject->schema = NULL;
   }
   if (tobject->items != NULL)
@@ -9725,10 +9989,10 @@ i_u_query_result_class_init (I_uQueryResultClass * cls)
   g_object_class_install_property
     (gobject_class,
      PROP_I_U_QUERY_RESULT_SCHEMA,
-     g_param_spec_boxed ("schema",
+     g_param_spec_object ("schema",
                          NULL,
                          NULL,
-                         G_TYPE_PTR_ARRAY,
+                         TYPE_I__SCHEMA,
                          G_PARAM_READWRITE));
 
   g_object_class_install_property
@@ -9830,11 +10094,11 @@ i__query_result_read (ThriftStruct *object, ThriftProtocol *protocol, GError **e
       case 1:
         if (ftype == T_I32)
         {
-          gint32 ecast25;
-          if ((ret = thrift_protocol_read_i32 (protocol, &ecast25, error)) < 0)
+          gint32 ecast24;
+          if ((ret = thrift_protocol_read_i32 (protocol, &ecast24, error)) < 0)
             return -1;
           xfer += ret;
-          this_object->type = (I_QueryResultType)ecast25;
+          this_object->type = (I_QueryResultType)ecast24;
           this_object->__isset_type = TRUE;
         } else {
           if ((ret = thrift_protocol_skip (protocol, ftype, error)) < 0)
